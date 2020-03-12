@@ -70,8 +70,12 @@
                   ['PlAClD_', 2360],
                   ['seannphorn', 2081]]);
 
-        var options = {
-          title: 'Top 10 Twitter usernames mostly retweeted'
+        var options_old = {
+          title: 'Top 10 Twitter usernames mostly retweeted, 2020-03-10'
+        };
+
+        var options_new = {
+          title: 'Top 10 Twitter usernames mostly retweeted, 2020-03-11'
         };
 
         // var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -81,8 +85,8 @@
         // var diffData = chartDiff.computeDiff(oldData, newData);
 
         // chart.draw(odata, options);
-        chartBefore.draw(oldData, options);
-        chartAfter.draw(newData, options);
+        chartBefore.draw(oldData, options_old);
+        chartAfter.draw(newData, options_new);
         // chartDiff.draw(diffData, options);
       }
     </script>
