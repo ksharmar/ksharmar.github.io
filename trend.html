@@ -18,17 +18,9 @@
   <script src="bootstrap/js/bootstrap.min.js"></script>
 
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
-  <script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js">
-  </script>
-  <script type = "text/javascript">
-     google.charts.load('current', {packages: ['corechart']});     
-  </script>
-   <script type = "text/javascript">
-     google.charts.load('current', {packages: ['table']});     
-  </script>
-  
-  <script language="JavaScript" src="interactive/bot.js"></script>
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" src="interactive/trend.js"></script>
 </head>
 
 <body>
@@ -47,10 +39,10 @@
                 <span class="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="trend.html">Trend Analysis</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="misinfo.html">Bot Analysis</a>
             </li>
             <li class="nav-item">
@@ -61,41 +53,40 @@
       </div>
     </nav>
     </div>
-    
+
 <!-- Page Content -->
   
-<div class="container" style="padding-top: 20px; padding-bottom: 0px ">
+<div class="container" style="padding-top: 20px; padding-bottom: 0px">
 
     <br/>
     <h2> Coronavirus on Social Media: Analyzing Twitter conversations </h2>
     <br/>
-	
-	<div class="row">
+    
+  <p class="lead"> Usernames frequently retweeted, 2020-03-11 </p>
+  <!-- <div id="piechart" style="width: 900px; height: 500px;"></div> -->
+  <!-- <div id="piechart_before" style="width: 900px; height: 500px;"></div> -->
+  <div id="piechart_after" style="width: 900px; height: 500px;"></div>
+  <!-- <div id="piechart_diff" style="width: 900px; height: 500px;"></div> -->
+  <!-- <h4> Trendy keywords, 2020-03-11 </h4>
+  <div id="chart_div" style="width: 900px; height: 1500px;"></div>
+ -->
 
-    <p class="card-text"></p>
-        Social media contains bots that are automated or semi-automated. 
-        Botometer scores user accounts based on their network activities to estimate
-        the probabilities that the account exhibits characteristics of social bots.
-		We analyze the 500 most retweeted accounts on ongoing coronavirus discussions.
-        <div id = "bot_hist" style = "width: 550px; height: 400px; margin: 0 auto">
-		</div>
-		<div> <br/><br/>
-			<div id = "bot_score_table" style = "width: 550px; height: 400px; margin: 0 auto ">
-      		</div>
-      	</div>
-
-    </div>
-
-
-    </div>
+  <h4> Topic modeling, 2020-03-11 </h4>
+  <!-- <div class="output_html rendered_html output_subarea output_execute_result">  -->
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/bmabey/pyLDAvis/files/ldavis.v1.0.0.css"> KS REMOVED TO RENDER THE TOP PIE CHART-->
+  <div id="ldavis_el197641397476474857767279928717"></div>
+  <script type="text/javascript" src='interactive/trend_topics.js'>
+  </script>
+  <!-- </div> -->
 
 </div>
+
   
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.slim.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <br/></br/> <br/></br/> <br/></br/> <br/></br/>
+  <br/></br/>
 
 </body>
 
