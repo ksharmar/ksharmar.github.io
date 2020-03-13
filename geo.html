@@ -28,69 +28,60 @@
      google.charts.load('current', {packages: ['table']});     
   </script>
   
-  <script language="JavaScript" src="interactive/bot.js"></script>
 </head>
 
 <body>
 
-  <div id="header">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-      <div class="container">
-        <!-- <img src="img/usc2.png" alt="" height="30px" width="30px"> -->
-        <a class="navbar-brand" href="https://melady.usc.edu/"> USC Melady Lab </a> <!-- </img> -->
-        
-        <div class="navbar-right collapse navbar-collapse menu-mobile" id="navbarResponsive">
-          <ul class="nav navbar-nav ml-auto navbar-link-area">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Coronovirus Tweets
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="trend.html">Trend Analysis</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="misinfo.html">Bot Analysis</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="geo.html">Geo Analysis</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
+    <div id="header">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+          <div class="container">
+            <!-- <img src="img/usc2.png" alt="" height="30px" width="30px"> -->
+            <a class="navbar-brand" href="https://melady.usc.edu/"> USC Melady Lab </a> <!-- </img> -->
+            
+            <div class="navbar-right collapse navbar-collapse menu-mobile" id="navbarResponsive">
+              <ul class="nav navbar-nav ml-auto navbar-link-area">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Coronovirus Tweets
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="trend.html">Trend Analysis</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="misinfo.html">Bot Analysis</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="geo.html">Geo Analysis</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
         </div>
-      </div>
-    </nav>
-    </div>
     
 <!-- Page Content -->
   
 <div class="container" style="padding-top: 20px; padding-bottom: 0px ">
 
     <br/>
-    <h2> Coronavirus on Social Media: Analyzing Twitter conversations </h2>
+    <h2> Coronavirus on Social Media: Analyzing Geographical Distribution </h2>
     <br/>
 	
 	<div class="row">
 
     <p class="card-text"></p>
-        Social media contains bots that are automated or semi-automated. 
-        Botometer scores user accounts based on their network activities to estimate
-        the probabilities that the account exhibits characteristics of social bots.
-		We analyze the 500 most retweeted accounts on ongoing coronavirus discussions.
-        <div id = "bot_hist" style = "width: 550px; height: 400px; margin: 0 auto">
-		</div>
-		<div> <br/><br/>
-			<div id = "bot_score_table" style = "width: 550px; height: 400px; margin: 0 auto ">
-      		</div>
-      	</div>
+        Social media collects posts from users around the world. After analyzing over 7 million tweets collected from 2019-03-08 to 2020-03-12, we show the geographical distribution of the count of tweets (in log scale).
 
-    </div>
+  </div>
 
-
-    </div>
+  <div class="row">
+    <img src="img/geo_tweet_count.png" class="img-fluid" alt="Responsive image">
+  </div>
 
 </div>
   
