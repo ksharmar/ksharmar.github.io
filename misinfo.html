@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Coronavirus Tweets Analysis">
+  <meta name="author" content="Melady Lab">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <title>Melady Lab, Coronavirus Tweets on Social Media </title>
+
+  <!-- Bootstrap core CSS -->
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+  <script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js">
+  </script>
+  <script type = "text/javascript">
+     google.charts.load('current', {packages: ['corechart']});     
+  </script>
+   <script type = "text/javascript">
+     google.charts.load('current', {packages: ['table']});     
+  </script>
+  
+  <script language="JavaScript" src="bot.js"></script>
+</head>
+
+<body> <!--onLoad="document.getElementById('c1button').click();"-->
+
+  <div id="header">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+      <div class="container">
+        <!-- <img src="img/usc2.png" alt="" height="30px" width="30px"> -->
+        <a class="navbar-brand" href="https://melady.usc.edu/"> USC Melady Lab </a> <!-- </img> -->
+        
+        <div class="navbar-right collapse navbar-collapse menu-mobile" id="navbarResponsive">
+          <ul class="nav navbar-nav ml-auto navbar-link-area">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Coronovirus Tweets
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#trendbot">Trend Analysis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="misinfo.html" active>Bot Analysis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    </div>
+    
+<!-- Page Content -->
+  
+<div class="container" style="padding-top: 20px; padding-bottom: 0px ">
+
+    <br/>
+    <h2> Coronavirus on Social Media: Analyzing Twitter conversations </h2>
+    <br/>
+	
+	<div class="row">
+
+    <p class="card-text"></p>
+        Social media contains bots that are automated or semi-automated. 
+        Botometer scores user accounts based on their network activities to estimate
+        the probabilities that the account exhibits characteristics of social bots.
+		We analyze the 500 most retweeted accounts on ongoing coronavirus discussions.
+        <div id = "bot_hist" style = "width: 550px; height: 400px; margin: 0 auto">
+		</div>
+		<div> <br/><br/>
+			<div id = "bot_score_table" style = "width: 550px; height: 400px; margin: 0 auto ">
+      		</div>
+      	</div>
+
+    </div>
+
+
+    </div>
+
+</div>
+  
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <br/></br/>
+
+</body>
+
+<!-- Footer -->
+<footer class="page-footer font-small gray" style="background-color: #2e3438; color:lightgray; bottom: 0; width: 100%"> 
+ <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://melady.usc.edu/" style="color: lightgray"> University of Southern California, <u> Melady Lab </u></a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+</html>
+
