@@ -3,24 +3,23 @@
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Coronavirus Tweets Analysis">
   <meta name="author" content="Melady Lab">
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
   <title>Melady Lab, Coronavirus Tweets on Social Media </title>
 
   <!-- Bootstrap core CSS -->
-  <!-- Bootstrap core CSS -->
-  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->
 
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<!-- 
+<!--
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
    -->
+   <script type="text/javascript" src="interactive/30clusters_word_tweet.js"></script>
 </head>
 
 <body onLoad="document.getElementById('c1button').click();">
@@ -33,7 +32,7 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      
+
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
@@ -60,18 +59,19 @@
     </div>
 
 <!-- Page Content -->
-  
+
 <div class="container" style="padding-top: 20px; padding-bottom: 0px">
 
     <br/>
     <h2> Coronavirus on Social Media: Analyzing Twitter conversations </h2>
     <br/>
-    
+
  <!--  </div> -->
 
     <div class="row">
 
-        <div class="col-sm-2 col-md-2">
+      <div class="col">
+        <!-- <div class="col col-md-2 col-md-offset-1"> -->
             <div class="card border-white">
                 <div class="card-header">Tweet Cluster</div>
                     <div class="card-body">
@@ -112,7 +112,8 @@
             <!--</div>-->
         </div>
 
-        <div class="col-sm-3 col-md-3">
+        <div class="col">
+        <!-- <div class="col col-md-3 col-md-offset-1"> -->
             <div class="card border-white">
                 <div class="card-header">Word Distribution</div>
                     <div class="card-body" id='words'>
@@ -122,7 +123,8 @@
             </div>
             <!--</div>-->
 
-        <div class="col-sm-7 col-md-7">
+        <!-- <div class="col col-md-7 col-md-offset-1"> -->
+        <div class="col">
             <div class="card border-white">
                 <div class="card-header">Representative Tweets (March 1-7)</div>
                     <div class="card-body" id='tweets'>
@@ -130,24 +132,14 @@
                     </div>
                 </div>
             </div>
-            <!--</div>-->
+          </div>
 
   </div>
   <!-- </div> -->
 
-
-    <!-- <br/></br/> -->
-  <!-- <div id='trendbot'>
-    <h4> More analysis </h4>
-   <p class="lead"> Trend and Bot analysis coming soon! </p>
-  </div> -->
-
 </div>
 
 
-  <script type="text/javascript" src="interactive/30clusters_word_tweet.js"></script>
-
-  
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.slim.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -157,7 +149,7 @@
 </body>
 
 <!-- Footer -->
-<footer class="page-footer font-small gray" style="background-color: #2e3438; color:lightgray; bottom: 0; width: 100%"> 
+<footer class="page-footer font-small gray" style="background-color: #2e3438; color:lightgray; bottom: 0; width: 100%">
  <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2020 Copyright:
     <a href="https://melady.usc.edu/" style="color: lightgray"> University of Southern California, <u> Melady Lab </u></a>
@@ -168,4 +160,3 @@
 <!-- Footer -->
 
 </html>
-

@@ -4,15 +4,15 @@ function display(val) {
 	tweets = showTweets(clustername)
 	// alert('ok'+ val)
 	document.getElementById("words").innerHTML = words;
-	document.getElementById("tweets").innerHTML = tweets	
+	document.getElementById("tweets").innerHTML = tweets
 }
 
 //  var myPlot = document.getElementById('460fa904-16fe-4a9e-9ff8-f98cb05e5796')
 //     myPlot.on('plotly_legendclick', function(clickdata){
 
 //         // alert("ok");
-//         var clustername = data[clickdata.curveNumber]['name'] 
-         
+//         var clustername = data[clickdata.curveNumber]['name']
+
 //         var textblock = showData(clustername)
 //         document.getElementById("worddistribution").innerHTML = textblock
 
@@ -144,7 +144,7 @@ function showWords(clustername){
     return textblock;
 };
 
-function getTable(clustername, wordlist, tfidf){              
+function getTable(clustername, wordlist, tfidf){
     var str = "" // <p class='lead'>Top Words in Cluster " + clustername + "</p>";
     str += "<table padding='10px'><tr style='border-bottom:1px solid lightpink'><th>Word</th><th>TF-IDF</th></tr>";
     var i;

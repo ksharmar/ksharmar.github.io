@@ -3,13 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Coronavirus Tweets Analysis">
   <meta name="author" content="Melady Lab">
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <title>Melady Lab, Coronavirus Tweets on Social Media </title>
-
   <!-- Bootstrap core CSS -->
   <!-- Bootstrap core CSS -->
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -18,30 +15,33 @@
   <script src="bootstrap/js/bootstrap.min.js"></script>
 
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
+
   <script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js">
   </script>
   <script type = "text/javascript">
-     google.charts.load('current', {packages: ['corechart']});     
+     google.charts.load('current', {packages: ['corechart']});
   </script>
    <script type = "text/javascript">
-     google.charts.load('current', {packages: ['table']});     
+     google.charts.load('current', {packages: ['table']});
   </script>
-  
+
 </head>
+
+
+
 
 <body>
 
     <div id="header">
         <!-- Navigation -->
-       
+
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <div class="container">
           <a class="navbar-brand" href="index.html">USC Melady Lab </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-            
+
             <div class="navbar-right collapse navbar-collapse menu-mobile" id="navbarResponsive">
               <ul class="nav navbar-nav ml-auto navbar-link-area">
                 <li class="nav-item">
@@ -66,28 +66,27 @@
           </div>
         </nav>
         </div>
-    
+
 <!-- Page Content -->
-  
+
 <div class="container" style="padding-top: 20px; padding-bottom: 0px ">
 
     <br/>
     <h2> Coronavirus on Social Media: Analyzing Geographical Distribution </h2>
     <br/>
-	
-	<div class="row">
 
-    <p class="card-text"></p>
-        Social media collects posts from users around the world. After analyzing over 7 million tweets collected from 2019-03-08 to 2020-03-11, we show the geographical distribution of the count of tweets (in log scale).
+    <p class="lead">
+        Social media collects posts from users around the world.
+        After analyzing over 7 million tweets collected from 2019-03-08 to 2020-03-11,
+        we show the geographical distribution of the count of tweets (in log scale).
+    </p>
 
-  </div>
+  <br/><br/>
 
-  <div class="row">
-    <img src="img/geo_tweet_count.png" class="img-fluid" alt="Responsive image">
-  </div>
+  <img src="img/geo_tweet_count.png" class="img-fluid" alt="Responsive image">
 
 </div>
-  
+
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.slim.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -97,7 +96,7 @@
 </body>
 
 <!-- Footer -->
-<footer class="page-footer font-small gray" style="background-color: #2e3438; color:lightgray; bottom: 0; width: 100%"> 
+<footer class="page-footer font-small gray" style="background-color: #2e3438; color:lightgray; bottom: 0; width: 100%">
  <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2020 Copyright:
     <a href="https://melady.usc.edu/" style="color: lightgray"> University of Southern California, <u> Melady Lab </u></a>
@@ -108,4 +107,3 @@
 <!-- Footer -->
 
 </html>
-
