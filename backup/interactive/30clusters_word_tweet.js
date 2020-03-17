@@ -160,8 +160,8 @@ function showTweets(clustername){
 	tweetlist = getTweets(clustername)
 	var str = "";
     str += "<table><tr style='border-bottom:1px solid lightpink'><th>Tweets</th></tr>";
-    var i;  // currently 25 tweets shown tweetlist.length/8
-    for (i = 0; i < 7; i++) {
+    var i;  // currently 25 tweets shown
+    for (i = 0; i < tweetlist.length/2; i++) {
         str += "<tr style='border-bottom:1px solid lightpink'><td><div style='width: 600px;'>" + tweetlist[i] + "</div></td></tr>";
     }
     str += "</table>";

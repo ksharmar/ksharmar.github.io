@@ -8,7 +8,7 @@
 
 .img { display: inline; }
 
-figure { 
+figure {
     display: inline-block;
 }
 
@@ -28,8 +28,8 @@ th, td {
   padding: 2px;
 }
 
-.button {
-  background-color: #4CAF50; /* Green */
+/* .button {
+  background-color: #4CAF50;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -37,19 +37,20 @@ th, td {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-}
+} */
 .button {
-  border: none;
-  color: white;
-  width: 40px;
-  height: 20px;
-  padding: 1px 1px;
-  text-align: center;
+  border: black;
+  color: black;
+  background-color: papayawhip;
+  width: 130px;
+  height: 30px;
+  padding: 4px 4px;
+  text-align: left;
   text-decoration: none;
   display: inline-block;
-  font-size: 12px;
+  font-size: 16px;
 }
-.button.c1{background-color:blue;}
+/* .button.c1{background-color:blue;}
 .button.c2{background-color:brown;}
 .button.c3{background-color:green;}
 .button.c4{background-color:coral;}
@@ -77,7 +78,17 @@ th, td {
 .button.c26{background-color:almond;}
 .button.c27{background-color:gray;}
 .button.c28{background-color:purple;}
-.button.c29{background-color:red;}
+.button.c29{background-color:red;} */
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* height: 300px;*/
+  width: 90%;
+}
 
-
+.card-header{
+  background-color: lightgray;
+  color:black;
+}
