@@ -8,18 +8,28 @@ function showMisinfoTweets(){
 	// var abc =  [['a', 'b', 'c'], ['d', 'e', 'f'], ['g', 'h', 'i']];
   var  abc = getMisinfoTweets();
 	var str = "";
-  str += "<table ><tr style='border-bottom:1px solid lightpink'>"
-  str += "<th>Website Type (if available)</th>  <th>Detection Score</th> <th>False/Misleading Tweets</th> </tr>";
+  str += "<table class='mistable'>"
+  // str += "<tr>";
+  // str += "<th>Website Type (if available)</th>";
+  // str += "<th>Detection Score</th>";
+  // str += "<th>False/Misleading Tweets</th> </tr>";
+
+	// str += "<table>"
+	str += "<tr class='mistr'><th class='misth'>Website Type (if available)</th>"
+	+ "<th class='misth'>Detection Score</th><th class='misth'>Tweet Propagated on Social Media</th></tr>"
+	// str += "<tr><td>a</td><td>b</td><td>c</td></tr>"
+	// str += "<table>"
+
   var i;  // currently 25 tweets shown tweetlist.length/8
   for (i = 0; i < abc.length; i++) {
-      str += "<tr style='border-bottom:1px solid lightpink'>"
-      str += "<td>" +   abc[i][0] + "<td>"
-      str += "<td>" +   abc[i][1] + "<td>"
-      str += "<td><div style='width: 600px;'>" +  abc[i][2] + "</div></td></tr>";
+      str += "<tr class='mistr'>";
+      str += "<td class='mistd'>" +   abc[i][0] + "</td>";
+      str += "<td class='mistd'>" +   abc[i][1] + "</td>";
+      str += "<td class='mistd'>" +  abc[i][2] + "</td></tr>";
   }
   str += "</table> <br/><br/><br/>";
-  // str += "<br><a href=javascript:showMoreTweets(" + clustername + ")  style='color: dimgray'>" + "See more tweets" + "</a>";
-  // alert(str);
+  // // str += "<br><a href=javascript:showMoreTweets(" + clustername + ")  style='color: dimgray'>" + "See more tweets" + "</a>";
+  // // alert(str);
   return str;
 }
 
