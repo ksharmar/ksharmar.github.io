@@ -33,39 +33,39 @@
 <body>
 
     <div id="header">
-        <!-- Navigation -->
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+     <div class="container">
+       <a class="navbar-brand" href="index.html">USC Melady Lab </a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-        <div class="container">
-          <a class="navbar-brand" href="index.html">USC Melady Lab </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+         <div class="navbar-right collapse navbar-collapse menu-mobile" id="navbarResponsive">
+           <ul class="nav navbar-nav ml-auto navbar-link-area">
+             <li class="nav-item">
+               <a class="nav-link" href="index.html">Coronovirus Tweets
+                 <span class="sr-only">(current)</span>
+               </a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="trend.html">Trend Analysis</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="misinfo.html">Misinformation Analysis</a>
+             </li>
+             <li class="nav-item active">
+               <a class="nav-link" href="geo.html">Geo Analysis</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="contact.html">Contact</a>
+             </li>
+           </ul>
+         </div>
+       </div>
+     </nav>
+     </div>
 
-            <div class="navbar-right collapse navbar-collapse menu-mobile" id="navbarResponsive">
-              <ul class="nav navbar-nav ml-auto navbar-link-area">
-                <li class="nav-item">
-                  <a class="nav-link" href="index.html">Coronovirus Tweets
-                    <span class="sr-only">(current)</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="trend.html">Trend Analysis</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="misinfo.html">Bot Analysis</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="geo.html">Geo Analysis</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-        </div>
 
 <!-- Page Content -->
 
@@ -78,7 +78,7 @@
     <p class="lead">
         Social media collects posts from users around the world.
         After analyzing over 2 million tweets with geographical information collected from 2019-03-09 to 2020-03-15,
-        we show the daily geographical distribution of the count of tweets (in log scale). 
+        we show the daily geographical distribution of the count of tweets (in log scale).
         We also show the daily increasement of the count of tweets (measured as #TweetsToday/#TweetsYesterday) side by side.
     </p>
 
