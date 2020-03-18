@@ -26,9 +26,11 @@
   </script>
 
   <script language="JavaScript" src="interactive/bot.js"></script>
+  <script type="text/javascript" src="interactive/misinfo.js"></script>
+
 </head>
 
-<body>
+<body onLoad="misinfo_display();">
 
   <div id="header">
     <!-- Navigation -->
@@ -50,7 +52,7 @@
               <a class="nav-link" href="trend.html">Trend Analysis</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="misinfo.html">Bot Analysis</a>
+              <a class="nav-link" href="misinfo.html">Misinformation Analysis</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="geo.html">Geo Analysis</a>
@@ -69,6 +71,24 @@
 <div class="container" style="padding-top: 20px; padding-bottom: 0px ">
 
     <br/>
+    <h2> Coronavirus on Social Media: Misinformation  Analysis </h2>
+    <br/>
+
+    <p class="lead">
+        Misinformation detection to find false, misleading and clickbait content being spreads
+        around Coronavirus.
+    </p>
+
+    <div class="row">
+      <div class="col">
+        <br/></br>
+        <div id = "misinfo_score_table" style = "width: 100%; height: 400px; margin: 0 auto">
+        </div>
+        <br/></br>
+      </div>
+    </div>
+
+    <!-- <br/>
     <h2> Coronavirus on Social Media: Analyzing User Behaviours </h2>
     <br/>
 
@@ -79,9 +99,9 @@
         which scores user accounts based on their network activities to estimate
         the probabilities that the account exhibits characteristics of social bots.
 
-    </p>
+    </p> -->
 
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-sm-5">
         <div id = "bot_hist" style = "width: 100%; height: 400px; margin: 0 auto">
         </div>
@@ -91,9 +111,10 @@
         <div id = "bot_score_table" style = "width: 100%; height: 400px; margin: 0 auto">
         </div>
       </div>
-    </div>
+    </div> -->
 
 </div>
+
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.slim.min.js"></script>
@@ -104,14 +125,11 @@
 </body>
 
 <!-- Footer -->
-<footer class="page-footer font-small gray" style="background-color: #2e3438; color:lightgray; bottom: 0; width: 100%">
- <!-- Copyright -->
+<!-- <footer class="page-footer font-small gray" style="background-color: #2e3438; color:lightgray; bottom: 0; width: 100%">
   <div class="footer-copyright text-center py-3">© 2020 Copyright:
     <a href="https://melady.usc.edu/" style="color: lightgray"> University of Southern California, <u> Melady Lab </u></a>
   </div>
-  <!-- Copyright -->
-
-</footer>
+</footer> -->
 <!-- Footer -->
 
 </html>
