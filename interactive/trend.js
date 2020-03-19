@@ -1,7 +1,5 @@
-// CHART 1 STARTS HERE
 // drawLineChart1 : Top-K hashtags
-google.charts.setOnLoadCallback(drawLineChart1);
-
+// DEPRECATED: We use better LineChart
 function drawLineChart1() {
 
   var data = new google.visualization.DataTable();
@@ -57,7 +55,7 @@ function drawLineChart1() {
       data.addColumn('number', 'coron');
       data.addColumn('number', 'pandemic');
 
-
+      // zero-based month
       data.addRows([
         [new Date(2020, 2, 14), 77838, 54223, 8637, 7785, 7671, 6986, 2910, 2686, 2216, 1990,
           1778, 1310, 1246, 1241, 1163, 1111, 1028, 1021, 918, 865, 834,
@@ -84,12 +82,13 @@ function drawLineChart1() {
       //     title: 'Top-50 hashtags trend',
       //     subtitle: 'in the number of usage count',
       // },
-       title: 'Top-50 hashtags trend of daily usage counts',
+        lineWidth: 4,
         hAxis: {
           format: "MMM d",
-          ticks: [new Date(2020,2,14),
-                  new Date(2020,2,15),
-                  new Date(2020,2,16),
+          // zero-based month
+          ticks: [new Date(2020,2,14), 
+                  new Date(2020,2,15), 
+                  new Date(2020,2,16), 
                   new Date(2020,2,17)],
         },
         vAxis: {
@@ -100,78 +99,386 @@ function drawLineChart1() {
 
       // var chart = new google.charts.Line(document.getElementById('topk_hashtags_line'));
       var chart = new google.visualization.LineChart(document.getElementById('topk_hashtags_line'));
-
+      
       // chart.draw(data, google.charts.Line.convertOptions(options));
       chart.draw(data, options);
+
 }
+google.charts.setOnLoadCallback(drawLineChart1);
+//////////
 
 
 
+// CHART 1 STARTS HERE
+// chartDrawFun : Top-K hashtags
+var chartDrawFun = {
+
+  chartDraw : function(){
+      var chartData = '';
+
+      var chartDateformat 	= 'yyyy-MM-dd';
+      var chartLineCount    = 5;
+      var controlLineCount	= 5;
 
 
+      function drawDashboard() {
+
+        var data = new google.visualization.DataTable();
+
+        data.addColumn('datetime' , 'Day');
+        data.addColumn('number', 'coronavirus');
+        data.addColumn('number', 'covid19');
+        data.addColumn('number', 'coronavirusoutbreak');
+        data.addColumn('number', 'covid2019');
+        data.addColumn('number', 'covid');
+        data.addColumn('number', 'covid_19');
+        data.addColumn('number', 'dontbeaspreader');
+        data.addColumn('number', 'corona');
+        data.addColumn('number', 'co');
+        data.addColumn('number', 'covid19france');
+        data.addColumn('number', 'covid-19');
+        data.addColumn('number', 'yomequedoencasa');
+        data.addColumn('number', 'china');
+        data.addColumn('number', 'coronavirusfrance');
+        data.addColumn('number', 'quarantinelife');
+        data.addColumn('number', 'coronavirusenfrance');
+        data.addColumn('number', 'breaking');
+        data.addColumn('number', 'confinementtotal');
+        data.addColumn('number', 'shipsgoingdown');
+        data.addColumn('number', 'rmstoiletpap');
+        data.addColumn('number', 'stayhomechallenge');
+        data.addColumn('number', 'socialdistancing');
+        data.addColumn('number', 'covid19malaysia');
+        data.addColumn('number', 'chinesevirus');
+        data.addColumn('number', 'cuba');
+        data.addColumn('number', 'flattenthecurve');
+        data.addColumn('number', 'coronavirusuk');
+        data.addColumn('number', 'venezuela');
+        data.addColumn('number', 'bbb20');
+        data.addColumn('number', 'qu');
+        data.addColumn('number', 'coronav');
+        data.addColumn('number', 'coronapocolypse');
+        data.addColumn('number', 'coronavirusupdates');
+        data.addColumn('number', 'confinementotal');
+        data.addColumn('number', 'confinement');
+        data.addColumn('number', 'quedateencasa');
+        data.addColumn('number', 'coronaviruspandemic');
+        data.addColumn('number', 'restezchezvous');
+        data.addColumn('number', 'update');
+        data.addColumn('number', 'stayhome');
+        data.addColumn('number', 'iran');
+        data.addColumn('number', 'quedateenlacasa');
+        data.addColumn('number', 'macron');
+        data.addColumn('number', 'trump');
+        data.addColumn('number', 'viruschino');
+        data.addColumn('number', 'italy');
+        data.addColumn('number', 'coronavirusinpakistan');
+        data.addColumn('number', 'cuarentenanacional');
+        data.addColumn('number', 'coronavirusindia');
+        data.addColumn('number', 'cov');
+
+
+        data.addRows([
+          [new Date(2020, 2, 13), 64598, 42575, 800, 989, 2151, 9484, 0, 1922, 712, 50, 315, 663, 1617, 46, 0, 0, 1581, 0, 0, 0, 0, 251, 0, 51, 301, 476, 156, 733, 40, 187, 546, 0, 142, 0, 223, 414, 3858, 0, 119, 89, 492, 0, 447, 837, 0, 537, 0, 0, 192, 307],
+          [new Date(2020, 2, 14), 77838, 54223, 670, 832, 8637, 7785, 0, 2216, 834, 54, 289, 1241, 2686, 261, 0, 0, 1310, 0, 0, 0, 0, 357, 0, 0, 1246, 715, 155, 742, 55, 268, 424, 30, 2910, 0, 440, 436, 6986, 307, 98, 276, 508, 0, 389, 786, 0, 918, 0, 0, 259, 821],
+          [new Date(2020, 2, 15), 83336, 50520, 2612, 624, 18233, 3192, 0, 2287, 919, 27, 395, 1426, 1718, 643, 0, 263, 2395, 0, 0, 0, 0, 738, 0, 41, 701, 955, 285, 774, 45, 409, 1277, 963, 6692, 0, 530, 408, 1279, 585, 145, 1149, 642, 0, 272, 753, 0, 1195, 0, 0, 266, 420],
+          [new Date(2020, 2, 16), 86221, 59215, 8704, 1404, 10506, 2470, 2944, 2773, 992, 941, 557, 728, 1450, 620, 1001, 645, 2407, 1303, 47, 47, 32, 962, 452, 0, 747, 907, 326, 580, 198, 503, 1002, 2031, 2430, 24, 835, 569, 711, 196, 158, 687, 520, 156, 1227, 634, 0, 719, 302, 0, 436, 354],
+          [new Date(2020, 2, 17), 88814, 64330, 10557, 6472, 5462, 4139, 3128, 2758, 2502, 2221,
+            2210, 2071, 1872, 1789, 1748, 1598, 1310, 1271, 1144, 1144, 1108, 1056, 923, 859, 792, 755, 753, 726, 706, 702, 696, 696, 673, 662, 643, 606, 586, 576, 557, 556, 553, 553, 544, 543, 539, 525, 508, 505, 503, 484]
+        ]);
+
+        var chart = new google.visualization.ChartWrapper({
+            chartType   : 'LineChart',
+            containerId : 'lineChartArea',
+            options     : {
+                            isStacked   : 'percent',
+                            focusTarget : 'category',
+                            height		  : 500,
+                            width			  : '100%',
+                            legend		  : { position: "right", textStyle: {fontSize: 13}},
+                            pointSize		: 5,
+                            tooltip		  : {textStyle : {fontSize:12}, showColorCode : true, trigger: 'both'},
+                            hAxis			  : {format: chartDateformat, 
+                                           gridlines:{count:chartLineCount,
+                                                      units: {
+                                                                years : {format: ['yyyy']},
+                                                                months: {format: ['MM']},
+                                                                days  : {format: ['dd']}}
+                                                      },
+                                           textStyle: {fontSize:12}},
+                            vAxis			  : {title: 'the daily usage count (logscale)',
+                                           logScale: true,
+                                           minValue: 0,
+                                           viewWindow:{min:0},
+                                           gridlines:{count:-1},
+                                           textStyle:{fontSize:12}
+                                          },
+                            animation		: {startup: true,duration: 1000,easing: 'in' },
+                            annotations	: {pattern: chartDateformat,
+                                            textStyle: {
+                                            fontSize: 15,
+                                            bold: true,
+                                            italic: true,
+                                            color: '#871b47',
+                                            auraColor: '#d799ae',
+                                            opacity: 0.8,
+                                            pattern: chartDateformat
+                                          }
+                                        }
+                            }
+          });
+
+          var control = new google.visualization.ControlWrapper({
+            controlType: 'ChartRangeFilter',
+            containerId: 'controlsArea',
+            options: {
+                ui:{
+                      chartType: 'LineChart',
+                      chartOptions: {
+                      chartArea: {'width': '60%', 'height' : 80},
+                      hAxis: {'baselineColor': 'none', format: chartDateformat, textStyle: {fontSize:12},
+                          gridlines: {count:controlLineCount,
+                                      units: {
+                                        years : {format: ['yyyy']},
+                                        months: {format: ['MM']},
+                                        days  : {format: ['dd']}
+                                      }
+                                     }
+                            }
+                      }
+                },
+                filterColumnIndex: 0
+              }
+          });
+
+          var date_formatter = new google.visualization.DateFormat({ pattern: chartDateformat});
+          date_formatter.format(data, 0);
+
+          var dashboard = new google.visualization.Dashboard(document.getElementById('Line_Controls_Chart'));
+          // window.addEventListener('resize', function() { dashboard.draw(data); }, false);
+          dashboard.bind([control], [chart]);
+          dashboard.draw(data);
+
+      }
+      google.charts.setOnLoadCallback(drawDashboard);
+
+    }
+}
+$(document).ready(function(){
+  google.charts.load('current', {'packages':['line','controls']});
+  chartDrawFun.chartDraw(); //run chartDraw()
+});
+
+
+// emergingChartDrawFun :Top-K emerging hashtags
+// Emerging hashtags
+var emergingChartDrawFun = {
+
+  chartDraw : function(){
+
+      var chartDateformat 	= 'yyyy-MM-dd';
+      var chartLineCount    = 5;
+      var controlLineCount	= 5;
+
+
+      function drawDashboard() {
+
+        var data = new google.visualization.DataTable();
+
+        data.addColumn('datetime' , 'Day');
+        data.addColumn('number', 'coronavirus');
+        data.addColumn('number', 'covid19');
+        data.addColumn('number', 'coronavirusoutbreak');
+        data.addColumn('number', 'covid2019');
+        data.addColumn('number', 'dontbeaspreader');
+        data.addColumn('number', 'covid');
+        data.addColumn('number', 'covid19france');
+        data.addColumn('number', 'quarantinelife');
+        data.addColumn('number', 'covid-19');
+        data.addColumn('number', 'coronavirusfrance');
+        data.addColumn('number', 'confinementtotal');
+        data.addColumn('number', 'coronavirusenfrance');
+        data.addColumn('number', 'co');
+        data.addColumn('number', 'coronapocolypse');
+        data.addColumn('number', 'shipsgoingdown');
+        data.addColumn('number', 'rmstoiletpap');
+        data.addColumn('number', 'yomequedoencasa');
+        data.addColumn('number', 'covid19malaysia');
+        data.addColumn('number', 'stayhomechallenge');
+        data.addColumn('number', 'corona');
+        data.addColumn('number', 'socialdistancing');
+        data.addColumn('number', 'cuarentenacoronavirus');
+        data.addColumn('number', 'chinesevirus');
+        data.addColumn('number', 'bbb20');
+        data.addColumn('number', 'coronavirusuk');
+        data.addColumn('number', 'confinementotal');
+        data.addColumn('number', 'stayhome');
+        data.addColumn('number', 'coronavirusinpakistan');
+        data.addColumn('number', 'qu');
+        data.addColumn('number', 'quedateenlacasa');
+
+
+        data.addRows([
+          [new Date(2020, 2, 13), 64598, 42575, 800, 989, 0, 2151, 50, 0, 315, 46, 0, 0, 712, 0, 0, 0, 663, 0, 0, 1922, 251, 0, 51, 40, 156, 0, 89, 0, 187, 0],
+          [new Date(2020, 2, 14), 77838, 54223, 670, 832, 0, 8637, 54, 0, 289, 261, 0, 0, 834, 30, 0, 0, 1241, 0, 0, 2216, 357, 0, 0, 55, 155, 0, 276, 0, 268, 0],
+          [new Date(2020, 2, 15), 83336, 50520, 2612, 624, 0, 18233, 27, 0, 395, 643, 0, 263, 919, 963, 0, 0, 1426, 0, 0, 2287, 738, 235, 41, 45, 285, 0, 1149, 0, 409, 0],
+          [new Date(2020, 2, 16), 86221, 59215, 8704, 1404, 2944, 10506, 941, 1001, 557, 620, 1303, 645, 992, 2031, 47, 47, 728, 452, 32, 2773, 962, 1483, 0, 198, 326, 24, 687, 302, 503, 156],
+          [new Date(2020, 2, 17), 88814, 64330, 10557, 6472, 3128, 5462, 2221, 1748, 2210, 1789, 1271, 1598, 2502, 696, 1144, 1144, 2071, 923, 1108, 2758, 1056, 312, 859, 706, 753, 662, 556, 508, 702, 553]
+        ]);
+
+        var chart = new google.visualization.ChartWrapper({
+            chartType   : 'LineChart',
+            containerId : 'emergingLineChartArea',
+            options     : {
+                            isStacked   : 'percent',
+                            focusTarget : 'category',
+                            height		  : 500,
+                            width			  : '100%',
+                            legend		  : { position: "right", textStyle: {fontSize: 13}},
+                            pointSize		: 5,
+                            tooltip		  : {textStyle : {fontSize:12}, showColorCode : true, trigger: 'both'},
+                            hAxis			  : {format: chartDateformat, 
+                                            gridlines:{count:chartLineCount,
+                                                      units: {
+                                                                years : {format: ['yyyy']},
+                                                                months: {format: ['MM']},
+                                                                days  : {format: ['dd']}}
+                                                      },
+                                            textStyle: {fontSize:12}},
+                            vAxis			  : {title: 'the daily usage count (logscale)',
+                                            logScale: true,
+                                            minValue: 0,
+                                            viewWindow:{min:0},
+                                            gridlines:{count:-1},
+                                            textStyle:{fontSize:12}
+                                          },
+                            animation		: {startup: true,duration: 1000,easing: 'in' },
+                            annotations	: {pattern: chartDateformat,
+                                            textStyle: {
+                                            fontSize: 15,
+                                            bold: true,
+                                            italic: true,
+                                            color: '#871b47',
+                                            auraColor: '#d799ae',
+                                            opacity: 0.8,
+                                            pattern: chartDateformat
+                                          }
+                                        }
+                            }
+          });
+
+          var control = new google.visualization.ControlWrapper({
+            controlType: 'ChartRangeFilter',
+            containerId: 'emergingControlsArea',
+            options: {
+                ui:{
+                      chartType: 'LineChart',
+                      chartOptions: {
+                      chartArea: {'width': '60%', 'height' : 80},
+                      hAxis: {'baselineColor': 'none', format: chartDateformat, textStyle: {fontSize:12},
+                          gridlines: {count:controlLineCount,
+                                      units: {
+                                        years : {format: ['yyyy']},
+                                        months: {format: ['MM']},
+                                        days  : {format: ['dd']}
+                                      }
+                                      }
+                            }
+                      }
+                },
+                filterColumnIndex: 0
+              }
+          });
+
+          var date_formatter = new google.visualization.DateFormat({ pattern: chartDateformat});
+          date_formatter.format(data, 0);
+
+          var dashboard = new google.visualization.Dashboard(document.getElementById('Emerging_Line_Controls_Chart'));
+          // window.addEventListener('resize', function() { dashboard.draw(data); }, false);
+          dashboard.bind([control], [chart]);
+          dashboard.draw(data);
+
+      }
+      google.charts.setOnLoadCallback(drawDashboard);
+  }
+}
+$(document).ready(function(){
+  google.charts.load('current', {'packages':['line','controls']});
+  emergingChartDrawFun.chartDraw(); //run chartDraw()
+});
+  
+
+
+// drawChart_table :Top-K hashtags
+// Hashtags
 function drawChart_table() {
   // Define the chart to be drawn.
   var data = new google.visualization.DataTable();
   data.addColumn('string', 'Hashtag');
+  data.addColumn('number', '2020-03-17');
+  data.addColumn('number', '2020-03-16');
   data.addColumn('number', '2020-03-15');
   data.addColumn('number', '2020-03-14');
-  data.addRows([['coronavirus', 83336, 77838],
-  ['covid19', 50520, 54223],
-  ['covid', 18233, 8637],
-  ['coronavirusupdates', 6692, 2910],
-  ['coronapocalypse', 5581, 7671],
-  ['covid_19', 3192, 7785],
-  ['coronavirusoutbreak', 2612, 670],
-  ['breaking', 2395, 1310],
-  ['corona', 2287, 2216],
-  ['china', 1718, 2686],
-  ['quedateentucasa', 1672, 596],
-  ['yomequedoencasa', 1426, 1241],
-  ['coronaviruspandemic', 1279, 6986],
-  ['coronav', 1277, 424],
-  ['italy', 1195, 918],
-  ['stayhome', 1149, 276],
-  ['wuhan', 1066, 1990],
-  ['coronapocolypse', 963, 30],
-  ['flattenthecurve', 955, 715],
-  ['co', 919, 834],
-  ['venezuela', 774, 742],
-  ['trump', 753, 786],
-  ['socialdistancing', 738, 357],
-  ['estevirusloparamosunidos', 702, 29],
-  ['cuba', 701, 1246],
-  ['virus', 695, 354],
-  ['coronavir', 680, 428],
-  ['coronavirusfrance', 643, 261],
-  ['iran', 642, 508],
-  ['italia', 641, 1111],
-  ['coronaoutbreak', 630, 1778],
-  ['covid2019', 624, 832],
-  ['france', 621, 599],
-  ['staythefhome', 601, 0],
-  ['paris', 597, 418],
-  ['coronaindia', 590, 0],
-  ['restezchezvous', 585, 307],
-  ['highriskcovid19', 541, 0],
-  ['cor', 536, 621],
-  ['confinement', 530, 440],
-  ['espa', 518, 421],
-  ['urgente', 496, 261],
-  ['coronavirusupdate', 452, 560],
-  ['saarc', 449, 38],
-  ['coronavi', 448, 527],
-  ['lockdownindonesia', 434, 694],
-  ['cov', 420, 821],
-  ['socialdistancingnow', 417, 63],
-  ['jimacosta', 417, 29],
-  ['nutrubberlemon', 414, 0]]);
+  data.addColumn('number', '2020-03-13');
+  data.addRows([
+    ['coronavirus', 88814, 86221, 83336, 77838, 64598],
+    ['covid19', 64330, 59215, 50520, 54223, 42575],
+    ['coronavirusoutbreak', 10557, 8704, 2612, 670, 800],
+    ['covid2019', 6472, 1404, 624, 832, 989],
+    ['covid', 5462, 10506, 18233, 8637, 2151],
+    ['covid_19', 4139, 2470, 3192, 7785, 9484],
+    ['dontbeaspreader', 3128, 2944, 0, 0, 0],
+    ['corona', 2758, 2773, 2287, 2216, 1922],
+    ['co', 2502, 992, 919, 834, 712],
+    ['covid19france', 2221, 941, 27, 54, 50],
+    ['covid-19', 2210, 557, 395, 289, 315],
+    ['yomequedoencasa', 2071, 728, 1426, 1241, 663],
+    ['china', 1872, 1450, 1718, 2686, 1617],
+    ['coronavirusfrance', 1789, 620, 643, 261, 46],
+    ['quarantinelife', 1748, 1001, 0, 0, 0],
+    ['coronavirusenfrance', 1598, 645, 263, 0, 0],
+    ['breaking', 1310, 2407, 2395, 1310, 1581],
+    ['confinementtotal', 1271, 1303, 0, 0, 0],
+    ['shipsgoingdown', 1144, 47, 0, 0, 0],
+    ['rmstoiletpap', 1144, 47, 0, 0, 0],
+    ['stayhomechallenge', 1108, 32, 0, 0, 0],
+    ['socialdistancing', 1056, 962, 738, 357, 251],
+    ['covid19malaysia', 923, 452, 0, 0, 0],
+    ['chinesevirus', 859, 0, 41, 0, 51],
+    ['cuba', 792, 747, 701, 1246, 301],
+    ['flattenthecurve', 755, 907, 955, 715, 476],
+    ['coronavirusuk', 753, 326, 285, 155, 156],
+    ['venezuela', 726, 580, 774, 742, 733],
+    ['bbb20', 706, 198, 45, 55, 40],
+    ['qu', 702, 503, 409, 268, 187],
+    ['coronav', 696, 1002, 1277, 424, 546],
+    ['coronapocolypse', 696, 2031, 963, 30, 0],
+    ['coronavirusupdates', 673, 2430, 6692, 2910, 142],
+    ['confinementotal', 662, 24, 0, 0, 0],
+    ['confinement', 643, 835, 530, 440, 223],
+    ['quedateencasa', 606, 569, 408, 436, 414],
+    ['coronaviruspandemic', 586, 711, 1279, 6986, 3858],
+    ['restezchezvous', 576, 196, 585, 307, 0],
+    ['update', 557, 158, 145, 98, 119],
+    ['stayhome', 556, 687, 1149, 276, 89],
+    ['iran', 553, 520, 642, 508, 492],
+    ['quedateenlacasa', 553, 156, 0, 0, 0],
+    ['macron', 544, 1227, 272, 389, 447],
+    ['trump', 543, 634, 753, 786, 837],
+    ['viruschino', 539, 0, 0, 0, 0],
+    ['italy', 525, 719, 1195, 918, 537],
+    ['coronavirusinpakistan', 508, 302, 0, 0, 0],
+    ['cuarentenanacional', 505, 0, 0, 0, 0],
+    ['coronavirusindia', 503, 436, 266, 259, 192],
+    ['cov', 484, 354, 420, 821, 307]
+  ]);
 
   var options = {
      showRowNumber: false,
-     width: '80%',
+     width: '80%', 
      height: '80%',
   };
-
+        
   // Instantiate and draw the chart.
   var chart = new google.visualization.Table(document.getElementById('topk_hashtags'));
   chart.draw(data, options);
@@ -179,74 +486,129 @@ function drawChart_table() {
 google.charts.setOnLoadCallback(drawChart_table);
 
 
+// drawChart_table :Top-K emerging hashtags
+// Hashtags
 function drawChart_table2() {
   // Define the chart to be drawn.
   var data = new google.visualization.DataTable();
   data.addColumn('string', 'Hashtag');
-  data.addColumn('number', 'Emerging on 2020-03-15');
-  data.addColumn('number', 'Ratio');
-  data.addRows([['covid', 18233, 2.11],
-  ['coronavirusupdates', 6692, 2.3],
-  ['coronavirusoutbreak', 2612, 3.9],
-  ['quedateentucasa', 1672, 2.81],
-  ['coronav', 1277, 3.01],
-  ['stayhome', 1149, 4.16],
-  ['coronapocolypse', 963, 32.1],
-  ['socialdistancing', 738, 2.07],
-  ['estevirusloparamosunidos', 702, 24.21],
-  ['coronavirusfrance', 643, 2.46],
-  ['saarc', 449, 11.82],
-  ['socialdistancingnow', 417, 6.62],
-  ['jimacosta', 417, 14.38],
-  ['pandemie', 385, 4.58],
-  ['per', 364, 3.25],
-  ['spain', 359, 2.3],
-  ['stayathome', 348, 3.31],
-  ['trumpplague', 338, 4.07],
-  ['municipales2020', 331, 2.21],
-  ['nationaldayofprayer', 331, 9.19],
-  ['covid19chile', 322, 7.32],
-  ['coronaviruspakistan', 322, 2.52],
-  ['coronavirusargentina', 304, 9.81],
-  ['panicshopping', 301, 12.54],
-  ['edouardphilippe', 290, 4.83],
-  ['embarazada', 269, 3.2],
-  ['municipale2020', 267, 4.85],
-  ['escudobolivarianoiii2020', 259, 10.36],
-  ['coronavirussa', 240, 5.71],
-  ['namaste', 225, 2.5],
-  ['vivelatino', 213, 3.55],
-  ['coronavirusenchile', 211, 7.54],
-  ['mequedoencasa', 201, 4.1],
-  ['mascherine', 195, 3.48],
-  ['president', 186, 6.2],
-  ['up', 170, 5.67],
-  ['israel', 162, 2.16],
-  ['suspendanlasclasesya', 162, 2.31],
-  ['coronavirusinsa', 155, 3.04],
-  ['indonesiabutuhpemimpin', 149, 2.76],
-  ['papafrancisco', 149, 5.32],
-  ['kashmir', 146, 4.87],
-  ['quedatencasa', 144, 2.29],
-  ['boristhebutcher', 143, 2.8],
-  ['staythefuckhome', 139, 2.11],
-  ['covid19nl', 134, 4.06],
-  ['coronavirusnl', 133, 3.32],
-  ['socialdistance', 127, 6.35],
-  ['coronavirusitaly', 126, 2.0],
-  ['coronavirusaustralia', 122, 2.39]]);
+  data.addColumn('number', '2020-03-17');
+  data.addColumn('number', '2020-03-16');
+  data.addColumn('number', '2020-03-15');
+  data.addColumn('number', '2020-03-14');
+  data.addColumn('number', '2020-03-13');
+  data.addColumn('number', 'Slope');
+  data.addRows([['coronavirus', 88814, 86221, 83336, 77838, 64598, 5681.5],
+  ['covid19', 64330, 59215, 50520, 54223, 42575, 4850.2],
+  ['coronavirusoutbreak', 10557, 8704, 2612, 670, 800, 2754.8],
+  ['covid2019', 6472, 1404, 624, 832, 989, 1153.8],
+  ['dontbeaspreader', 3128, 2944, 0, 0, 0, 920.0],
+  ['covid', 5462, 10506, 18233, 8637, 2151, 849.1],
+  ['covid19france', 2221, 941, 27, 54, 50, 522.9],
+  ['quarantinelife', 1748, 1001, 0, 0, 0, 449.7],
+  ['covid-19', 2210, 557, 395, 289, 315, 405.8],
+  ['coronavirusfrance', 1789, 620, 643, 261, 46, 384.5],
+  ['confinementtotal', 1271, 1303, 0, 0, 0, 384.5],
+  ['coronavirusenfrance', 1598, 645, 263, 0, 0, 384.1],
+  ['co', 2502, 992, 919, 834, 712, 373.8],
+  ['coronapocolypse', 696, 2031, 963, 30, 0, 339.3],
+  ['shipsgoingdown', 1144, 47, 0, 0, 0, 233.5],
+  ['rmstoiletpap', 1144, 47, 0, 0, 0, 233.5],
+  ['yomequedoencasa', 2071, 728, 1426, 1241, 663, 230.3],
+  ['covid19malaysia', 923, 452, 0, 0, 0, 229.8],
+  ['stayhomechallenge', 1108, 32, 0, 0, 0, 224.8],
+  ['corona', 2758, 2773, 2287, 2216, 1922, 222.9],
+  ['socialdistancing', 1056, 962, 738, 357, 251, 221.5],
+  ['cuarentenacoronavirus', 312, 1483, 235, 0, 0, 210.7],
+  ['chinesevirus', 859, 0, 41, 0, 51, 161.6],
+  ['bbb20', 706, 198, 45, 55, 40, 147.5],
+  ['coronavirusuk', 753, 326, 285, 155, 156, 136.5],
+  ['confinementotal', 662, 24, 0, 0, 0, 134.8],
+  ['stayhome', 556, 687, 1149, 276, 89, 134.5],
+  ['coronavirusinpakistan', 508, 302, 0, 0, 0, 131.8],
+  ['qu', 702, 503, 409, 268, 187, 126.5],
+  ['quedateenlacasa', 553, 156, 0, 0, 0, 126.2]]);
 
   var options = {
      showRowNumber: false,
-     width: '80%',
+     width: '80%', 
      height: '80%',
   };
-
+        
   // Instantiate and draw the chart.
   var chart = new google.visualization.Table(document.getElementById('topk_emerging_hashtags'));
   chart.draw(data, options);
 }
 google.charts.setOnLoadCallback(drawChart_table2);
+
+// function drawChart_table2() {
+//   // Define the chart to be drawn.
+//   var data = new google.visualization.DataTable();
+//   data.addColumn('string', 'Hashtag');
+//   data.addColumn('number', 'Emerging on 2020-03-15');
+//   data.addColumn('number', 'Ratio');
+//   data.addRows([['covid', 18233, 2.11],
+//   ['coronavirusupdates', 6692, 2.3],
+//   ['coronavirusoutbreak', 2612, 3.9],
+//   ['quedateentucasa', 1672, 2.81],
+//   ['coronav', 1277, 3.01],
+//   ['stayhome', 1149, 4.16],
+//   ['coronapocolypse', 963, 32.1],
+//   ['socialdistancing', 738, 2.07],
+//   ['estevirusloparamosunidos', 702, 24.21],
+//   ['coronavirusfrance', 643, 2.46],
+//   ['saarc', 449, 11.82],
+//   ['socialdistancingnow', 417, 6.62],
+//   ['jimacosta', 417, 14.38],
+//   ['pandemie', 385, 4.58],
+//   ['per', 364, 3.25],
+//   ['spain', 359, 2.3],
+//   ['stayathome', 348, 3.31],
+//   ['trumpplague', 338, 4.07],
+//   ['municipales2020', 331, 2.21],
+//   ['nationaldayofprayer', 331, 9.19],
+//   ['covid19chile', 322, 7.32],
+//   ['coronaviruspakistan', 322, 2.52],
+//   ['coronavirusargentina', 304, 9.81],
+//   ['panicshopping', 301, 12.54],
+//   ['edouardphilippe', 290, 4.83],
+//   ['embarazada', 269, 3.2],
+//   ['municipale2020', 267, 4.85],
+//   ['escudobolivarianoiii2020', 259, 10.36],
+//   ['coronavirussa', 240, 5.71],
+//   ['namaste', 225, 2.5],
+//   ['vivelatino', 213, 3.55],
+//   ['coronavirusenchile', 211, 7.54],
+//   ['mequedoencasa', 201, 4.1],
+//   ['mascherine', 195, 3.48],
+//   ['president', 186, 6.2],
+//   ['up', 170, 5.67],
+//   ['israel', 162, 2.16],
+//   ['suspendanlasclasesya', 162, 2.31],
+//   ['coronavirusinsa', 155, 3.04],
+//   ['indonesiabutuhpemimpin', 149, 2.76],
+//   ['papafrancisco', 149, 5.32],
+//   ['kashmir', 146, 4.87],
+//   ['quedatencasa', 144, 2.29],
+//   ['boristhebutcher', 143, 2.8],
+//   ['staythefuckhome', 139, 2.11],
+//   ['covid19nl', 134, 4.06],
+//   ['coronavirusnl', 133, 3.32],
+//   ['socialdistance', 127, 6.35],
+//   ['coronavirusitaly', 126, 2.0],
+//   ['coronavirusaustralia', 122, 2.39]]);
+
+//   var options = {
+//      showRowNumber: false,
+//      width: '80%', 
+//      height: '80%',
+//   };
+        
+//   // Instantiate and draw the chart.
+//   var chart = new google.visualization.Table(document.getElementById('topk_emerging_hashtags'));
+//   chart.draw(data, options);
+// }
+// google.charts.setOnLoadCallback(drawChart_table2);
 
 
 
@@ -308,10 +670,10 @@ function drawChart_table3() {
 
   var options = {
      showRowNumber: false,
-     width: '80%',
+     width: '80%', 
      height: '80%',
   };
-
+        
   // Instantiate and draw the chart.
   var chart = new google.visualization.Table(document.getElementById('topk_new_hashtags'));
   chart.draw(data, options);

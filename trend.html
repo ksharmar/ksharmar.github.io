@@ -81,21 +81,40 @@
     While some hashtags remain popular and highly used, new hashtags emerge or diminish in popularity over time.
     The following is the daily usage counts of hashtags on Twitter.
   </p>
-  <div id="topk_hashtags_line" style="width: 900px; height: 500px;"></div>
+
+  <!-- Top-50 hashtags line charts -->
+  <p class="lead"> Top-50 hashtags </p>
+  <div id="Line_Controls_Chart">
+    <!-- main chart -->
+    <div id="lineChartArea" style="padding:0px 20px 0px 0px;"></div>
+    <!-- control bar-->
+    <div id="controlsArea" style="padding:0px 20px 0px 0px;"></div>
+  </div>
+
+
+  <p class="lead"> Top-30 emerging hashtags </p>
+  <div id="Emerging_Line_Controls_Chart">
+    <!-- main chart -->
+    <div id="emergingLineChartArea" style="padding:0px 20px 0px 0px;"></div>
+    <!-- control bar-->
+    <div id="emergingControlsArea" style="padding:0px 20px 0px 0px;"></div>
+  </div>
+
+
+  <!-- <div id="topk_hashtags_line" style="width: 900px; height: 500px;"></div> -->
 
   <!-- Top-50 hashtags -->
 
-  <p class="lead"> The following provides the Top-50 hashtags based on usage counts on March 15th.
-    Top-50 hashtags, 2020-03-15 <br/> </p>
-  <div id="topk_hashtags" style="width: 600px; height: 900px;"></div>
+  <p class="lead"> The following provides the Top-50 hashtags based on usage counts on March 17th.
+    Top-50 hashtags, 2020-03-17 <br/> </p>
+  <div id="topk_hashtags" style="width: 1200px; height: 900px;"></div>
 
   <!-- Top-50 Emerging hashtags -->
 
-  <p class="lead"> The following provides the Top-50 emerging hashtags based
-     on usage counts on March 15th compared to its previous day.
-  The ratio provides change in counts to estimate emerging hashtags.
-  Top-50 emerging hashtags, 2020-03-15 <br/>  </p>
-  <div id="topk_emerging_hashtags" style="width: 600px; height: 900px;"></div>
+  <p class="lead"> The following provides the Top-30 emerging hashtags based on usage counts over last 5 days.
+  The slope provides "usage counts change" in counts to estimate emerging hashtags.
+  Top-30 emerging hashtags, 2020-03-17 <br/>  </p>
+  <div id="topk_emerging_hashtags" style="width: 1200px; height: 900px;"></div>
 
   <!-- Top-50 New hashtags -->
   <!-- <p class="lead"> Top-50 new hashtags, 2020-03-15 </p>
