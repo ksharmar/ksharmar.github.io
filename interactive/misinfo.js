@@ -27,9 +27,10 @@ function showMisinfoTweets(){
       str += "<td class='mistd'>" +   abc[i][1] + "</td>";
       str += "<td class='mistd'>" +  abc[i][2] + "</td></tr>";
   }
+	str += "<tr><td></td><td></td><td><a href=javascript:showMoreTweets() style='color: dimgray'>" + "<br/>See more tweets (upcoming)" + "</a></td></tr>";
+
   str += "</table> <br/><br/><br/>";
-  // // str += "<br><a href=javascript:showMoreTweets(" + clustername + ")  style='color: dimgray'>" + "See more tweets" + "</a>";
-  // // alert(str);
+    // // alert(str);
   return str;
 }
 

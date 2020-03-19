@@ -84,11 +84,12 @@ function drawLineChart1() {
       //     title: 'Top-50 hashtags trend',
       //     subtitle: 'in the number of usage count',
       // },
+       title: 'Top-50 hashtags trend of daily usage counts',
         hAxis: {
           format: "MMM d",
-          ticks: [new Date(2020,2,14), 
-                  new Date(2020,2,15), 
-                  new Date(2020,2,16), 
+          ticks: [new Date(2020,2,14),
+                  new Date(2020,2,15),
+                  new Date(2020,2,16),
                   new Date(2020,2,17)],
         },
         vAxis: {
@@ -167,10 +168,10 @@ function drawChart_table() {
 
   var options = {
      showRowNumber: false,
-     width: '80%', 
+     width: '80%',
      height: '80%',
   };
-        
+
   // Instantiate and draw the chart.
   var chart = new google.visualization.Table(document.getElementById('topk_hashtags'));
   chart.draw(data, options);
@@ -237,10 +238,10 @@ function drawChart_table2() {
 
   var options = {
      showRowNumber: false,
-     width: '80%', 
+     width: '80%',
      height: '80%',
   };
-        
+
   // Instantiate and draw the chart.
   var chart = new google.visualization.Table(document.getElementById('topk_emerging_hashtags'));
   chart.draw(data, options);
@@ -307,10 +308,10 @@ function drawChart_table3() {
 
   var options = {
      showRowNumber: false,
-     width: '80%', 
+     width: '80%',
      height: '80%',
   };
-        
+
   // Instantiate and draw the chart.
   var chart = new google.visualization.Table(document.getElementById('topk_new_hashtags'));
   chart.draw(data, options);
