@@ -26,6 +26,9 @@
   <script type = "text/javascript">
     google.charts.load('current', {packages: ['table']});
  </script>
+ <script type = "text/javascript">
+  google.charts.load('current', {packages: ['line']});
+</script>
   <script type="text/javascript" src="interactive/trend.js"></script>
 </head>
 
@@ -73,6 +76,10 @@
     <h2> Coronavirus on Social Media: Analyzing Twitter conversations </h2>
     <br/>
 
+  <!-- Top-50 hashtags line charts -->
+  <p class="lead"> Top-50 hashtags </p>
+  <div id="topk_hashtags_line" style="width: 900px; height: 500px;"></div>
+  
   <!-- Top-50 hashtags -->
   <p class="lead"> Top-50 hashtags, 2020-03-15 </p>
   <div id="topk_hashtags" style="width: 600px; height: 900px;"></div>

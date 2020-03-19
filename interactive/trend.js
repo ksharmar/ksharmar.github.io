@@ -1,74 +1,110 @@
 // CHART 1 STARTS HERE
+// drawLineChart1 : Top-K hashtags
+google.charts.setOnLoadCallback(drawLineChart1);
 
-// google.charts.load('current', {'packages':['corechart']});
-// google.charts.load('current', {'packages':['table']});
-google.charts.setOnLoadCallback(drawChart1);
+function drawLineChart1() {
 
-function drawChart1() {
+  var data = new google.visualization.DataTable();
+      data.addColumn('date', 'Day');
+      data.addColumn('number', 'coronavirus');
+      data.addColumn('number', 'covid19');
+      data.addColumn('number', 'covid');
+      data.addColumn('number', 'covid_19');
+      data.addColumn('number', 'coronapocalypse');
+      data.addColumn('number', 'coronaviruspandemic');
+      data.addColumn('number', 'coronavirusupdates');
+      data.addColumn('number', 'china');
+      data.addColumn('number', 'corona');
+      data.addColumn('number', 'wuhan');
+      data.addColumn('number', 'coronaoutbreak');
+      data.addColumn('number', 'breaking');
+      data.addColumn('number', 'cuba');
+      data.addColumn('number', 'yomequedoencasa');
+      data.addColumn('number', 'edom');
+      data.addColumn('number', 'italia');
+      data.addColumn('number', 'bersatutangkalcorona');
+      data.addColumn('number', 'familiesfirst');
+      data.addColumn('number', 'italy');
+      data.addColumn('number', 'coronavirusitalia');
+      data.addColumn('number', 'co');
+      data.addColumn('number', 'covid2019');
+      data.addColumn('number', 'cov');
+      data.addColumn('number', 'save');
+      data.addColumn('number', 'trump');
+      data.addColumn('number', 'venezuela');
+      data.addColumn('number', 'restaacasa');
+      data.addColumn('number', 'flattenthecurve');
+      data.addColumn('number', 'agrigento');
+      data.addColumn('number', 'lockdownindonesia');
+      data.addColumn('number', 'coronavirusoutbreak');
+      data.addColumn('number', 'cor');
+      data.addColumn('number', 'france');
+      data.addColumn('number', 'quedateentucasa');
+      data.addColumn('number', 'coronavirusupdate');
+      data.addColumn('number', 'coronavi');
+      data.addColumn('number', 'covid_19uk');
+      data.addColumn('number', 'hr6201');
+      data.addColumn('number', 'iran');
+      data.addColumn('number', 'coronauk');
+      data.addColumn('number', 'coronavirusesp');
+      data.addColumn('number', 'atenci');
+      data.addColumn('number', 'confinement');
+      data.addColumn('number', 'quedateencasa');
+      data.addColumn('number', 'coronavir');
+      data.addColumn('number', 'coronav');
+      data.addColumn('number', 'espa');
+      data.addColumn('number', 'paris');
+      data.addColumn('number', 'coron');
+      data.addColumn('number', 'pandemic');
 
-  var oldData = google.visualization.arrayToDataTable([['usernames', '2020-03-14'],
-            ['NicholsUprising', 5948],
-            ['HtownBabyG', 5450],
-            ['_theghettomonk', 4355],
-            ['elkhalifag', 4273],
-            ['TheyLoveDjJigga', 4149],
-            ['BoBundyy', 3569],
-            ['QHaRi', 3290],
-            ['xoxotmdxoxo', 3233],
-            ['hyejoohobi', 3093],
-            ['Still_Bourgeois', 2880],
-            ['Y2SHAF', 2743],
-            ['EchoXrayMusic', 2665],
-            ['redfishstream', 2602],
-            ['realDonaldTrump', 2530],
-            ['kiaudn', 2427],
-            ['djdommb', 2415],
-            ['ReadToriko', 2364],
-            ['fmagsl', 2224],
-            ['KenichiAL', 2115],
-            ['EdwardTHardy', 2095]]);
 
-  var newData = google.visualization.arrayToDataTable([['usernames', '2020-03-15'],
-            ['micheljessica_', 8949],
-            ['jovronavirus', 5089],
-            ['LBGEEVEE', 3045],
-            ['djdommb', 2956],
-            ['thacondition', 2955],
-            ['MrDre_', 2764],
-            ['BarackObama', 2633],
-            ['Conflits_FR', 2513],
-            ['tyrathetaurus', 2377],
-            ['tytfn0901', 2222],
-            ['elkhalifag', 2163],
-            ['edwardsuhadi', 2001],
-            ['auronplay', 1912],
-            ['AdamantxYves', 1886],
-            ['DatBadBRi', 1818],
-            ['sophthorntonn', 1779],
-            ['shortshitmax', 1726],
-            ['loxwtf', 1711],
-            ['bang_bar0n', 1673],
-            ['realDonaldTrump', 1556]]);
+      data.addRows([
+        [new Date(2020, 2, 14), 77838, 54223, 8637, 7785, 7671, 6986, 2910, 2686, 2216, 1990,
+          1778, 1310, 1246, 1241, 1163, 1111, 1028, 1021, 918, 865, 834,
+          832, 821, 800, 786, 742, 718, 715, 709, 694, 670, 621, 599, 596,
+          560, 527, 519, 515, 508, 491, 489, 460, 440, 436, 428, 424, 421,
+          418, 410, 409],
+        [new Date(2020, 2, 15),  83336, 50520, 18233, 3192, 5581, 1279, 6692, 1718, 2287, 1066,
+          630, 2395, 701, 1426, 85, 641, 0, 193, 1195, 311, 919, 624, 420,
+          120, 753, 774, 166, 955, 162, 434, 2612, 536, 621, 1672, 452,
+          448, 101, 26, 642, 233, 296, 389, 530, 408, 680, 1277, 518, 597,
+          363, 398],
+        [new Date(2020, 2, 16), 86221, 59215, 10506, 2470, 1113, 711, 2430, 1450, 2773, 494, 286,
+          2407, 747, 728, 29, 482, 0, 77, 719, 165, 992, 1404, 354, 29,
+          634, 580, 0, 907, 0, 0, 8704, 499, 430, 1484, 326, 512, 58, 0,
+          520, 45, 153, 371, 835, 569, 622, 1002, 359, 311, 421, 404],
+        [new Date(2020, 2, 17), 88814, 64330, 5462, 4139, 416, 586, 673, 1872, 2758, 334, 314,
+          1310, 792, 2071, 0, 449, 0, 146, 525, 156, 2502, 6472, 484, 158,
+          543, 726, 0, 755, 0, 31, 10557, 392, 366, 231, 248, 469, 35, 0,
+          553, 33, 98, 308, 643, 606, 400, 696, 301, 314, 480, 446],
+      ]);
 
-  var options_old = {
-    title: 'Top Twitter usernames most retweeted, 2020-03-14'
-  };
+      var options = {
+      //   chart: {
+      //     title: 'Top-50 hashtags trend',
+      //     subtitle: 'in the number of usage count',
+      // },
+        hAxis: {
+          format: "MMM d",
+          ticks: [new Date(2020,2,14), 
+                  new Date(2020,2,15), 
+                  new Date(2020,2,16), 
+                  new Date(2020,2,17)],
+        },
+        vAxis: {
+          logScale: true,
+          minValue: 0
+        }
+      };
 
-  var options_new = {
-    title: 'Top Twitter usernames most retweeted, 2020-03-15'
-  };
+      // var chart = new google.charts.Line(document.getElementById('topk_hashtags_line'));
+      var chart = new google.visualization.LineChart(document.getElementById('topk_hashtags_line'));
 
-  // var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-  // var chartBefore = new google.visualization.PieChart(document.getElementById('piechart_before'));
-  var chartAfter = new google.visualization.PieChart(document.getElementById('piechart_after'));
-  // var chartDiff = new google.visualization.PieChart(document.getElementById('piechart_diff'));
-  // var diffData = chartDiff.computeDiff(oldData, newData);
-
-  // chart.draw(odata, options);
-  // chartBefore.draw(oldData, options_old);
-  chartAfter.draw(newData, options_new);
-  // chartDiff.draw(diffData, options);
+      // chart.draw(data, google.charts.Line.convertOptions(options));
+      chart.draw(data, options);
 }
+
+
 
 
 
