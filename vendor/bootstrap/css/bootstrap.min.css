@@ -92,3 +92,27 @@ th, td {
   background-color: lightgray;
   color:black;
 }
+
+.mistable {
+  width: 100%;
+  border-spacing: 10px;
+  border-collapse: collapse;
+  /* border: 1px solid black; */
+}
+
+.misth, .mistd {
+  text-align: left;
+  padding: 8px;
+  border-bottom:1px solid lightpink;
+  /* border-right: solid 1px black;
+  border-left: solid 1px black; */
+}
+
+.misth {
+  text-align: left;
+  padding: 8px;
+  background-color: papayawhip;
+  font-weight:normal;
+}
+
+/* tr:nth-child(even) {background-color: #f2f2f2;} */
