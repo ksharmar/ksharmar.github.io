@@ -7,74 +7,92 @@ function drawLineChart1() {
       data.addColumn('number', 'coronavirus');
       data.addColumn('number', 'covid19');
       data.addColumn('number', 'covid');
-      data.addColumn('number', 'covid_19');
-      data.addColumn('number', 'coronapocalypse');
-      data.addColumn('number', 'coronaviruspandemic');
-      data.addColumn('number', 'coronavirusupdates');
-      data.addColumn('number', 'china');
-      data.addColumn('number', 'corona');
-      data.addColumn('number', 'wuhan');
-      data.addColumn('number', 'coronaoutbreak');
-      data.addColumn('number', 'breaking');
-      data.addColumn('number', 'cuba');
-      data.addColumn('number', 'yomequedoencasa');
-      data.addColumn('number', 'edom');
-      data.addColumn('number', 'italia');
-      data.addColumn('number', 'bersatutangkalcorona');
-      data.addColumn('number', 'familiesfirst');
-      data.addColumn('number', 'italy');
-      data.addColumn('number', 'coronavirusitalia');
-      data.addColumn('number', 'co');
-      data.addColumn('number', 'covid2019');
-      data.addColumn('number', 'cov');
-      data.addColumn('number', 'save');
-      data.addColumn('number', 'trump');
-      data.addColumn('number', 'venezuela');
-      data.addColumn('number', 'restaacasa');
-      data.addColumn('number', 'flattenthecurve');
-      data.addColumn('number', 'agrigento');
-      data.addColumn('number', 'lockdownindonesia');
       data.addColumn('number', 'coronavirusoutbreak');
-      data.addColumn('number', 'cor');
-      data.addColumn('number', 'france');
-      data.addColumn('number', 'quedateentucasa');
+      data.addColumn('number', 'covid_19');
+      data.addColumn('number', 'covid2019');
+      data.addColumn('number', 'corona');
+      data.addColumn('number', 'coronaviruspandemic');
+      data.addColumn('number', 'coronapocalypse');
+      data.addColumn('number', 'breaking');
+      data.addColumn('number', 'china');
+      data.addColumn('number', 'italy');
+      data.addColumn('number', 'coronavirusupdates');
       data.addColumn('number', 'coronavirusupdate');
-      data.addColumn('number', 'coronavi');
-      data.addColumn('number', 'covid_19uk');
-      data.addColumn('number', 'hr6201');
+      data.addColumn('number', 'co');
+      data.addColumn('number', 'wuhan');
+      data.addColumn('number', 'trump');
+      data.addColumn('number', 'coronaoutbreak');
       data.addColumn('number', 'iran');
-      data.addColumn('number', 'coronauk');
-      data.addColumn('number', 'coronavirusesp');
-      data.addColumn('number', 'atenci');
-      data.addColumn('number', 'confinement');
-      data.addColumn('number', 'quedateencasa');
-      data.addColumn('number', 'coronavir');
+      data.addColumn('number', 'italia');
+      data.addColumn('number', 'yomequedoencasa');
       data.addColumn('number', 'coronav');
-      data.addColumn('number', 'espa');
-      data.addColumn('number', 'paris');
-      data.addColumn('number', 'coron');
+      data.addColumn('number', 'dontbeaspreader');
+      data.addColumn('number', 'flattenthecurve');
+      data.addColumn('number', 'cuba');
+      data.addColumn('number', 'covid-19');
       data.addColumn('number', 'pandemic');
+      data.addColumn('number', 'covid19france');
+      data.addColumn('number', 'macron');
+      data.addColumn('number', 'venezuela');
+      data.addColumn('number', 'covi');
+      data.addColumn('number', 'coronavid19');
+      data.addColumn('number', 'pandemia');
+      data.addColumn('number', 'coronavirusfrance');
+      data.addColumn('number', 'coronavir');
+      data.addColumn('number', 'virus');
+      data.addColumn('number', 'coronavi');
+      data.addColumn('number', 'quedateentucasa');
+      data.addColumn('number', 'iorestoacasa');
+      data.addColumn('number', 'cor');
+      data.addColumn('number', 'coro');
+      data.addColumn('number', 'coron');
+      data.addColumn('number', 'socialdistancing');
+      data.addColumn('number', 'cov');
+      data.addColumn('number', 'coronapocolypse');
+      data.addColumn('number', 'coronavirusitalia');
+      data.addColumn('number', 'codvid19');
+      data.addColumn('number', 'france');
+      data.addColumn('number', 'espa');
+      data.addColumn('number', 'wuhanvirus');
 
       // zero-based month
       data.addRows([
-        [new Date(2020, 2, 14), 77838, 54223, 8637, 7785, 7671, 6986, 2910, 2686, 2216, 1990,
-          1778, 1310, 1246, 1241, 1163, 1111, 1028, 1021, 918, 865, 834,
-          832, 821, 800, 786, 742, 718, 715, 709, 694, 670, 621, 599, 596,
-          560, 527, 519, 515, 508, 491, 489, 460, 440, 436, 428, 424, 421,
-          418, 410, 409],
-        [new Date(2020, 2, 15),  83336, 50520, 18233, 3192, 5581, 1279, 6692, 1718, 2287, 1066,
-          630, 2395, 701, 1426, 85, 641, 0, 193, 1195, 311, 919, 624, 420,
-          120, 753, 774, 166, 955, 162, 434, 2612, 536, 621, 1672, 452,
-          448, 101, 26, 642, 233, 296, 389, 530, 408, 680, 1277, 518, 597,
-          363, 398],
-        [new Date(2020, 2, 16), 86221, 59215, 10506, 2470, 1113, 711, 2430, 1450, 2773, 494, 286,
-          2407, 747, 728, 29, 482, 0, 77, 719, 165, 992, 1404, 354, 29,
-          634, 580, 0, 907, 0, 0, 8704, 499, 430, 1484, 326, 512, 58, 0,
-          520, 45, 153, 371, 835, 569, 622, 1002, 359, 311, 421, 404],
-        [new Date(2020, 2, 17), 88814, 64330, 5462, 4139, 416, 586, 673, 1872, 2758, 334, 314,
-          1310, 792, 2071, 0, 449, 0, 146, 525, 156, 2502, 6472, 484, 158,
-          543, 726, 0, 755, 0, 31, 10557, 392, 366, 231, 248, 469, 35, 0,
-          553, 33, 98, 308, 643, 606, 400, 696, 301, 314, 480, 446],
+        [new Date(2020, 2, 9), 91660, 49389, 4873, 8537, 838, 9821, 2301, 26, 0, 2111, 1920,
+          1912, 245, 887, 879, 794, 1107, 372, 1151, 848, 0, 580, 0, 184,
+          336, 445, 424, 309, 357, 489, 158, 1552, 50, 453, 508, 517, 734,
+          0, 1208, 372, 534, 440, 33, 299, 0, 770, 64, 293, 488, 802],
+        [new Date(2020, 2, 10), 86237, 49981, 2728, 5028, 804, 8107, 2836, 0, 0, 1400, 1717,
+          5814, 128, 1256, 719, 864, 1153, 184, 1079, 882, 0, 531, 0, 537,
+          468, 370, 557, 889, 358, 477, 205, 908, 43, 244, 392, 584, 427,
+          0, 972, 635, 557, 386, 41, 265, 0, 561, 239, 291, 404, 449],
+        [new Date(2020, 2, 11), 87462, 67289, 2031, 2414, 1264, 2810, 5593, 46, 0, 1677, 1219,
+          1445, 164, 2721, 680, 1046, 653, 270, 1152, 756, 0, 691, 0, 946,
+          430, 406, 953, 505, 598, 164, 2313, 1051, 1873, 161, 466, 666,
+          335, 0, 602, 317, 401, 370, 112, 510, 0, 493, 1292, 536, 292, 366],
+        [new Date(2020, 2, 12), 65684, 51676, 1953, 1243, 5508, 970, 2304, 3769, 0, 1893, 1138,
+          728, 69, 2278, 790, 461, 1095, 788, 650, 640, 299, 548, 0, 591,
+          455, 423, 1262, 106, 839, 276, 516, 543, 1155, 115, 325, 307,
+          214, 0, 275, 307, 370, 534, 212, 262, 0, 196, 1113, 229, 455, 365],
+        [new Date(2020, 2, 13), 64598, 42575, 2151, 800, 9484, 989, 1922, 3858, 1793, 1581, 1617,
+          537, 142, 2384, 712, 582, 837, 2129, 492, 664, 663, 546, 0, 476,
+          301, 315, 478, 50, 447, 733, 254, 215, 393, 46, 351, 240, 416,
+          78, 267, 363, 406, 437, 251, 307, 0, 194, 330, 227, 353, 484],
+        [new Date(2020, 2, 14), 77838, 54223, 8637, 670, 7785, 832, 2216, 6986, 7671, 1310, 2686,
+          918, 2910, 560, 834, 1990, 786, 1778, 508, 1111, 1241, 424, 0,
+          715, 1246, 289, 409, 54, 389, 742, 328, 156, 271, 261, 428, 354,
+          527, 596, 234, 621, 312, 410, 357, 821, 30, 865, 233, 599, 421, 308],
+        [new Date(2020, 2, 15), 83336, 50520, 18233, 2612, 3192, 624, 2287, 1279, 5581, 2395,
+          1718, 1195, 6692, 452, 919, 1066, 753, 630, 642, 641, 1426, 1277,
+          0, 955, 701, 395, 398, 27, 272, 774, 359, 156, 215, 643, 680,
+          695, 448, 1672, 186, 536, 396, 363, 738, 420, 963, 311, 119, 621, 518, 224],
+        [new Date(2020, 2, 16), 86221, 59215, 10506, 8704, 2470, 1404, 2773, 711, 1113, 2407,
+          1450, 719, 2430, 326, 992, 494, 634, 286, 520, 482, 728, 1002,
+          2944, 907, 747, 557, 404, 941, 1227, 580, 367, 153, 260, 620,
+          622, 347, 512, 1484, 150, 499, 520, 421, 962, 354, 2031, 165, 121, 430, 359, 153],
+        [new Date(2020, 2, 17), 88814, 64330, 5462, 10557, 4139, 6472, 2758, 586, 416, 1310,
+          1872, 525, 673, 248, 2502, 334, 543, 314, 553, 449, 2071, 696,
+          3128, 755, 792, 2210, 446, 2221, 544, 726, 318, 72, 249, 1789,
+          400, 441, 469, 231, 160, 392, 367, 480, 1056, 484, 696, 156, 115, 366, 301, 382],
       ]);
 
       var options = {
@@ -82,7 +100,7 @@ function drawLineChart1() {
       //     title: 'Top-50 hashtags trend',
       //     subtitle: 'in the number of usage count',
       // },
-        lineWidth: 4,
+        lineWidth: 10,
         hAxis: {
           format: "MMM d",
           // zero-based month
@@ -117,8 +135,8 @@ var chartDrawFun = {
       var chartData = '';
 
       var chartDateformat 	= 'yyyy-MM-dd';
-      var chartLineCount    = 5;
-      var controlLineCount	= 5;
+      var chartLineCount    = 10;
+      var controlLineCount	= 10;
 
 
       function drawDashboard() {
@@ -128,63 +146,93 @@ var chartDrawFun = {
         data.addColumn('datetime' , 'Day');
         data.addColumn('number', 'coronavirus');
         data.addColumn('number', 'covid19');
-        data.addColumn('number', 'coronavirusoutbreak');
-        data.addColumn('number', 'covid2019');
         data.addColumn('number', 'covid');
+        data.addColumn('number', 'coronavirusoutbreak');
         data.addColumn('number', 'covid_19');
-        data.addColumn('number', 'dontbeaspreader');
+        data.addColumn('number', 'covid2019');
         data.addColumn('number', 'corona');
-        data.addColumn('number', 'co');
-        data.addColumn('number', 'covid19france');
-        data.addColumn('number', 'covid-19');
-        data.addColumn('number', 'yomequedoencasa');
-        data.addColumn('number', 'china');
-        data.addColumn('number', 'coronavirusfrance');
-        data.addColumn('number', 'quarantinelife');
-        data.addColumn('number', 'coronavirusenfrance');
-        data.addColumn('number', 'breaking');
-        data.addColumn('number', 'confinementtotal');
-        data.addColumn('number', 'shipsgoingdown');
-        data.addColumn('number', 'rmstoiletpap');
-        data.addColumn('number', 'stayhomechallenge');
-        data.addColumn('number', 'socialdistancing');
-        data.addColumn('number', 'covid19malaysia');
-        data.addColumn('number', 'chinesevirus');
-        data.addColumn('number', 'cuba');
-        data.addColumn('number', 'flattenthecurve');
-        data.addColumn('number', 'coronavirusuk');
-        data.addColumn('number', 'venezuela');
-        data.addColumn('number', 'bbb20');
-        data.addColumn('number', 'qu');
-        data.addColumn('number', 'coronav');
-        data.addColumn('number', 'coronapocolypse');
-        data.addColumn('number', 'coronavirusupdates');
-        data.addColumn('number', 'confinementotal');
-        data.addColumn('number', 'confinement');
-        data.addColumn('number', 'quedateencasa');
         data.addColumn('number', 'coronaviruspandemic');
-        data.addColumn('number', 'restezchezvous');
-        data.addColumn('number', 'update');
-        data.addColumn('number', 'stayhome');
-        data.addColumn('number', 'iran');
-        data.addColumn('number', 'quedateenlacasa');
-        data.addColumn('number', 'macron');
-        data.addColumn('number', 'trump');
-        data.addColumn('number', 'viruschino');
+        data.addColumn('number', 'coronapocalypse');
+        data.addColumn('number', 'breaking');
+        data.addColumn('number', 'china');
         data.addColumn('number', 'italy');
-        data.addColumn('number', 'coronavirusinpakistan');
-        data.addColumn('number', 'cuarentenanacional');
-        data.addColumn('number', 'coronavirusindia');
+        data.addColumn('number', 'coronavirusupdates');
+        data.addColumn('number', 'coronavirusupdate');
+        data.addColumn('number', 'co');
+        data.addColumn('number', 'wuhan');
+        data.addColumn('number', 'trump');
+        data.addColumn('number', 'coronaoutbreak');
+        data.addColumn('number', 'iran');
+        data.addColumn('number', 'italia');
+        data.addColumn('number', 'yomequedoencasa');
+        data.addColumn('number', 'coronav');
+        data.addColumn('number', 'dontbeaspreader');
+        data.addColumn('number', 'flattenthecurve');
+        data.addColumn('number', 'cuba');
+        data.addColumn('number', 'covid-19');
+        data.addColumn('number', 'pandemic');
+        data.addColumn('number', 'covid19france');
+        data.addColumn('number', 'macron');
+        data.addColumn('number', 'venezuela');
+        data.addColumn('number', 'covi');
+        data.addColumn('number', 'coronavid19');
+        data.addColumn('number', 'pandemia');
+        data.addColumn('number', 'coronavirusfrance');
+        data.addColumn('number', 'coronavir');
+        data.addColumn('number', 'virus');
+        data.addColumn('number', 'coronavi');
+        data.addColumn('number', 'quedateentucasa');
+        data.addColumn('number', 'iorestoacasa');
+        data.addColumn('number', 'cor');
+        data.addColumn('number', 'coro');
+        data.addColumn('number', 'coron');
+        data.addColumn('number', 'socialdistancing');
         data.addColumn('number', 'cov');
+        data.addColumn('number', 'coronapocolypse');
+        data.addColumn('number', 'coronavirusitalia');
+        data.addColumn('number', 'codvid19');
+        data.addColumn('number', 'france');
+        data.addColumn('number', 'espa');
+        data.addColumn('number', 'wuhanvirus');
 
 
         data.addRows([
-          [new Date(2020, 2, 13), 64598, 42575, 800, 989, 2151, 9484, 0, 1922, 712, 50, 315, 663, 1617, 46, 0, 0, 1581, 0, 0, 0, 0, 251, 0, 51, 301, 476, 156, 733, 40, 187, 546, 0, 142, 0, 223, 414, 3858, 0, 119, 89, 492, 0, 447, 837, 0, 537, 0, 0, 192, 307],
-          [new Date(2020, 2, 14), 77838, 54223, 670, 832, 8637, 7785, 0, 2216, 834, 54, 289, 1241, 2686, 261, 0, 0, 1310, 0, 0, 0, 0, 357, 0, 0, 1246, 715, 155, 742, 55, 268, 424, 30, 2910, 0, 440, 436, 6986, 307, 98, 276, 508, 0, 389, 786, 0, 918, 0, 0, 259, 821],
-          [new Date(2020, 2, 15), 83336, 50520, 2612, 624, 18233, 3192, 0, 2287, 919, 27, 395, 1426, 1718, 643, 0, 263, 2395, 0, 0, 0, 0, 738, 0, 41, 701, 955, 285, 774, 45, 409, 1277, 963, 6692, 0, 530, 408, 1279, 585, 145, 1149, 642, 0, 272, 753, 0, 1195, 0, 0, 266, 420],
-          [new Date(2020, 2, 16), 86221, 59215, 8704, 1404, 10506, 2470, 2944, 2773, 992, 941, 557, 728, 1450, 620, 1001, 645, 2407, 1303, 47, 47, 32, 962, 452, 0, 747, 907, 326, 580, 198, 503, 1002, 2031, 2430, 24, 835, 569, 711, 196, 158, 687, 520, 156, 1227, 634, 0, 719, 302, 0, 436, 354],
-          [new Date(2020, 2, 17), 88814, 64330, 10557, 6472, 5462, 4139, 3128, 2758, 2502, 2221,
-            2210, 2071, 1872, 1789, 1748, 1598, 1310, 1271, 1144, 1144, 1108, 1056, 923, 859, 792, 755, 753, 726, 706, 702, 696, 696, 673, 662, 643, 606, 586, 576, 557, 556, 553, 553, 544, 543, 539, 525, 508, 505, 503, 484]
+          [new Date(2020, 2, 9), 91660, 49389, 4873, 8537, 838, 9821, 2301, 26, 0, 2111, 1920,
+            1912, 245, 887, 879, 794, 1107, 372, 1151, 848, 0, 580, 0, 184,
+            336, 445, 424, 309, 357, 489, 158, 1552, 50, 453, 508, 517, 734,
+            0, 1208, 372, 534, 440, 33, 299, 0, 770, 64, 293, 488, 802],
+          [new Date(2020, 2, 10), 86237, 49981, 2728, 5028, 804, 8107, 2836, 0, 0, 1400, 1717,
+            5814, 128, 1256, 719, 864, 1153, 184, 1079, 882, 0, 531, 0, 537,
+            468, 370, 557, 889, 358, 477, 205, 908, 43, 244, 392, 584, 427,
+            0, 972, 635, 557, 386, 41, 265, 0, 561, 239, 291, 404, 449],
+          [new Date(2020, 2, 11), 87462, 67289, 2031, 2414, 1264, 2810, 5593, 46, 0, 1677, 1219,
+            1445, 164, 2721, 680, 1046, 653, 270, 1152, 756, 0, 691, 0, 946,
+            430, 406, 953, 505, 598, 164, 2313, 1051, 1873, 161, 466, 666,
+            335, 0, 602, 317, 401, 370, 112, 510, 0, 493, 1292, 536, 292, 366],
+          [new Date(2020, 2, 12), 65684, 51676, 1953, 1243, 5508, 970, 2304, 3769, 0, 1893, 1138,
+            728, 69, 2278, 790, 461, 1095, 788, 650, 640, 299, 548, 0, 591,
+            455, 423, 1262, 106, 839, 276, 516, 543, 1155, 115, 325, 307,
+            214, 0, 275, 307, 370, 534, 212, 262, 0, 196, 1113, 229, 455, 365],
+          [new Date(2020, 2, 13), 64598, 42575, 2151, 800, 9484, 989, 1922, 3858, 1793, 1581, 1617,
+            537, 142, 2384, 712, 582, 837, 2129, 492, 664, 663, 546, 0, 476,
+            301, 315, 478, 50, 447, 733, 254, 215, 393, 46, 351, 240, 416,
+            78, 267, 363, 406, 437, 251, 307, 0, 194, 330, 227, 353, 484],
+          [new Date(2020, 2, 14), 77838, 54223, 8637, 670, 7785, 832, 2216, 6986, 7671, 1310, 2686,
+            918, 2910, 560, 834, 1990, 786, 1778, 508, 1111, 1241, 424, 0,
+            715, 1246, 289, 409, 54, 389, 742, 328, 156, 271, 261, 428, 354,
+            527, 596, 234, 621, 312, 410, 357, 821, 30, 865, 233, 599, 421, 308],
+          [new Date(2020, 2, 15), 83336, 50520, 18233, 2612, 3192, 624, 2287, 1279, 5581, 2395,
+            1718, 1195, 6692, 452, 919, 1066, 753, 630, 642, 641, 1426, 1277,
+            0, 955, 701, 395, 398, 27, 272, 774, 359, 156, 215, 643, 680,
+            695, 448, 1672, 186, 536, 396, 363, 738, 420, 963, 311, 119, 621, 518, 224],
+          [new Date(2020, 2, 16), 86221, 59215, 10506, 8704, 2470, 1404, 2773, 711, 1113, 2407,
+            1450, 719, 2430, 326, 992, 494, 634, 286, 520, 482, 728, 1002,
+            2944, 907, 747, 557, 404, 941, 1227, 580, 367, 153, 260, 620,
+            622, 347, 512, 1484, 150, 499, 520, 421, 962, 354, 2031, 165, 121, 430, 359, 153],
+          [new Date(2020, 2, 17), 88814, 64330, 5462, 10557, 4139, 6472, 2758, 586, 416, 1310,
+            1872, 525, 673, 248, 2502, 334, 543, 314, 553, 449, 2071, 696,
+            3128, 755, 792, 2210, 446, 2221, 544, 726, 318, 72, 249, 1789,
+            400, 441, 469, 231, 160, 392, 367, 480, 1056, 484, 696, 156, 115, 366, 301, 382],
         ]);
 
         var chart = new google.visualization.ChartWrapper({
@@ -277,8 +325,8 @@ var emergingChartDrawFun = {
   chartDraw : function(){
 
       var chartDateformat 	= 'yyyy-MM-dd';
-      var chartLineCount    = 5;
-      var controlLineCount	= 5;
+      var chartLineCount    = 10;
+      var controlLineCount	= 10;
 
 
       function drawDashboard() {
@@ -286,44 +334,57 @@ var emergingChartDrawFun = {
         var data = new google.visualization.DataTable();
 
         data.addColumn('datetime' , 'Day');
-        data.addColumn('number', 'coronavirus');
-        data.addColumn('number', 'covid19');
-        data.addColumn('number', 'coronavirusoutbreak');
-        data.addColumn('number', 'covid2019');
-        data.addColumn('number', 'dontbeaspreader');
         data.addColumn('number', 'covid');
-        data.addColumn('number', 'covid19france');
+        data.addColumn('number', 'covid19');
+        data.addColumn('number', 'coronavirusupdates');
+        data.addColumn('number', 'covid_19');
+        data.addColumn('number', 'coronapocalypse');
+        data.addColumn('number', 'dontbeaspreader');
+        data.addColumn('number', 'coronavirusoutbreak');
+        data.addColumn('number', 'yomequedoencasa');
+        data.addColumn('number', 'coronapocolypse');
+        data.addColumn('number', 'coronaviruspandemic');
         data.addColumn('number', 'quarantinelife');
-        data.addColumn('number', 'covid-19');
-        data.addColumn('number', 'coronavirusfrance');
+        data.addColumn('number', 'quedateentucasa');
         data.addColumn('number', 'confinementtotal');
         data.addColumn('number', 'coronavirusenfrance');
+        data.addColumn('number', 'socialdistancing');
         data.addColumn('number', 'co');
-        data.addColumn('number', 'coronapocolypse');
+        data.addColumn('number', 'coronavirusfrance');
+        data.addColumn('number', 'covid-19');
+        data.addColumn('number', 'covid19france');
+        data.addColumn('number', 'stayhome');
+        data.addColumn('number', 'confinement');
+        data.addColumn('number', 'cuarentenacoronavirus');
+        data.addColumn('number', 'qu');
+        data.addColumn('number', 'quedateencasa');
+        data.addColumn('number', 'covid19malaysia');
         data.addColumn('number', 'shipsgoingdown');
         data.addColumn('number', 'rmstoiletpap');
-        data.addColumn('number', 'yomequedoencasa');
-        data.addColumn('number', 'covid19malaysia');
         data.addColumn('number', 'stayhomechallenge');
-        data.addColumn('number', 'corona');
-        data.addColumn('number', 'socialdistancing');
-        data.addColumn('number', 'cuarentenacoronavirus');
-        data.addColumn('number', 'chinesevirus');
-        data.addColumn('number', 'bbb20');
-        data.addColumn('number', 'coronavirusuk');
-        data.addColumn('number', 'confinementotal');
-        data.addColumn('number', 'stayhome');
-        data.addColumn('number', 'coronavirusinpakistan');
-        data.addColumn('number', 'qu');
-        data.addColumn('number', 'quedateenlacasa');
+        data.addColumn('number', 'restezchezvous');
+        data.addColumn('number', 'cuba');
 
 
         data.addRows([
-          [new Date(2020, 2, 13), 64598, 42575, 800, 989, 0, 2151, 50, 0, 315, 46, 0, 0, 712, 0, 0, 0, 663, 0, 0, 1922, 251, 0, 51, 40, 156, 0, 89, 0, 187, 0],
-          [new Date(2020, 2, 14), 77838, 54223, 670, 832, 0, 8637, 54, 0, 289, 261, 0, 0, 834, 30, 0, 0, 1241, 0, 0, 2216, 357, 0, 0, 55, 155, 0, 276, 0, 268, 0],
-          [new Date(2020, 2, 15), 83336, 50520, 2612, 624, 0, 18233, 27, 0, 395, 643, 0, 263, 919, 963, 0, 0, 1426, 0, 0, 2287, 738, 235, 41, 45, 285, 0, 1149, 0, 409, 0],
-          [new Date(2020, 2, 16), 86221, 59215, 8704, 1404, 2944, 10506, 941, 1001, 557, 620, 1303, 645, 992, 2031, 47, 47, 728, 452, 32, 2773, 962, 1483, 0, 198, 326, 24, 687, 302, 503, 156],
-          [new Date(2020, 2, 17), 88814, 64330, 10557, 6472, 3128, 5462, 2221, 1748, 2210, 1789, 1271, 1598, 2502, 696, 1144, 1144, 2071, 923, 1108, 2758, 1056, 312, 859, 706, 753, 662, 556, 508, 702, 553]
+          [new Date(2020, 2, 9), 4873, 49389, 245, 838, 0, 0, 8537, 0, 0, 26, 0, 0, 0, 25, 33,
+            879, 453, 445, 309, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 336],
+          [new Date(2020, 2, 10), 2728, 49981, 128, 804, 0, 0, 5028, 0, 0, 0, 0, 0, 0, 0, 41, 719,
+            244, 370, 889, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 468],
+          [new Date(2020, 2, 11), 2031, 67289, 164, 1264, 0, 0, 2414, 0, 0, 46, 0, 0, 0, 0, 112,
+            680, 161, 406, 505, 29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 430],
+          [new Date(2020, 2, 12), 1953, 51676, 69, 5508, 0, 0, 1243, 299, 0, 3769, 0, 0, 0, 17,
+            212, 790, 115, 423, 106, 16, 0, 0, 63, 315, 0, 0, 0, 0, 0, 455],
+          [new Date(2020, 2, 13), 2151, 42575, 142, 9484, 1793, 0, 800, 663, 0, 3858, 0, 78, 0, 0,
+            251, 712, 46, 315, 50, 89, 223, 0, 187, 414, 0, 0, 0, 0, 0, 301],
+          [new Date(2020, 2, 14), 8637, 54223, 2910, 7785, 7671, 0, 670, 1241, 30, 6986, 0, 596, 0,
+            0, 357, 834, 261, 289, 54, 276, 440, 0, 268, 436, 0, 0, 0, 0, 307, 1246],
+          [new Date(2020, 2, 15), 18233, 50520, 6692, 3192, 5581, 0, 2612, 1426, 963, 1279, 0,
+            1672, 0, 263, 738, 919, 643, 395, 27, 1149, 530, 235, 409, 408, 0, 0, 0, 0, 585, 701],
+          [new Date(2020, 2, 16), 10506, 59215, 2430, 2470, 1113, 2944, 8704, 728, 2031, 711, 1001,
+            1484, 1303, 645, 962, 992, 620, 557, 941, 687, 835, 1483, 503, 569, 452, 47, 47, 32, 196, 747],
+          [new Date(2020, 2, 17), 5462, 64330, 673, 4139, 416, 3128, 10557, 2071, 696, 586, 1748,
+            231, 1271, 1598, 1056, 2502, 1789, 2210, 2221, 556, 643, 312, 702, 606, 923, 1144, 1144, 1108, 576, 792],
         ]);
 
         var chart = new google.visualization.ChartWrapper({
@@ -420,57 +481,67 @@ function drawChart_table() {
   data.addColumn('number', '2020-03-15');
   data.addColumn('number', '2020-03-14');
   data.addColumn('number', '2020-03-13');
+  data.addColumn('number', '2020-03-12');
+  data.addColumn('number', '2020-03-11');
+  data.addColumn('number', '2020-03-10');
+  data.addColumn('number', '2020-03-09');
   data.addRows([
-    ['coronavirus', 88814, 86221, 83336, 77838, 64598],
-    ['covid19', 64330, 59215, 50520, 54223, 42575],
-    ['coronavirusoutbreak', 10557, 8704, 2612, 670, 800],
-    ['covid2019', 6472, 1404, 624, 832, 989],
-    ['covid', 5462, 10506, 18233, 8637, 2151],
-    ['covid_19', 4139, 2470, 3192, 7785, 9484],
-    ['dontbeaspreader', 3128, 2944, 0, 0, 0],
-    ['corona', 2758, 2773, 2287, 2216, 1922],
-    ['co', 2502, 992, 919, 834, 712],
-    ['covid19france', 2221, 941, 27, 54, 50],
-    ['covid-19', 2210, 557, 395, 289, 315],
-    ['yomequedoencasa', 2071, 728, 1426, 1241, 663],
-    ['china', 1872, 1450, 1718, 2686, 1617],
-    ['coronavirusfrance', 1789, 620, 643, 261, 46],
-    ['quarantinelife', 1748, 1001, 0, 0, 0],
-    ['coronavirusenfrance', 1598, 645, 263, 0, 0],
-    ['breaking', 1310, 2407, 2395, 1310, 1581],
-    ['confinementtotal', 1271, 1303, 0, 0, 0],
-    ['shipsgoingdown', 1144, 47, 0, 0, 0],
-    ['rmstoiletpap', 1144, 47, 0, 0, 0],
-    ['stayhomechallenge', 1108, 32, 0, 0, 0],
-    ['socialdistancing', 1056, 962, 738, 357, 251],
-    ['covid19malaysia', 923, 452, 0, 0, 0],
-    ['chinesevirus', 859, 0, 41, 0, 51],
-    ['cuba', 792, 747, 701, 1246, 301],
-    ['flattenthecurve', 755, 907, 955, 715, 476],
-    ['coronavirusuk', 753, 326, 285, 155, 156],
-    ['venezuela', 726, 580, 774, 742, 733],
-    ['bbb20', 706, 198, 45, 55, 40],
-    ['qu', 702, 503, 409, 268, 187],
-    ['coronav', 696, 1002, 1277, 424, 546],
-    ['coronapocolypse', 696, 2031, 963, 30, 0],
-    ['coronavirusupdates', 673, 2430, 6692, 2910, 142],
-    ['confinementotal', 662, 24, 0, 0, 0],
-    ['confinement', 643, 835, 530, 440, 223],
-    ['quedateencasa', 606, 569, 408, 436, 414],
-    ['coronaviruspandemic', 586, 711, 1279, 6986, 3858],
-    ['restezchezvous', 576, 196, 585, 307, 0],
-    ['update', 557, 158, 145, 98, 119],
-    ['stayhome', 556, 687, 1149, 276, 89],
-    ['iran', 553, 520, 642, 508, 492],
-    ['quedateenlacasa', 553, 156, 0, 0, 0],
-    ['macron', 544, 1227, 272, 389, 447],
-    ['trump', 543, 634, 753, 786, 837],
-    ['viruschino', 539, 0, 0, 0, 0],
-    ['italy', 525, 719, 1195, 918, 537],
-    ['coronavirusinpakistan', 508, 302, 0, 0, 0],
-    ['cuarentenanacional', 505, 0, 0, 0, 0],
-    ['coronavirusindia', 503, 436, 266, 259, 192],
-    ['cov', 484, 354, 420, 821, 307]
+    ['coronavirus', 88814, 86221, 83336, 77838, 64598, 65684, 87462,
+        86237, 91660],
+       ['covid19', 64330, 59215, 50520, 54223, 42575, 51676, 67289,
+        49981, 49389],
+       ['covid', 5462, 10506, 18233, 8637, 2151, 1953, 2031, 2728, 4873],
+       ['coronavirusoutbreak', 10557, 8704, 2612, 670, 800, 1243, 2414,
+        5028, 8537],
+       ['covid_19', 4139, 2470, 3192, 7785, 9484, 5508, 1264, 804, 838],
+       ['covid2019', 6472, 1404, 624, 832, 989, 970, 2810, 8107, 9821],
+       ['corona', 2758, 2773, 2287, 2216, 1922, 2304, 5593, 2836, 2301],
+       ['coronaviruspandemic', 586, 711, 1279, 6986, 3858, 3769, 46, 0,
+        26],
+       ['coronapocalypse', 416, 1113, 5581, 7671, 1793, 0, 0, 0, 0],
+       ['breaking', 1310, 2407, 2395, 1310, 1581, 1893, 1677, 1400, 2111],
+       ['china', 1872, 1450, 1718, 2686, 1617, 1138, 1219, 1717, 1920],
+       ['italy', 525, 719, 1195, 918, 537, 728, 1445, 5814, 1912],
+       ['coronavirusupdates', 673, 2430, 6692, 2910, 142, 69, 164, 128,
+        245],
+       ['coronavirusupdate', 248, 326, 452, 560, 2384, 2278, 2721, 1256,
+        887],
+       ['co', 2502, 992, 919, 834, 712, 790, 680, 719, 879],
+       ['wuhan', 334, 494, 1066, 1990, 582, 461, 1046, 864, 794],
+       ['trump', 543, 634, 753, 786, 837, 1095, 653, 1153, 1107],
+       ['coronaoutbreak', 314, 286, 630, 1778, 2129, 788, 270, 184, 372],
+       ['iran', 553, 520, 642, 508, 492, 650, 1152, 1079, 1151],
+       ['italia', 449, 482, 641, 1111, 664, 640, 756, 882, 848],
+       ['yomequedoencasa', 2071, 728, 1426, 1241, 663, 299, 0, 0, 0],
+       ['coronav', 696, 1002, 1277, 424, 546, 548, 691, 531, 580],
+       ['dontbeaspreader', 3128, 2944, 0, 0, 0, 0, 0, 0, 0],
+       ['flattenthecurve', 755, 907, 955, 715, 476, 591, 946, 537, 184],
+       ['cuba', 792, 747, 701, 1246, 301, 455, 430, 468, 336],
+       ['covid-19', 2210, 557, 395, 289, 315, 423, 406, 370, 445],
+       ['pandemic', 446, 404, 398, 409, 478, 1262, 953, 557, 424],
+       ['covid19france', 2221, 941, 27, 54, 50, 106, 505, 889, 309],
+       ['macron', 544, 1227, 272, 389, 447, 839, 598, 358, 357],
+       ['venezuela', 726, 580, 774, 742, 733, 276, 164, 477, 489],
+       ['covi', 318, 367, 359, 328, 254, 516, 2313, 205, 158],
+       ['coronavid19', 72, 153, 156, 156, 215, 543, 1051, 908, 1552],
+       ['pandemia', 249, 260, 215, 271, 393, 1155, 1873, 43, 50],
+       ['coronavirusfrance', 1789, 620, 643, 261, 46, 115, 161, 244, 453],
+       ['coronavir', 400, 622, 680, 428, 351, 325, 466, 392, 508],
+       ['virus', 441, 347, 695, 354, 240, 307, 666, 584, 517],
+       ['coronavi', 469, 512, 448, 527, 416, 214, 335, 427, 734],
+       ['quedateentucasa', 231, 1484, 1672, 596, 78, 0, 0, 0, 0],
+       ['iorestoacasa', 160, 150, 186, 234, 267, 275, 602, 972, 1208],
+       ['cor', 392, 499, 536, 621, 363, 307, 317, 635, 372],
+       ['coro', 367, 520, 396, 312, 406, 370, 401, 557, 534],
+       ['coron', 480, 421, 363, 410, 437, 534, 370, 386, 440],
+       ['socialdistancing', 1056, 962, 738, 357, 251, 212, 112, 41, 33],
+       ['cov', 484, 354, 420, 821, 307, 262, 510, 265, 299],
+       ['coronapocolypse', 696, 2031, 963, 30, 0, 0, 0, 0, 0],
+       ['coronavirusitalia', 156, 165, 311, 865, 194, 196, 493, 561, 770],
+       ['codvid19', 115, 121, 119, 233, 330, 1113, 1292, 239, 64],
+       ['france', 366, 430, 621, 599, 227, 229, 536, 291, 293],
+       ['espa', 301, 359, 518, 421, 353, 455, 292, 404, 488],
+       ['wuhanvirus', 382, 153, 224, 308, 484, 365, 366, 449, 802]
   ]);
 
   var options = {
@@ -497,37 +568,54 @@ function drawChart_table2() {
   data.addColumn('number', '2020-03-15');
   data.addColumn('number', '2020-03-14');
   data.addColumn('number', '2020-03-13');
+  data.addColumn('number', '2020-03-12');
+  data.addColumn('number', '2020-03-11');
+  data.addColumn('number', '2020-03-10');
+  data.addColumn('number', '2020-03-09');
   data.addColumn('number', 'Slope');
-  data.addRows([['coronavirus', 88814, 86221, 83336, 77838, 64598, 5681.5],
-  ['covid19', 64330, 59215, 50520, 54223, 42575, 4850.2],
-  ['coronavirusoutbreak', 10557, 8704, 2612, 670, 800, 2754.8],
-  ['covid2019', 6472, 1404, 624, 832, 989, 1153.8],
-  ['dontbeaspreader', 3128, 2944, 0, 0, 0, 920.0],
-  ['covid', 5462, 10506, 18233, 8637, 2151, 849.1],
-  ['covid19france', 2221, 941, 27, 54, 50, 522.9],
-  ['quarantinelife', 1748, 1001, 0, 0, 0, 449.7],
-  ['covid-19', 2210, 557, 395, 289, 315, 405.8],
-  ['coronavirusfrance', 1789, 620, 643, 261, 46, 384.5],
-  ['confinementtotal', 1271, 1303, 0, 0, 0, 384.5],
-  ['coronavirusenfrance', 1598, 645, 263, 0, 0, 384.1],
-  ['co', 2502, 992, 919, 834, 712, 373.8],
-  ['coronapocolypse', 696, 2031, 963, 30, 0, 339.3],
-  ['shipsgoingdown', 1144, 47, 0, 0, 0, 233.5],
-  ['rmstoiletpap', 1144, 47, 0, 0, 0, 233.5],
-  ['yomequedoencasa', 2071, 728, 1426, 1241, 663, 230.3],
-  ['covid19malaysia', 923, 452, 0, 0, 0, 229.8],
-  ['stayhomechallenge', 1108, 32, 0, 0, 0, 224.8],
-  ['corona', 2758, 2773, 2287, 2216, 1922, 222.9],
-  ['socialdistancing', 1056, 962, 738, 357, 251, 221.5],
-  ['cuarentenacoronavirus', 312, 1483, 235, 0, 0, 210.7],
-  ['chinesevirus', 859, 0, 41, 0, 51, 161.6],
-  ['bbb20', 706, 198, 45, 55, 40, 147.5],
-  ['coronavirusuk', 753, 326, 285, 155, 156, 136.5],
-  ['confinementotal', 662, 24, 0, 0, 0, 134.8],
-  ['stayhome', 556, 687, 1149, 276, 89, 134.5],
-  ['coronavirusinpakistan', 508, 302, 0, 0, 0, 131.8],
-  ['qu', 702, 503, 409, 268, 187, 126.5],
-  ['quedateenlacasa', 553, 156, 0, 0, 0, 126.2]]);
+  data.addRows([
+    ['covid', 5462, 10506, 18233, 8637, 2151, 1953, 2031, 2728, 4873,
+        1079.63],
+       ['covid19', 64330, 59215, 50520, 54223, 42575, 51676, 67289,
+        49981, 49389, 941.25],
+       ['coronavirusupdates', 673, 2430, 6692, 2910, 142, 69, 164, 128,
+        245, 408.58],
+       ['covid_19', 4139, 2470, 3192, 7785, 9484, 5508, 1264, 804, 838,
+        405.58],
+       ['coronapocalypse', 416, 1113, 5581, 7671, 1793, 0, 0, 0, 0,
+        397.27],
+       ['dontbeaspreader', 3128, 2944, 0, 0, 0, 0, 0, 0, 0, 355.73],
+       ['coronavirusoutbreak', 10557, 8704, 2612, 670, 800, 1243, 2414,
+        5028, 8537, 315.52],
+       ['yomequedoencasa', 2071, 728, 1426, 1241, 663, 299, 0, 0, 0,
+        237.7],
+       ['coronapocolypse', 696, 2031, 963, 30, 0, 0, 0, 0, 0, 180.55],
+       ['coronaviruspandemic', 586, 711, 1279, 6986, 3858, 3769, 46, 0,
+        26, 167.6],
+       ['quarantinelife', 1748, 1001, 0, 0, 0, 0, 0, 0, 0, 166.58],
+       ['quedateentucasa', 231, 1484, 1672, 596, 78, 0, 0, 0, 0, 155.27],
+       ['confinementtotal', 1271, 1303, 0, 0, 0, 0, 0, 0, 0, 149.88],
+       ['coronavirusenfrance', 1598, 645, 263, 0, 0, 17, 0, 0, 25, 145.6],
+       ['socialdistancing', 1056, 962, 738, 357, 251, 212, 112, 41, 33,
+        137.53],
+       ['co', 2502, 992, 919, 834, 712, 790, 680, 719, 879, 130.55],
+       ['coronavirusfrance', 1789, 620, 643, 261, 46, 115, 161, 244, 453,
+        126.37],
+       ['covid-19', 2210, 557, 395, 289, 315, 423, 406, 370, 445, 124.42],
+       ['covid19france', 2221, 941, 27, 54, 50, 106, 505, 889, 309,
+        113.27],
+       ['stayhome', 556, 687, 1149, 276, 89, 16, 29, 21, 0, 112.03],
+       ['confinement', 643, 835, 530, 440, 223, 0, 0, 0, 0, 109.62],
+       ['cuarentenacoronavirus', 312, 1483, 235, 0, 0, 0, 0, 0, 0,
+        102.78],
+       ['qu', 702, 503, 409, 268, 187, 63, 0, 0, 0, 89.0],
+       ['quedateencasa', 606, 569, 408, 436, 414, 315, 0, 0, 0, 84.47],
+       ['covid19malaysia', 923, 452, 0, 0, 0, 0, 0, 0, 0, 84.13],
+       ['shipsgoingdown', 1144, 47, 0, 0, 0, 0, 0, 0, 0, 78.62],
+       ['rmstoiletpap', 1144, 47, 0, 0, 0, 0, 0, 0, 0, 78.62],
+       ['stayhomechallenge', 1108, 32, 0, 0, 0, 0, 0, 0, 0, 75.47],
+       ['restezchezvous', 576, 196, 585, 307, 0, 0, 0, 0, 0, 72.82],
+       ['cuba', 792, 747, 701, 1246, 301, 455, 430, 468, 336, 66.57]]);
 
   var options = {
      showRowNumber: false,
