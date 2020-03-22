@@ -8,15 +8,15 @@ function showMisinfoTweets(){
 	// var abc =  [['a', 'b', 'c'], ['d', 'e', 'f'], ['g', 'h', 'i']];
   var  abc = getMisinfoTweets();
 	var str = "";
-  str += "<table class='mistable'>"
+  str += "<table class='mistable' style='border-collapse: separate; border-spacing: 0px;'>"
   // str += "<tr>";
   // str += "<th>Website Type (if available)</th>";
   // str += "<th>Detection Score</th>";
   // str += "<th>False/Misleading Tweets</th> </tr>";
 
 	// str += "<table>"
-	str += "<tr class='mistr'><th class='misth'>Website Type (if available)</th>"
-	+ "<th class='misth'>Detection Score</th><th class='misth'>Tweet Propagated on Social Media</th></tr>"
+	str += "<tr class='mistr'><td class='card-header' width='15%'>Website Type*</td>"
+	+ "<td class='card-header'>Tweet Propagated on Social Media</td><td class='card-header'  width='15%'>Detection Score</td></tr>"
 	// str += "<tr><td>a</td><td>b</td><td>c</td></tr>"
 	// str += "<table>"
 
@@ -24,10 +24,12 @@ function showMisinfoTweets(){
   for (i = 0; i < abc.length; i++) {
       str += "<tr class='mistr'>";
       str += "<td class='mistd'>" +   abc[i][0] + "</td>";
-      str += "<td class='mistd'>" +   abc[i][1] + "</td>";
-      str += "<td class='mistd'>" +  abc[i][2] + "</td></tr>";
+      str += "<td class='mistd'>" +  abc[i][2] + "</td>";
+      str += "<td class='mistd' style='text-align:center'>" +   abc[i][1] + "</td></tr>";
   }
-	str += "<tr><td></td><td></td><td><a href=javascript:showMoreTweets() style='color: dimgray'>" + "<br/>See more tweets (upcoming)" + "</a></td></tr>";
+	str += "<tr><td>*Website type displayed if available</td>"
+    + "<td style='text-align:center'><a href=javascript:showMoreTweets() style='color: dimgray'>" + "<br/>See more tweets (upcoming)" + "</a></td>"
+    + "<td></td></tr>";
 
   str += "</table> <br/><br/><br/>";
     // // alert(str);
