@@ -27,7 +27,7 @@ function showMisinfoTweets(){
       str += "<td class='mistd'>" +  abc[i][2] + "</td>";
       str += "<td class='mistd' style='text-align:center'>" +   abc[i][1] + "</td></tr>";
   }
-	str += "<tr><td>*Website type displayed if available</td>"
+	str += "<tr><td style='color:dimgray; font-size:14px'>*(displayed if available)</td>"
     + "<td style='text-align:center'><a href=javascript:showMoreTweets() style='color: dimgray'>" + "<br/>See more tweets (upcoming)" + "</a></td>"
     + "<td></td></tr>";
 
