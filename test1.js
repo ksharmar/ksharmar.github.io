@@ -17,15 +17,15 @@ var map = new Datamap({
 
         // @KS : fill this with the number of tweets of every country -- that will help to populate colors 
         data: {
-          USA: {fillKey: 'lt50' },
-          RUS: {fillKey: 'lt50' },
-          CAN: {fillKey: 'lt50' },
-          BRA: {fillKey: 'gt50' },
-          ARG: {fillKey: 'gt50'},
-          COL: {fillKey: 'gt50' },
-          AUS: {fillKey: 'gt50' },
-          ZAF: {fillKey: 'gt50' },
-          MAD: {fillKey: 'gt50' }       
+          // USA: {fillKey: 'lt50' },
+          // RUS: {fillKey: 'lt50' },
+          // CAN: {fillKey: 'lt50' },
+          // BRA: {fillKey: 'gt50' },
+          // ARG: {fillKey: 'gt50'},
+          // COL: {fillKey: 'gt50' },
+          // AUS: {fillKey: 'gt50' },
+          // ZAF: {fillKey: 'gt50' },
+          // MAD: {fillKey: 'gt50' }       
         },
 
         done: function(datamap) {

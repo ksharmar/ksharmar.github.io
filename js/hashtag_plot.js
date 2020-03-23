@@ -1,5 +1,32 @@
-import { trend_top100 } from "../resources/trend_analysis/trend_top100.js"
-import { trend_emerging100 } from "../resources/trend_analysis/trend_emerging100.js"
+import { trend_top } from "../resources/trend_analysis/trend_top50.js"
+import { trend_emerging } from "../resources/trend_analysis/trend_emerging30.js"
+
+function highlightLine(chart,data) {
+    var selectedLineWidth = 4;
+    var selectedItem = chart.getChart().getSelection()[0];
+    var options = chart.getOptions();
+    try {
+        options.series[selectedItem.column-1].selected = !(options.series[selectedItem.column-1].selected);
+        var anyselected = false;
+        for (var i in options.series) {
+            if (options.series[i].selected) {
+                options.series[i].pointSize = 5;
+                options.series[i].lineWidth = 2;
+                anyselected = true;
+            } else {
+                options.series[i].pointSize = 0;
+                options.series[i].lineWidth = 0;
+            }
+        }
+        if (!anyselected) {
+            for (var i in options.series) {
+                options.series[i].pointSize = 5;
+                options.series[i].lineWidth = 2;
+            }
+        }
+        chart.getChart().draw(data, options);   //redraw
+    } catch (err) {}
+}
 
 var chartDrawFun = {
 
@@ -10,8 +37,7 @@ var chartDrawFun = {
         var chartLineCount    = 10;
         var controlLineCount	= 10;
 
-        // var drawdata = trend_top100[name];
-        var drawdata = trend_top100[name];
+        var drawdata = trend_top[name];
 
         function drawDashboard() {
 
@@ -19,8 +45,14 @@ var chartDrawFun = {
 
             data.addColumn('datetime' , 'Day');
             var i;
+            var options_series = {};
             for (i = 0; i < drawdata["hashtag"].length; i++) {
                 data.addColumn('number', drawdata["hashtag"][i]);
+                options_series[i] = {
+                    pointSize: 5,
+                    lineWidth: 2,
+                    selected: false
+                };
             }
 
             var seqlen = drawdata["dates"].length;
@@ -38,12 +70,13 @@ var chartDrawFun = {
                 chartType   : 'LineChart',
                 containerId : 'lineChartArea',
                 options     : {
+                                title: "Top-50 hashtags in ".concat(name),
                                 isStacked   : 'percent',
-                                focusTarget : 'category',
+                                focusTarget : 'datum',
                                 height		  : 500,
                                 width			  : '100%',
                                 legend		  : { position: "right", textStyle: {fontSize: 13}},
-                                pointSize		: 5,
+                                // pointSize		: 5,
                                 tooltip		  : {textStyle : {fontSize:12}, showColorCode : true, trigger: 'both'},
                                 hAxis			  : {format: chartDateformat, 
                                                 gridlines:{count:chartLineCount,
@@ -71,9 +104,13 @@ var chartDrawFun = {
                                                 opacity: 0.8,
                                                 pattern: chartDateformat
                                             }
-                                            }
+                                            },
+                                // lineWidth: 2
+                                series: options_series
                                 }
             });
+
+            google.visualization.events.addListener(chart, 'select', function() { highlightLine(chart, data); });
 
             var control = new google.visualization.ControlWrapper({
                 controlType: 'ChartRangeFilter',
@@ -120,7 +157,7 @@ var emergingChartDrawFun = {
         var chartLineCount    = 10;
         var controlLineCount	= 10;
     
-        var drawdata = trend_emerging100[name];
+        var drawdata = trend_emerging[name];
 
         function drawDashboard() {
     
@@ -128,8 +165,14 @@ var emergingChartDrawFun = {
     
             data.addColumn('datetime' , 'Day');
             var i;
+            var options_series = {};
             for (i = 0; i < drawdata["hashtag"].length; i++) {
                 data.addColumn('number', drawdata["hashtag"][i]);
+                options_series[i] = {
+                    pointSize: 5,
+                    lineWidth: 2,
+                    selected: false
+                };
             }
 
             var seqlen = drawdata["dates"].length;
@@ -147,12 +190,13 @@ var emergingChartDrawFun = {
                 chartType   : 'LineChart',
                 containerId : 'emergingLineChartArea',
                 options     : {
+                                title: "Top-30 emerging hashtags in ".concat(name),
                                 isStacked   : 'percent',
-                                focusTarget : 'category',
+                                focusTarget : 'datum',
                                 height		  : 500,
                                 width			  : '100%',
                                 legend		  : { position: "right", textStyle: {fontSize: 13}},
-                                pointSize		: 5,
+                                // pointSize		: 5,
                                 tooltip		  : {textStyle : {fontSize:12}, showColorCode : true, trigger: 'both'},
                                 hAxis			  : {format: chartDateformat, 
                                                 gridlines:{count:chartLineCount,
@@ -180,9 +224,12 @@ var emergingChartDrawFun = {
                                                 opacity: 0.8,
                                                 pattern: chartDateformat
                                             }
-                                            }
+                                            },
+                                series: options_series
                                 }
             });
+
+            google.visualization.events.addListener(chart, 'select', function() { highlightLine(chart, data); });
     
             var control = new google.visualization.ControlWrapper({
                 controlType: 'ChartRangeFilter',
