@@ -11,6 +11,19 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
    <script type="text/javascript" src="interactive/30clusters_word_tweet.js"></script>
+
+  <!-- google charts -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type = "text/javascript">
+    google.charts.load('current', {packages: ['corechart']});
+  </script>
+    <script type = "text/javascript">
+      google.charts.load('current', {packages: ['table']});
+  </script>
+  <script type = "text/javascript">
+    google.charts.load('current', {packages: ['line']});
+  </script>
+  <!-- <script type="text/javascript" src="interactive/trend.js"></script> -->
 </head>
 
 <body bgcolor="black">
@@ -19,14 +32,14 @@
 </div>
   <script src="http://d3js.org/d3.v3.min.js"></script>
   <script src="http://d3js.org/topojson.v1.min.js"></script>
-  <script src="http://datamaps.github.io/scripts/datamaps.world.min.js?v=1"></script>
+  <script src="resources/datamaps.world.min.js"></script>
 
 
 <div class="row">
   <div class="column"> <font color="white">  </font> <div class="wmap">
     <div id="container1" style="position: relative; width: 100%; max-height: 450px;"></div>
 
-    <script src="test1.js"></script>
+    <script src="test1.js" type="module"></script>
   
   </div>
 </div>
@@ -44,8 +57,21 @@
 
 <div class="lbox">
   <script src="scroll.js"></script>
-      <input type="text" id ="screen2" size ="30" style="font-size:18pt;height:320px;width:350px;" /> 
-      <p>      <font color="white" size="6" > This is box 2. Some more text can put here.<br>.<br>.<br>.<br>.<br>.  </font></p>
+      <!-- <input type="text" id ="screen2" size ="30" style="font-size:18pt;height:320px;width:350px;" /> 
+      <p>      <font color="white" size="6" > This is box 2. Some more text can put here.<br>.<br>.<br>.<br>.<br>.  </font></p> -->
+      <div id="Line_Controls_Chart">
+        <!-- main chart -->
+        <div id="lineChartArea" style="padding:0px 20px 0px 0px;"></div>
+        <!-- control bar-->
+        <div id="controlsArea" style="padding:0px 20px 0px 0px;"></div>
+      </div>
+
+      <div id="Emerging_Line_Controls_Chart">
+        <!-- main chart -->
+        <div id="emergingLineChartArea" style="padding:0px 20px 0px 0px;"></div>
+        <!-- control bar-->
+        <div id="emergingControlsArea" style="padding:0px 20px 0px 0px;"></div>
+      </div>
     </div>
 <div class="lbox">
             <input type="text" id ="screen3" size ="30" style="font-size:18pt;height:320px;width:350px;" /> 

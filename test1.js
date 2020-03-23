@@ -1,7 +1,9 @@
-    var map = new Datamap({
+import {show_hashtag_plot} from "./js/hashtag_plot.js";
+
+var map = new Datamap({
         scope: 'world',
         element: document.getElementById('container1'),
-        projection: 'mercator',
+        // projection: 'mercator',
         height: 450,
 
         //@KS :  fill this with the color scheme for the number of tweets Unless we want a black map
@@ -33,6 +35,7 @@
                 var g = geography.properties.name;
                 showtext(g)
                 screen.value = g;
+                show_hashtag_plot(g);
             });
         }
     });
@@ -43,8 +46,8 @@ function showtext(name){
   var screen  = document.getElementById('screen1');
   screen1.value = name+ " sentiment analysis";// content below this.";
 
-  var screen  = document.getElementById('screen2');
-  screen2.value = name+ " Popular hashtag";// content below this.";
+  // var screen  = document.getElementById('screen2');
+  // screen2.value = name+ " Popular hashtag";// content below this.";
 
   var screen  = document.getElementById('screen3');
   screen3.value = name+ " wordcloud"; // for emerging hash-tags content below this.";
