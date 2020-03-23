@@ -1,5 +1,5 @@
 import { trend_top } from "../resources/trend_analysis/trend_top50.js"
-import { trend_emerging } from "../resources/trend_analysis/trend_emerging30.js"
+import { trend_emerging } from "../resources/trend_analysis/trend_emerging10.js"
 
 function highlightLine(chart,data) {
     var selectedLineWidth = 4;
@@ -37,6 +37,22 @@ var chartDrawFun = {
         var chartLineCount    = 10;
         var controlLineCount	= 10;
 
+        // try {
+        //     var drawdata = trend_top[name];
+        //     if (typeof drawdata == 'undefined') {
+        //         drawdata = {
+        //             "hashtag": [],
+        //             "dates": [],
+        //             "rows": []
+        //         }
+        //     }
+        // } catch (err) {
+        //     var drawdata = {
+        //         "hashtag": [],
+        //         "dates": [],
+        //         "rows": []
+        //     }
+        // }
         var drawdata = trend_top[name];
 
         function drawDashboard() {
@@ -190,7 +206,7 @@ var emergingChartDrawFun = {
                 chartType   : 'LineChart',
                 containerId : 'emergingLineChartArea',
                 options     : {
-                                title: "Top-30 emerging hashtags in ".concat(name),
+                                title: "Top-10 emerging hashtags in ".concat(name),
                                 isStacked   : 'percent',
                                 focusTarget : 'datum',
                                 height		  : 500,
