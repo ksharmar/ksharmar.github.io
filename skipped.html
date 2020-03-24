@@ -36,73 +36,35 @@
    <!-- <script type="text/javascript" src="interactive/jquery.vmap.sampledata.js"></script> -->
    <script type="text/javascript" src="interactive/map_sentiment.js"></script>
    <!-- <script type="JavaScript" src="interactive/sentiment.js"></script> -->
-
-
-  <script>
+   <script>
 
     function _sentiment_data(region){
       var list = []
       switch(region){
         case 'United States of America':
           list =
-          //   ['Date', 'Anger', 'Disgust', 'Fear', 'Joy', 'Sadness', 'Surprise'],
-          //   // ['2020-03-09', 0.028, 0.028, 0.494, 0.296, 0.043, 0.111],
-          //   // ['2020-03-10', 0.027, 0.031, 0.495, 0.275, 0.048, 0.124],
-          //   // ['2020-03-11', 0.03, 0.031, 0.457, 0.286, 0.067, 0.128],
-          //   // ['2020-03-12', 0.034, 0.029, 0.45, 0.275, 0.068, 0.143],
-          //   // ['2020-03-13', 0.035, 0.033, 0.462, 0.273, 0.065, 0.132],
-          //   // ['2020-03-14', 0.039, 0.038, 0.444, 0.282, 0.064, 0.134],
-          //   // ['2020-03-15', 0.036, 0.031, 0.479, 0.293, 0.047, 0.114],
-          //   // ['2020-03-16', 0.028, 0.027, 0.464, 0.295, 0.049, 0.137],
-          //   // ['2020-03-17', 0.032, 0.03, 0.452, 0.294, 0.056, 0.137]
-          //   ['2020-03-17', 0.03, 0.03, 0.57, 0.28, 0.02, 0.09]
-          // ];
-          [['Date', '+ Positive Sentiment', '- Negative Sentiment'],
-           ['2020-03-09', 6.974, 8.852],
-           ['2020-03-10', 7.208, 8.463],
-           ['2020-03-11', 6.839, 8.643],
-           ['2020-03-12', 6.798, 8.491],
-           ['2020-03-13', 7.178, 8.945],
-           ['2020-03-14', 7.72, 8.72],
-           ['2020-03-15', 7.451, 9.482],
-           ['2020-03-16', 7.127, 7.78],
-           ['2020-03-17', 7.266, 8.273]]
+            [['Date', 'Anger', 'Disgust', 'Fear', 'Joy', 'Sadness', 'Surprise'],
+            ['2020-03-09', 0.028, 0.028, 0.494, 0.296, 0.043, 0.111],
+            //['2020-03-10', 0.027, 0.031, 0.495, 0.275, 0.048, 0.124],
+            ['2020-03-11', 0.03, 0.031, 0.457, 0.286, 0.067, 0.128],
+            //['2020-03-12', 0.034, 0.029, 0.45, 0.275, 0.068, 0.143],
+            ['2020-03-13', 0.035, 0.033, 0.462, 0.273, 0.065, 0.132],
+            //['2020-03-14', 0.039, 0.038, 0.444, 0.282, 0.064, 0.134],
+            ['2020-03-15', 0.036, 0.031, 0.479, 0.293, 0.047, 0.114],
+            //['2020-03-16', 0.028, 0.027, 0.464, 0.295, 0.049, 0.137],
+            ['2020-03-17', 0.032, 0.03, 0.452, 0.294, 0.056, 0.137],
+            // ['2020-03-17', 0.03, 0.03, 0.57, 0.28, 0.02, 0.09]
+          ];
           break;
-        case 'China':
-          list = [['Date', '+ Positive Sentiment', '- Negative Sentiment'],
-           ['2020-03-09', 7.558, 6.687],
-           ['2020-03-10', 6.496, 6.204],
-           ['2020-03-11', 6.429, 4.677],
-           ['2020-03-12', 8.747, 6.241],
-           ['2020-03-13', 7.831, 6.286],
-           ['2020-03-14', 8.214, 7.342],
-           ['2020-03-15', 9.074, 7.814],
-           ['2020-03-16', 8.424, 6.549],
-           ['2020-03-17', 7.519, 5.303]];
-        break;
-        case 'India':
-        list = [['Date', '+ Positive Sentiment', '- Negative Sentiment'],
-         ['2020-03-09', 8.153, 8.324],
-         ['2020-03-10', 8.328, 7.984],
-         ['2020-03-11', 7.538, 6.665],
-         ['2020-03-12', 7.504, 6.984],
-         ['2020-03-13', 9.207, 7.047],
-         ['2020-03-14', 9.004, 7.081],
-         ['2020-03-15', 8.647, 7.169],
-         ['2020-03-16', 8.361, 6.762],
-         ['2020-03-17', 8.113, 6.577]
-         ];
-         break;
       }
       return list;
     }
 
      function draw_sentiment(region) {
-       // Define the chart to be drawn.
        var data = google.visualization.arrayToDataTable(_sentiment_data(region));
        var options = {title: 'Sentiment (2020-03-09 - 2020-03-17)',
                       isStacked:false,
-                      chartArea:{left:0,top:30,width:"300px",height:"250px"},
+                      chartArea:{left:0,top:30,width:"300px",height:"400px"},
                       height: 350,
                       width: 450
                     };
@@ -110,9 +72,10 @@
        var chart = new google.visualization.BarChart(document.getElementById('country_sentiments'));
        chart.draw(data, options);
       }
+      // google.charts.setOnLoadCallback(draw_sentiment(''));
 
       function show_sentiment_chart(region) {
-          document.getElementById('country_sentiments_desc').innerHTML = "Click map for sentiment. Map color intensity reflects positive <br/> to negative sentiment ratio. <br/><br/><p class='lead'>" + region + "<br/>";
+          document.getElementById('country_sentiments_desc').innerHTML = "<p class='lead'>" + region + "<br/>";
           draw_sentiment(region);
       }
 
@@ -128,9 +91,9 @@
          scaleColors: ['#C8EEFF', '#006491'],
          values: sample_data,
          normalizeFunction: 'polynomial',
-         // onLoad: function(event, map){
-         //     show_sentiment_chart('United States of America');
-         // },
+         onLoad: function(event, map){
+             show_sentiment_chart('United States of America');
+         },
          onRegionClick: function(event, code, region){
            if (region == 'United States of America' || region == 'China' || region == 'India') {
               show_sentiment_chart(region);
@@ -221,188 +184,11 @@
     <div class="row">
       <div class="column"><div id="vmap" style="width: 600px; height: 400px;"></div></div>
       <div class="column">
-        <div id="country_sentiments_desc">
-          Click map for sentiment. Map color intensity reflects positive
-          <br/> to negative sentiment ratio.
-        </div>
-        <div id="country_sentiments"><img src='img/US_load_sentiments.png'> </img></div>
+        <div id="country_sentiments_desc"></div>
+        <div id="country_sentiments"></div>
       </div>
     </div>
 
-
-
-    <br/>
-    <h4>
-    Twitter Sentiments on #SocialDistancing
-    <br/><br/>
-    </h4>
-    <div class="row">
-    <div class="col">
-      <!-- style="background-color:lightblue; margin-right:20px"> -->
-
-      <div style="width: 100%; height: 400px; overflow-y: scroll">
-        <blockquote class="twitter-tweet" data-lang="en">
-        <p lang="en" dir="ltr">Positive sentiments (9.79%)
-         <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
-        </blockquote>
-
-      <blockquote class="twitter-tweet" data-lang="en">
-      <p lang="en" dir="ltr">Proud of @ACCinTouch for this important step to #SocialDistancing #COVID19 we remain strong 💪
-       <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
-      </blockquote>
-
-      <blockquote class="twitter-tweet" data-lang="en">
-      <p lang="en" dir="ltr">RT @ABetterYouToda1: Yes please #Canada #Covid19 #ShutItDown #SocialDistancing #FlattenTheCurve
-       <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
-      </blockquote>
-
-      <blockquote class="twitter-tweet" data-lang="en">
-      <p lang="en" dir="ltr">RT @AskAdam3: Please share with your community. Thanks @TheTechRabbi #COVID19 #SocialDistancing #elearning #ncssbethebest https://t.co/ZAry…
-       <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
-      </blockquote>
-
-      <blockquote class="twitter-tweet" data-lang="en">
-      <p lang="en" dir="ltr">RT @JustAMazen: @jaketapper Treat everyone like they have Coronavirus!! #SocialDistancing #SelfIsolationHelp
-       <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
-      </blockquote>
-
-      <blockquote class="twitter-tweet" data-lang="en">
-      <p lang="en" dir="ltr">RT @audrago4th: @10NewsWTSP While my immune system may be strong, I’m practicing #SocialDistancing to protect those like my grandfather. He…
-       <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
-      </blockquote>
-    </div>
-  </div>
-
-  <div class="col">
-     <!-- style="background-color:indianred"> -->
-
-    <div style="width: 100%; height: 400px; overflow-y: scroll">
-
-      <blockquote class="twitter-tweet" data-lang="en">
-      <p lang="en" dir="ltr">Negative sentiments (4.11%)
-       <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
-      </blockquote>
-
-    <blockquote class="twitter-tweet" data-lang="en">
-    <p lang="en" dir="ltr">I know that we must stay safe but there must be a go between so the poor don't get sabotaged esp. Pls. none of us innocent folks created this #Covid19 crisis. Too much #SocialDistancing will have a negative impact. #SoundsGood not 2 forget the unfortunate. Plus this is NOT Contd.
-     <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
-    </blockquote>
-
-    <blockquote class="twitter-tweet" data-lang="en">
-    <p lang="en" dir="ltr">RT @mostflavored: A lot of younger Americans not caring about sentencing a large number of other's grandparents to death #SocialDistancing…
-     <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
-    </blockquote>
-
-    <blockquote class="twitter-tweet" data-lang="en">
-    <p lang="en" dir="ltr"> Not the best example of #SocialDistancing.🤔 #Coronavirus #COVID19
-     <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
-    </blockquote>
-
-    <blockquote class="twitter-tweet" data-lang="en">
-    <p lang="en" dir="ltr">RT @AndyOstroy: @realDonaldTrump You don’t have to worry about #SocialDistancing. You have no friends... #Trump #Coronavirus
-     <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
-    </blockquote>
-
-    <blockquote class="twitter-tweet" data-lang="en">
-    <p lang="en" dir="ltr">RT @jennyyangtv: this is the scary part and why we need to take #socialdistancing seriously: just ONE infected person is HIGHLY CONTAGIOUS…
-     <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
-    </blockquote>
-  </div>
-  </div>
-
-</div>
-
-
-<br/><br/><br/>
-<h4>
-Twitter Sentiments on #WorkFromHome
-<br/><br/>
-</h4>
-<div class="row">
-<div class="col">
-  <!-- style="background-color:lightblue; margin-right:20px"> -->
-
-  <div style="width: 100%; height: 400px; overflow-y: scroll">
-    <blockquote class="twitter-tweet" data-lang="en">
-    <p lang="en" dir="ltr">Positive sentiments (9.66%)
-     <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
-    </blockquote>
-
-  <blockquote class="twitter-tweet" data-lang="en">
-  <p lang="en" dir="ltr">
-    RT @StribOpinion: #WorkFromHome: It's good in a public health crisis, and good for business generally. #coronavirus By @MaryMorseMarti http…
-   <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
-  </blockquote>
-
-  <blockquote class="twitter-tweet" data-lang="en">
-  <p lang="en" dir="ltr">
-    RT @Golden_Roots_: One of our fave tools! We highly recommend @useloom for those transitioning into #WFH, and those always #workingremotely…
-   <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
-  </blockquote>
-
-  <blockquote class="twitter-tweet" data-lang="en">
-  <p lang="en" dir="ltr">
-    RT @prasanna_says: Leaders changing from the front! Thanks @BaskarG for moving to #WFH cc: @ericsyuan - zoom is holding up super well wit…
-  <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
-  </blockquote>
-
-  <blockquote class="twitter-tweet" data-lang="en">
-  <p lang="en" dir="ltr">
-    RT @LouiseJupe: Right. That’s the best few months sorted. #coronaschedule #coronavirus #WorkFromHome #HelpEachOther ⁦@AcademicChatter⁩ ⁦@pa…
-   <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
-  </blockquote>
-
-  <blockquote class="twitter-tweet" data-lang="en">
-  <p lang="en" dir="ltr">
-    RT @hlpeeples: I bet dogs are like “whatever this #coronavirus thing is... I love it!!!” #WorkFromHome #dogmom https://t.co/ztnVey1DWl
-   <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
-  </blockquote>
-</div>
-</div>
-
-<div class="col">
- <!-- style="background-color:indianred"> -->
-
-<div style="width: 100%; height: 400px; overflow-y: scroll">
-
-  <blockquote class="twitter-tweet" data-lang="en">
-  <p lang="en" dir="ltr">Negative sentiments (2.97%)
-   <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
-  </blockquote>
-
-<blockquote class="twitter-tweet" data-lang="en">
-<p lang="en" dir="ltr">
-RT @ludditus: Most jobs for which #SmartWorking #WorkingFromHome #télétravail #telelavoro is possible are useless, parasite, or alienated b…
-  <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
-</blockquote>
-
-<blockquote class="twitter-tweet" data-lang="en">
-<p lang="en" dir="ltr">
-With 3 confirmed cases of #coronavirus, we should encourage Ohioans to #WorkFromHome when they feel sick. However, many living paycheck to paycheck can't afford to stay home. Creating a paid sick leave program will help reduce the risk of #COVID19. https://t.co/YLslg7SkGc
-<!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
-</blockquote>
-
-<blockquote class="twitter-tweet" data-lang="en">
-<p lang="en" dir="ltr">
-  RT @MPOHealthLit: Unfortunately, this means basically that it is everywhere now. #WorkFromHome if possible protect the #vulnerable in m…
- <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
-</blockquote>
-
-<blockquote class="twitter-tweet" data-lang="en">
-<p lang="en" dir="ltr">
-  Tracker by @timeular helps a lot in #wfh situation due to #COVID19 . I like my job and often forget it's past hours when I don't have to catch my train. Remember that you can get #overworked and #tired even at home and it has negative impact to your immunity! #timemanagement
-   <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
-</blockquote>
-
-<blockquote class="twitter-tweet" data-lang="en">
-<p lang="en" dir="ltr">
-RT @bozzie_t: Now we going to miss our work spouses 😭😭💔 #workingfromhome ##CoronaVirusSA #CoronavirusOutbreak https://t.co/dRkz835nKK
-<!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
-</blockquote>
-</div>
-</div>
-
-</div>
 
 
 
