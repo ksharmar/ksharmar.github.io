@@ -52,7 +52,7 @@ function showMisinfoTweets(){
 	var str = "";
   str += "<table class='mistable' style='border-collapse: separate; border-spacing: 0px;'>"
 	str += "<tr class='mistr'><td class='card-header' width='15%'>Website Type*</td>"
-	+ "<td class='card-header'>Tweet Propagated on Social Media</td><td class='card-header'  width='15%'>Detection score</td></tr>"
+	+ "<td class='card-header'>Tweet Propagated on Social Media</td><td class='card-header'  width='35%'>Retweets</td></tr>"
   var i;  // currently 25 tweets shown tweetlist.length/8 abc.length
   for (i = 0; i < 50; i++) {
 			if (abc[i].length == 3){
@@ -67,10 +67,10 @@ function showMisinfoTweets(){
 
 				+  "</td>";
 
-	      str += "<td class='mistd' style='text-align:center'>" +   abc[i][1] + "</td></tr>";
-				// str += "<td class='mistd' style='text-align:center'>" +
-				// "<img src='img/misinfo/cascade_timeseries_" + abc[i][4] + ".png'" + " class='img-fluid' alt='Responsive image'/>"
-				// + "</td></tr>";
+	      //str += "<td class='mistd' style='text-align:center'>" +   abc[i][1] + "</td></tr>";
+				str += "<td class='mistd' style='text-align:center'>" +
+				"<img src='img/misinfo/cascade_timeseries_" + abc[i][4] + ".png'" + " class='img-fluid' alt='Responsive image'/>"
+				+ "</td></tr>";
 
 			}else{
 				str += "<tr class='mistr'>";
@@ -84,10 +84,10 @@ function showMisinfoTweets(){
 
 				+  "</td>";
 
-	      str += "<td class='mistd' style='text-align:center'>" +   abc[i][1] + "</td></tr>";
-				// str += "<td class='mistd' style='text-align:center'>" +
-				// "<img src='img/misinfo/cascade_timeseries_" + abc[i][4] + ".png'" + " class='img-fluid' alt='Responsive image'/>"
-				// + "</td></tr>";
+	      // str += "<td class='mistd' style='text-align:center'>" +   abc[i][1] + "</td></tr>";
+				str += "<td class='mistd' style='text-align:center'>" +
+				"<img src='img/misinfo/cascade_timeseries_" + abc[i][4] + ".png'" + " class='img-fluid' alt='Responsive image'/>"
+				+ "</td></tr>";
 
 			};
   }
@@ -103,49 +103,53 @@ function showMisinfoTweets(){
 }
 
 function showMoreMisinfoTweets(){
-	var  abc = getMisinfoTweets();
-	var str = "";
-  str += "<table class='mistable' style='border-collapse: separate; border-spacing: 0px;'>"
-	str += "<tr class='mistr'><td class='card-header' width='15%'>Website Type*</td>"
-	+ "<td class='card-header'>Tweet Propagated on Social Media</td><td class='card-header'  width='15%'>Detection score</td></tr>"
-  var i;  // currently 25 tweets shown tweetlist.length/8 abc.length
-  for (i = 0; i < abc.length; i++) {
-			if (abc[i].length == 3){
-				str += "<tr class='mistr'>";
-	      str += "<td class='mistd'>" + abc[i][0] + "</td>";
-	      str += "<td class='mistd'>" + abc[i][2]  +"  [" + abc[i][1]+ "]"
 
-				// "<blockquote class='twitter-tweet' data-lang='en'>" +
-				// "<p lang='en' dir='ltr'>" + abc[i][2] + "<br/><br/>"  + abc[i][3] +
-				// // "<a href='https://twitter.com/anyuser/status/"+ '' +"'>" + abc[i][3] + "</a> " +
-				// "</blockquote>"
+		// 0 = webtype; 1=detection score; 2=text, 3=date, 4=num
+		// var abc =  [['a', 'b', 'c'], ['d', 'e', 'f'], ['g', 'h', 'i']];
+	  var  abc = getMisinfoTweets();
+		var str = "";
+	  str += "<table class='mistable' style='border-collapse: separate; border-spacing: 0px;'>"
+		str += "<tr class='mistr'><td class='card-header' width='15%'>Website Type*</td>"
+		+ "<td class='card-header'>Tweet Propagated on Social Media</td><td class='card-header'  width='35%'>Retweets</td></tr>"
+	  var i;  // currently 25 tweets shown tweetlist.length/8 abc.length
+	  for (i = 0; i < 100; i++) {
+				if (abc[i].length == 3){
+					str += "<tr class='mistr'>";
+		      str += "<td class='mistd'>" + abc[i][0] + "</td>";
+		      str += "<td class='mistd'>" + abc[i][2]  +"  [" + abc[i][1]+ "]"
 
-				+  "</td>";
+					// "<blockquote class='twitter-tweet' data-lang='en'>" +
+					// "<p lang='en' dir='ltr'>" + abc[i][2] + "<br/><br/>"  + abc[i][3] +
+					// // "<a href='https://twitter.com/anyuser/status/"+ '' +"'>" + abc[i][3] + "</a> " +
+					// "</blockquote>"
 
-	      str += "<td class='mistd' style='text-align:center'>" +   abc[i][1] + "</td></tr>";
-				// str += "<td class='mistd' style='text-align:center'>" +
-				// "<img src='img/misinfo/cascade_timeseries_" + abc[i][4] + ".png'" + " class='img-fluid' alt='Responsive image'/>"
-				// + "</td></tr>";
+					+  "</td>";
 
-			}else{
-				str += "<tr class='mistr'>";
-	      str += "<td class='mistd'>" + abc[i][0] + "</td>";
-	      str += "<td class='mistd'>" + abc[i][2]  +"  [" + abc[i][3]+ "]"
+		      //str += "<td class='mistd' style='text-align:center'>" +   abc[i][1] + "</td></tr>";
+					str += "<td class='mistd' style='text-align:center'>" +
+					"<img src='img/misinfo/cascade_timeseries_" + abc[i][4] + ".png'" + " class='img-fluid' alt='Responsive image'/>"
+					+ "</td></tr>";
 
-				// "<blockquote class='twitter-tweet' data-lang='en'>" +
-				// "<p lang='en' dir='ltr'>" + abc[i][2] + "<br/><br/>"  + abc[i][3] +
-				// // "<a href='https://twitter.com/anyuser/status/"+ '' +"'>" + abc[i][3] + "</a> " +
-				// "</blockquote>"
+				}else{
+					str += "<tr class='mistr'>";
+		      str += "<td class='mistd'>" + abc[i][0] + "</td>";
+		      str += "<td class='mistd'>" + abc[i][2]  +"  [" + abc[i][3]+ "]"
 
-				+  "</td>";
+					// "<blockquote class='twitter-tweet' data-lang='en'>" +
+					// "<p lang='en' dir='ltr'>" + abc[i][2] + "<br/><br/>"  + abc[i][3] +
+					// // "<a href='https://twitter.com/anyuser/status/"+ '' +"'>" + abc[i][3] + "</a> " +
+					// "</blockquote>"
 
-	      str += "<td class='mistd' style='text-align:center'>" +   abc[i][1] + "</td></tr>";
-				// str += "<td class='mistd' style='text-align:center'>" +
-				// "<img src='img/misinfo/cascade_timeseries_" + abc[i][4] + ".png'" + " class='img-fluid' alt='Responsive image'/>"
-				// + "</td></tr>";
+					+  "</td>";
 
-			};
-  }
+		      // str += "<td class='mistd' style='text-align:center'>" +   abc[i][1] + "</td></tr>";
+					str += "<td class='mistd' style='text-align:center'>" +
+					"<img src='img/misinfo/cascade_timeseries_" + abc[i][4] + ".png'" + " class='img-fluid' alt='Responsive image'/>"
+					+ "</td></tr>";
+
+				};
+	  }
+
 
 // + abc[4] + ".png'"
 	str += "<tr><td style='color:dimgray; font-size:14px'>*(displayed if available)</td>"
