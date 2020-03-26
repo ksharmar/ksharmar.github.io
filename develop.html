@@ -38,61 +38,15 @@
    <!-- <script type="JavaScript" src="interactive/sentiment.js"></script> -->
 
 
-  <script>
+  <script type="module">
 
+    import { sentiment_results } from "./resources/sentiment_analysis/sentiment_analysis.js"
     function _sentiment_data(region){
-      var list = []
-      switch(region){
-        case 'United States of America':
-          list =
-          //   ['Date', 'Anger', 'Disgust', 'Fear', 'Joy', 'Sadness', 'Surprise'],
-          //   // ['2020-03-09', 0.028, 0.028, 0.494, 0.296, 0.043, 0.111],
-          //   // ['2020-03-10', 0.027, 0.031, 0.495, 0.275, 0.048, 0.124],
-          //   // ['2020-03-11', 0.03, 0.031, 0.457, 0.286, 0.067, 0.128],
-          //   // ['2020-03-12', 0.034, 0.029, 0.45, 0.275, 0.068, 0.143],
-          //   // ['2020-03-13', 0.035, 0.033, 0.462, 0.273, 0.065, 0.132],
-          //   // ['2020-03-14', 0.039, 0.038, 0.444, 0.282, 0.064, 0.134],
-          //   // ['2020-03-15', 0.036, 0.031, 0.479, 0.293, 0.047, 0.114],
-          //   // ['2020-03-16', 0.028, 0.027, 0.464, 0.295, 0.049, 0.137],
-          //   // ['2020-03-17', 0.032, 0.03, 0.452, 0.294, 0.056, 0.137]
-          //   ['2020-03-17', 0.03, 0.03, 0.57, 0.28, 0.02, 0.09]
-          // ];
-          [['Date', '+ Positive Sentiment', '- Negative Sentiment'],
-           ['2020-03-09', 6.974, 8.852],
-           ['2020-03-10', 7.208, 8.463],
-           ['2020-03-11', 6.839, 8.643],
-           ['2020-03-12', 6.798, 8.491],
-           ['2020-03-13', 7.178, 8.945],
-           ['2020-03-14', 7.72, 8.72],
-           ['2020-03-15', 7.451, 9.482],
-           ['2020-03-16', 7.127, 7.78],
-           ['2020-03-17', 7.266, 8.273]]
-          break;
-        case 'China':
-          list = [['Date', '+ Positive Sentiment', '- Negative Sentiment'],
-           ['2020-03-09', 7.558, 6.687],
-           ['2020-03-10', 6.496, 6.204],
-           ['2020-03-11', 6.429, 4.677],
-           ['2020-03-12', 8.747, 6.241],
-           ['2020-03-13', 7.831, 6.286],
-           ['2020-03-14', 8.214, 7.342],
-           ['2020-03-15', 9.074, 7.814],
-           ['2020-03-16', 8.424, 6.549],
-           ['2020-03-17', 7.519, 5.303]];
-        break;
-        case 'India':
-        list = [['Date', '+ Positive Sentiment', '- Negative Sentiment'],
-         ['2020-03-09', 8.153, 8.324],
-         ['2020-03-10', 8.328, 7.984],
-         ['2020-03-11', 7.538, 6.665],
-         ['2020-03-12', 7.504, 6.984],
-         ['2020-03-13', 9.207, 7.047],
-         ['2020-03-14', 9.004, 7.081],
-         ['2020-03-15', 8.647, 7.169],
-         ['2020-03-16', 8.361, 6.762],
-         ['2020-03-17', 8.113, 6.577]
-         ];
-         break;
+      var list = [];
+      if (sentiment_results.hasOwnProperty(region)) {
+        list = sentiment_results[region];
+      } else {
+        list = sentiment_results["missing"];
       }
       return list;
     }
@@ -100,14 +54,14 @@
      function draw_sentiment(region) {
        // Define the chart to be drawn.
        var data = google.visualization.arrayToDataTable(_sentiment_data(region));
-       var options = {title: 'Sentiment (2020-03-09 - 2020-03-17)',
+       var options = {title: 'Sentiment % (2020-03-09 - 2020-03-17)',
                       isStacked:false,
-                      chartArea:{left:0,top:30,width:"300px",height:"250px"},
+                      chartArea:{left:60,top:30,width:"300px",height:"250px"},
                       height: 350,
-                      width: 450
+                      width: 500
                     };
        // Instantiate and draw the chart.
-       var chart = new google.visualization.BarChart(document.getElementById('country_sentiments'));
+       var chart = new google.visualization.ColumnChart(document.getElementById('country_sentiments'));
        chart.draw(data, options);
       }
 
@@ -132,13 +86,17 @@
          //     show_sentiment_chart('United States of America');
          // },
          onRegionClick: function(event, code, region){
-           if (region == 'United States of America' || region == 'China' || region == 'India') {
-              show_sentiment_chart(region);
-           };
+            show_sentiment_chart(region);
          }
        });
      });
+     
+     function default_region() {
+       show_sentiment_chart("United States of America");
+       draw_sentiment("United States of America");
+     }
 
+     google.charts.setOnLoadCallback(default_region);
    </script>
 
 
@@ -225,7 +183,7 @@
           Click map for sentiment. Map color intensity reflects positive
           <br/> to negative sentiment ratio.
         </div>
-        <div id="country_sentiments"><img src='img/US_load_sentiments.png'> </img></div>
+        <div id="country_sentiments"> </div>
       </div>
     </div>
 
@@ -242,7 +200,7 @@
 
       <div style="width: 100%; height: 400px; overflow-y: scroll">
         <blockquote class="twitter-tweet" data-lang="en">
-        <p lang="en" dir="ltr">Positive sentiments (9.79%)
+        <p lang="en" dir="ltr">Positive sentiments (70.43%)
          <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
         </blockquote>
 
@@ -279,7 +237,7 @@
     <div style="width: 100%; height: 400px; overflow-y: scroll">
 
       <blockquote class="twitter-tweet" data-lang="en">
-      <p lang="en" dir="ltr">Negative sentiments (4.11%)
+      <p lang="en" dir="ltr">Negative sentiments (29.57%)
        <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
       </blockquote>
 
@@ -324,7 +282,7 @@ Twitter Sentiments on #WorkFromHome
 
   <div style="width: 100%; height: 400px; overflow-y: scroll">
     <blockquote class="twitter-tweet" data-lang="en">
-    <p lang="en" dir="ltr">Positive sentiments (9.66%)
+    <p lang="en" dir="ltr">Positive sentiments (76.48%)
      <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
     </blockquote>
 
@@ -366,7 +324,7 @@ Twitter Sentiments on #WorkFromHome
 <div style="width: 100%; height: 400px; overflow-y: scroll">
 
   <blockquote class="twitter-tweet" data-lang="en">
-  <p lang="en" dir="ltr">Negative sentiments (2.97%)
+  <p lang="en" dir="ltr">Negative sentiments (23.52%)
    <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
   </blockquote>
 
