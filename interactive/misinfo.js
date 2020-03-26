@@ -1,9 +1,9 @@
 function misinfo_display() {
   // alert('abc');
-	tweets = showMisinfoTweets(0, 10)
-	tweets_2 = showMisinfoTweets(10, 100)
+	tweets = showMisinfoTweets(0, 100)
+	//tweets_2 = showMisinfoTweets(10, 100)
 	document.getElementById("misinfo_score_table_recent").innerHTML = tweets;
-	document.getElementById("misinfo_score_table_remaining").innerHTML = tweets_2;
+	//document.getElementById("misinfo_score_table_remaining").innerHTML = tweets_2;
 }
 
 function showMisinfoTweets(s, e){
@@ -16,7 +16,7 @@ function showMisinfoTweets(s, e){
 	str += "<tr class='mistr'><td class='card-header' width='15%'>Website Type*</td>"
 	+ "<td class='card-header'>Tweet Propagated on Social Media</td><td class='card-header'  width='35%'>Retweets</td></tr>"
   var i;  // currently 25 tweets shown tweetlist.length/8 abc.length
-  for (i = s; i < e; i++) {
+  for (i = s; i < abc.length; i++) {
 			//alert(i)
 			if (abc[i].length == 3){
 				str += "<tr class='mistr'>";
@@ -196,38 +196,50 @@ function showMisinfoTweets(s, e){
 function getMisinfoTweets(){
   var abc = [
 		['political-clickbait', 1.0, 'RT @TeaPainUSA: Trump will easily double the national debt during his first and only term.  https://t.co/Goh9Ndow9F', '2020-03-17T21:00:30', '121'],
-		// ['political-clickbait-bias', 1.0, 'RT @Inevitable_ET: Wut in tarnation  https://t.co/KgA2jkelJb', '2020-03-17T18:54:40', '120'],
+		['bias-conspiracy-unreliable', 1.0, '📢 CALM DOWN!   BREAKING EXCLUSIVE: The Coronavirus Fatality Rate Reported by Media Is COMPLETELY INACCURATE. Actual Rate Is LESS THAN THE FLU – MEDIA LYING AGAIN!  Are we surprised?   @RudyGiuliani has a #coronavirus podcast:  👇 https://t.co/nWV2zaaXm6  https://t.co/0rXKmMuOIY', '2020-03-16T14:33:14', '105'],
+		//['political-bias', 1.0, 'RT @dbongino: Ayanna Pressley Would Release Prisoners to Fight Coronavirus. #TDS 👇🏻 https://t.co/jYHMBAxPuL', '2020-03-16T13:04:30', '102'],
+		['political-clickbait-bias', 1.0, 'RT @DailyCaller: Jennifer Rubin: More Republicans Will Die From Coronavirus Than Democrats https://t.co/r3V0bSvyot', '2020-03-16T10:34:42', '101'],
 		['bias', 1.0, 'RT @marklevinshow: Pompeo slams communist China for lying about Wuhan coronavirus. https://t.co/1aozdSU1qK', '2020-03-17T12:28:47', '119'],
-		// ['political-clickbait-bias', 1.0, 'RT @EyesOnQ: Katie Hill Claims She ‘Almost Certainly’ Has Coronavirus https://t.co/yK9Dse8JZh', '2020-03-17T07:09:00', '118'],
+		// ['political-clickbait', 1.0, 'RT @TekStol: Trump supporters worry president’s coronavirus response will cost him 2020 re-election https://t.co/ww8Bk8FM7D', '2020-03-16T15:37:07', '109'],
+		['bias-conspiracy-unreliable', 1.0, 'RT @JohnGrahamDick1: Johns Hopkins and Gates Foundation Hosted Coronavirus Pandemic Simulation Last October https://t.co/JSn1dAh3zi via @ga…', '2020-03-15T02:06:31', '92'],
+		['', 1.0, 'RT @TheOnion: Health Experts Worry Coronavirus Will Overwhelm America’s GoFundMe System https://t.co/7W8dIjmVJS https://t.co/eALs99PiBA', '2020-03-13T17:25:56', '129'],
 		['conspiracy-fake-bias', 1.0, 'RT @EyesOnQ: Sheriff Clarke: George Soros is Involved in Coronavirus Outbreak Panic .... https://t.co/wWAXHxvWd2', '2020-03-17T06:25:15', '117'],
-		['political-clickbait-bias', 1.0, 'RT @DailyCaller: Trump Calls Coronavirus ‘The Chinese Virus’ For The First Time https://t.co/OHK3ptaK5g', '2020-03-17T03:54:06', '116'],
+		['political-clickbait', 1.0, 'RT @RawStory: Here’s how the Kushner family is cashing in on the coronavirus  https://t.co/5xqq93NTdE', '2020-03-16T03:48:48', '98'],
+		['political-bias', 1.0, 'RT @Kimbraov1: The Real Reason Why 40 Republicans Voted Against the Second Coronavirus Bill https://t.co/zfpaji8uEi #NewsandPolitics via @p…', '2020-03-14T21:03:58', '89'],
+['political-bias', 1.0, 'RT @dbongino: Joe Biden Presents Trumps Coronavirus Response as His Own Plan https://t.co/qnaTDyhxol', '2020-03-13T11:39:12', '72'],
+		['', 1.0, 'RT @TheBabylonBee: Biden: Ill Survive The Coronavirus Just Like I Survived The Black Death https://t.co/QINU5dKadi', '2020-03-12T21:19:33', '128'],
+
+
+
+		['bias', 1.0, 'RT @EyesOnQ: Hunter Biden to Skip Court Appearance, Citing Coronavirus and His Pregnant Wife https://t.co/k1inDIuKi8', '2020-03-10T19:13:56', '47'],
+		['clickbait-unreliable', 1.0, 'RT @Breaking911: LIST: These Products Will Kill The Coronavirus - https://t.co/flnPkXPPou https://t.co/q3XcSz0z3n', '2020-03-10T18:32:30', '46'],
+		['bias-unreliable', 1.0, 'RT @Russ_Warrior: #Russia gives #Iran 50.000 #coronavirus testing kits to help fight epidemic. 👏 https://t.co/ckxs7K1yHp', '2020-03-10T17:47:42', '45'],
+		['clickbait-unreliable', 1.0, 'RT @RobertCooper58: Ben Carson Admits Trump Has No Plan For Coronavirus Infected Cruise Ship https://t.co/ss1ufvKYBM', '2020-03-08T23:28:49', '1'],
+		['clickbait-unreliable', 1.0, 'RT @realTuckFrumper: Trump Is Withholding Coronavirus Testing Kits From Governors https://t.co/aszIIk1dOq', '2020-03-08T23:28:43', '0'],
+
+		// ['political-clickbait-bias', 1.0, 'RT @Inevitable_ET: Wut in tarnation  https://t.co/KgA2jkelJb', '2020-03-17T18:54:40', '120'],
+		// ['political-clickbait-bias', 1.0, 'RT @EyesOnQ: Katie Hill Claims She ‘Almost Certainly’ Has Coronavirus https://t.co/yK9Dse8JZh', '2020-03-17T07:09:00', '118'],
+		['political-clickbait-bias', 1.0, 'RT @ReneeCarrollAZ: Devin Nunez: Media And The Left Are Putting The Country Into A Panic For No Reason https://t.co/9lo9VoB0Wn  "So a…', '2020-03-15T11:21:55', '94'],
+		//['political-clickbait-bias', 1.0, 'RT @DailyCaller: Trump Calls Coronavirus ‘The Chinese Virus’ For The First Time https://t.co/OHK3ptaK5g', '2020-03-17T03:54:06', '116'],
 		//['political-clickbait-bias', 1.0, 'RT @JackPosobiec: Katie Hill Claims She ‘Almost Certainly’ Has Coronavirus  https://t.co/nZblOBtyUC', '2020-03-17T02:38:54', '115'],
-		['political-clickbait-bias', 1.0, 'RT @DailyCaller: Katie Hill Claims She ‘Almost Certainly’ Has Coronavirus https://t.co/FZeNuTEKo0', '2020-03-17T01:34:20', '114'],
+		//['political-clickbait-bias', 1.0, 'RT @DailyCaller: Katie Hill Claims She ‘Almost Certainly’ Has Coronavirus https://t.co/FZeNuTEKo0', '2020-03-17T01:34:20', '114'],
 		// ['political', 1.0, 'Twitter Deleted Sheriff Clarke’s Wildly Reckless Coronavirus Tweets, So He Says He’s Quitting https://t.co/v0iocpCWlJ via @thedailybeast', '2020-03-17T00:54:53', '113'],
 		['political', 1.0, 'RT @realTuckFrumper: Twitter Deleted Sheriff Clarke’s Wildly Reckless Coronavirus Tweets, So He Says He’s Quitting https://t.co/gYtcz2xfba', '2020-03-16T19:30:22', '112'],
 		['political-clickbait', 1.0, 'RT @SarahKSilverman: Here’s how the Kushner family is cashing in on the coronavirus | Raw Story https://t.co/uvHCrRLgrA', '2020-03-16T16:40:33', '111'],
 		['political-clickbait', 1.0, 'Looks like @senatemajldr again putting the needs of Americans behind other interests by pushing coronavirus vote to later in week over GOP opposition to House bill.  There are no possible reasons. Even the House GOP and the Trump support this. https://t.co/ThwhpMuZSh via rawstory', '2020-03-16T16:40:28', '110'],
-		['political-clickbait', 1.0, 'RT @TekStol: Trump supporters worry president’s coronavirus response will cost him 2020 re-election https://t.co/ww8Bk8FM7D', '2020-03-16T15:37:07', '109'],
-		// ['political-clickbait', 1.0, 'RT @IBiegen: McConnell pushing coronavirus vote to later in week over GOP opposition to House bill: report https://t.co/qVVBctCHDU THIS SHI…', '2020-03-16T15:15:34', '108'],
+				// ['political-clickbait', 1.0, 'RT @IBiegen: McConnell pushing coronavirus vote to later in week over GOP opposition to House bill: report https://t.co/qVVBctCHDU THIS SHI…', '2020-03-16T15:15:34', '108'],
 		//['political-clickbait', 1.0, 'No member of the @GOP should ever be allowed to serve in Government again.  McConnell pushing coronavirus vote to later in week over GOP opposition to House bill: report https://t.co/zqGF5XJeta', '2020-03-16T14:55:30', '107'],
 		// ['political-clickbait', 1.0, 'RT @thomaskaine5: McConnell pushing coronavirus vote to later in week over GOP opposition to House bill: report https://t.co/TnduzshhBG', '2020-03-16T14:52:35', '106'],
-		['bias-conspiracy-unreliable', 1.0, '📢 CALM DOWN!   BREAKING EXCLUSIVE: The Coronavirus Fatality Rate Reported by Media Is COMPLETELY INACCURATE. Actual Rate Is LESS THAN THE FLU – MEDIA LYING AGAIN!  Are we surprised?   @RudyGiuliani has a #coronavirus podcast:  👇 https://t.co/nWV2zaaXm6  https://t.co/0rXKmMuOIY', '2020-03-16T14:33:14', '105'],
-		//['political-clickbait', 1.0, 'Trump-loving megachurch begs followers to pack into the pews amid coronavirus outbreak: ‘If we die — we die for Christ’ https://t.co/ZUfkml5tAQ', '2020-03-16T14:08:43', '104'],
+				//['political-clickbait', 1.0, 'Trump-loving megachurch begs followers to pack into the pews amid coronavirus outbreak: ‘If we die — we die for Christ’ https://t.co/ZUfkml5tAQ', '2020-03-16T14:08:43', '104'],
 		//['political', 1.0, 'RT @Public_Citizen: Matt Gaetz voted against paid sick leave then took paid sick leave. https://t.co/E9uvK4I6SJ', '2020-03-16T13:28:32', '103'],
-		['political-bias', 1.0, 'RT @dbongino: Ayanna Pressley Would Release Prisoners to Fight Coronavirus. #TDS 👇🏻 https://t.co/jYHMBAxPuL', '2020-03-16T13:04:30', '102'],
-		['political-clickbait-bias', 1.0, 'RT @DailyCaller: Jennifer Rubin: More Republicans Will Die From Coronavirus Than Democrats https://t.co/r3V0bSvyot', '2020-03-16T10:34:42', '101'],
 		['bias-conspiracy-unreliable', 1.0, 'Pompous Democrat Lawyer Who Tried and Failed to Impeach Trump Tests Positive for Coronavirus - Then Blames Trump https://t.co/yd8vY65HBs via @gatewaypundit', '2020-03-16T08:07:17', '100'],
 		['political-clickbait', 1.0, 'RT @TeaPainUSA: Take comfort, MAGA.  Your suffering is linin’ the pockets of the Trump crime family. https://t.co/T5cIzHUCoh', '2020-03-16T04:31:46', '99'],
-		['political-clickbait', 1.0, 'RT @RawStory: Here’s how the Kushner family is cashing in on the coronavirus  https://t.co/5xqq93NTdE', '2020-03-16T03:48:48', '98'],
 		// ['bias-conspiracy-unreliable', 1.0, 'RT @gatewaypundit: 29 of 68 Coronavirus Deaths in US Are Associated with One Senior Center in Kirkland, Washington https://t.co/vb6FeWn9eS…', '2020-03-15T23:11:03', '97'],
 		// ['political-clickbait', 1.0, 'Dow Futures drop 840 points as Trump was speaking about coronavirus response  https://t.co/1ZqNCUY1j2', '2020-03-15T22:28:39', '96'],
 		// ['bias-conspiracy-unreliable', 1.0, 'RT @militarysweep2: https://t.co/hA7UuqhONN Indictments Fl 14K+- Iw 5k+- La 3k+- NY 17000+ RI 1600+- WA 6500+- MD 6k+- CA 72K+- Think Smoke…', '2020-03-15T12:49:49', '95'],
-		['political-clickbait-bias', 1.0, 'RT @ReneeCarrollAZ: Devin Nunez: Media And The Left Are Putting The Country Into A Panic For No Reason https://t.co/9lo9VoB0Wn  "So a…', '2020-03-15T11:21:55', '94'],
 		['political-clickbait-bias', 1.0, 'RT @DailyCaller: Devin Nunes: ‘Media And The Left’ Are ‘Putting The Country Into A Panic’ For ‘No Reason’ https://t.co/kdM7mVmhIn', '2020-03-15T02:25:40', '93'],
-		['bias-conspiracy-unreliable', 1.0, 'RT @JohnGrahamDick1: Johns Hopkins and Gates Foundation Hosted Coronavirus Pandemic Simulation Last October https://t.co/JSn1dAh3zi via @ga…', '2020-03-15T02:06:31', '92'],
 		['bias-conspiracy-unreliable', 1.0, 'RT @gatewaypundit: Johns Hopkins and Gates Foundation Hosted Coronavirus Pandemic Simulation Last October https://t.co/A7pvxqjxGY via @gate…', '2020-03-15T01:42:15', '91'],
 		['bias-conspiracy-unreliable', 1.0, 'RT @love4thegameAK: 👀👀  Johns Hopkins and Gates Foundation Hosted Coronavirus Pandemic Simulation Last October   https://t.co/XK8vbFow81', '2020-03-15T01:42:03', '90'],
-		['political-bias', 1.0, 'RT @Kimbraov1: The Real Reason Why 40 Republicans Voted Against the Second Coronavirus Bill https://t.co/zfpaji8uEi #NewsandPolitics via @p…', '2020-03-14T21:03:58', '89'],
 		// ['political', 1.0, '“We’re in one of those rare times when sharp, structural change is possible in the heat of the crisis.” Read me, @alybatt @aldatweets &amp  @KateAronoff in @jacobinmag. We must care for the vulnerable and demand systemic  transformation. We can’t afford not to https://t.co/o0MZmgFvUR', '2020-03-14T20:41:59', '88'],
 		// ['political', 1.0, 'Matt Gaetz voted against paid sick leave.   Matt Gaetz is currently on paid sick leave from Congress. https://t.co/E9uvK4I6SJ', '2020-03-14T18:36:01', '87'],
 		['bias-conspiracy-unreliable', 1.0, 'Fox Business Suspends Trish Regan and Kennedy Shows for Coronavirus Coverage... Wait...Stop... ⁦@trish_regan⁩ monologue created such a uproar on the #Left her show was suspended shortly after..  ⁦@FoxBusiness⁩ Is suppressing our voice (VIDEO)🤬 https://t.co/RXvEATdnbE', '2020-03-14T13:34:48', '86'],
@@ -243,22 +255,25 @@ function getMisinfoTweets(){
 		['satire', 1.0, 'RT @NickBaumann: Health Experts Worry Coronavirus Will Overwhelm America’s GoFundMe System: https://t.co/XEFaJnIWOX', '2020-03-14T01:05:41', '76'],
 		['political', 1.0, 'RT @jacobinmag: Bernie Sanders can lead the fight against coronavirus. Joe Biden can’t. https://t.co/BjnOwMhl5z', '2020-03-13T22:14:25', '75'],
 		['bias', 1.0, 'RT @newtgingrich: Bidens attacks on the administrations handling of the coronavirus were filled with falsehoods. https://t.co/1ZubavDdIH', '2020-03-13T19:39:00', '74'],
-		['', 1.0, 'RT @TheOnion: Health Experts Worry Coronavirus Will Overwhelm America’s GoFundMe System https://t.co/7W8dIjmVJS https://t.co/eALs99PiBA', '2020-03-13T17:25:56', '129'],
 		['political', 1.0, 'RT @briantylercohen: Matt Gaetz, who voted against paid sick leave, is currently on paid sick leave from Congress. https://t.co/SRfjGWqkjH', '2020-03-13T16:43:39', '73'],
-		['political-bias', 1.0, 'RT @dbongino: Joe Biden Presents Trumps Coronavirus Response as His Own Plan https://t.co/qnaTDyhxol', '2020-03-13T11:39:12', '72'],
 		['political-unreliable-bias', 1.0, 'RT @joelpollak: Pollak: Democrats Pushed Impeachment While Coronavirus Spread — (for 20 days!) https://t.co/Iw1gIBCuZc', '2020-03-13T11:18:05', '71'],
 		['political-clickbait', 1.0, 'RT @RawStory: How did Matt Gaetz get a coronavirus test when the rest of us can’t?  https://t.co/gSLVKhzAcu', '2020-03-13T10:55:07', '70'],
 		['political-clickbait', 1.0, 'RT @RealJamesWoods: Can they be any more putrid examples of pure evil than they already are?  https://t.co/puVhu71qw0', '2020-03-13T05:51:45', '69'],
 		['political-unreliable-bias', 1.0, 'RT @2runtherace: Super-Rich Turn to Bunkers to Self-Quarantine During Coronavirus Outbreak!!  https://t.co/uiuE9DiT0t @realDonaldTrump', '2020-03-13T02:38:34', '68'],
+
+
 		['political', 1.0, 'RT @dyllyp: Matt Gaetz voted against paid sick leave, and then went on paid sick leave. https://t.co/1oh2WOZoWu', '2020-03-12T23:52:22', '67'],
-		['', 1.0, 'RT @TheBabylonBee: Biden: Ill Survive The Coronavirus Just Like I Survived The Black Death https://t.co/QINU5dKadi', '2020-03-12T21:19:33', '128'],
 		['political-clickbait', 1.0, 'RT @TeaPainUSA: We should condemn Mar-a-Lago and turn it into a #coronavirus containment facility.   https://t.co/KDNyD7e4PH', '2020-03-12T19:54:43', '66'],
 		['political-clickbait-bias', 1.0, 'RT @DailyCaller: Chinese Official Blames US For Introducing Coronavirus To Wuhan, Says US ‘Owes Us An Explanation’ https://t.co/TxELt2x5nA', '2020-03-12T18:04:32', '65'],
+
+
 		['bias-clickbait', 1.0, 'RT @HarveyStaub1: MSNBC Hopes Americans Dying From Coronavirus Will “Take Down Trump’s Presidency” https://t.co/XUBaj6Y8x1 Think. The fake…', '2020-03-12T03:32:44', '64'],
 		['political-clickbait', 1.0, 'RT @TeaPainUSA: Trump’s every instinct is either wrong, stupid or evil. https://t.co/ILbuNzkBRx', '2020-03-12T02:46:47', '63'],
 		['political-clickbait', 1.0, 'RT @TeaPainUSA: ‘We can’t believe a word you say’  https://t.co/GFSovbT6i0', '2020-03-11T22:56:30', '62'],
 		['political', 1.0, 'RT @jaketapper: Editors of @NRO: President Trump Needs to Step Up on the Coronavirus  https://t.co/K36xcTxR8e', '2020-03-11T12:28:37', '61'],
 		['political-clickbait-bias', 1.0, 'RT @DailyCaller: Gavin Newsom Praises Trump Administration’s Response To Coronavirus. https://t.co/2xgZmD4GBm', '2020-03-11T08:12:01', '60'],
+
+
 		['bias-conspiracy-unreliable', 1.0, 'So commie #BernieSanders says he wouldn’t close the border to stop the spread of #coronavirus in a national emergency—it’s too xenophobic.   Stuff like this is why he got destroyed yesterday by a guy who is semi-senile.  #SocialismKills #KAGA2020 #TWGRP  https://t.co/KDa2qUrzJz', '2020-03-11T06:21:40', '59'],
 		['bias-conspiracy-unreliable', 1.0, 'DESPITE CORONAVIRUS PANIC: President Trump Approval Rating at 48% -- 4 Points Higher than Media Darling Obama at Same Point in His Presidency https://t.co/0BCDzzXmPS via @gatewaypundit', '2020-03-11T02:47:32', '58'],
 		['', 1.0, 'RT @chuckwoolery: Liberal California Governor Praises Trump And Pence For Response To Coronavirus (VIDEO) https://t.co/fW9fSWj85n https://t…', '2020-03-10T23:10:23', '127'],
@@ -273,16 +288,13 @@ function getMisinfoTweets(){
 		['bias', 1.0, 'RT @BrentScher: BREAKING: Hunter Biden to Skip Court Appearance, Citing Coronavirus and His Pregnant Wife https://t.co/Py17Wr37Kc', '2020-03-10T19:14:34', '50'],
 		['bias', 1.0, 'RT @bennyjohnson: Hunter Biden to Skip Court Appearance, Citing Coronavirus and His Pregnant Wife   https://t.co/IEdjcmaVeX', '2020-03-10T19:14:16', '49'],
 		['bias', 1.0, 'RT @JackPosobiec: Hunter Biden to Skip Court Appearance, Citing Coronavirus  https://t.co/VxXZFmKeCr', '2020-03-10T19:13:57', '48'],
-		['bias', 1.0, 'RT @EyesOnQ: Hunter Biden to Skip Court Appearance, Citing Coronavirus and His Pregnant Wife https://t.co/k1inDIuKi8', '2020-03-10T19:13:56', '47'],
-		['clickbait-unreliable', 1.0, 'RT @Breaking911: LIST: These Products Will Kill The Coronavirus - https://t.co/flnPkXPPou https://t.co/q3XcSz0z3n', '2020-03-10T18:32:30', '46'],
-		['bias-unreliable', 1.0, 'RT @Russ_Warrior: #Russia gives #Iran 50.000 #coronavirus testing kits to help fight epidemic. 👏 https://t.co/ckxs7K1yHp', '2020-03-10T17:47:42', '45'],
 		['political-unreliable-bias', 1.0, 'RT @yogagenie: Scott Adams: Even with Coronavirus, Bernie and Biden Will Lose to Trump https://t.co/t1i7ExgPc7', '2020-03-10T13:30:56', '44'],
 		['political-clickbait', 1.0, 'Just more #fakenews trying to tarnish ⁦@realDonaldTrump⁩ reputation with #America Fake News: #DailyMail Claims #Trump ‘Storms’ Out of #WuhanVirus Briefing, But the Video Shows No Such Thing #coronavirus #KAG2020 #MAGA #KAG #Trump2020  https://t.co/Ant7S0MWMD', '2020-03-10T12:49:32', '43'],
 		['bias-conspiracy-unreliable', 1.0, 'Dr. Oz Argues Coronavirus Numbers from Korea Show Lower Death Rate - May Be No Worse than Common Flu (VIDEO) https://t.co/4UwnFDpz1D', '2020-03-10T10:19:18', '42'],
 		['', 1.0, 'RT @washingtonpost: Opinion: As the coronavirus burns, Trump scores a perfect Nero https://t.co/wXo7KohMxI', '2020-03-10T07:45:21', '125'],
 		['bias-conspiracy-unreliable', 1.0, 'RT @Wingman_Bret: Liberal California Governor Praises Trump And Pence For Response To Coronavirus (VIDEO) https://t.co/nAX4SoEN1s', '2020-03-10T06:20:31', '41'],
 		['bias-conspiracy-unreliable', 1.0, 'RT @gatewaypundit: Liberal California Governor Praises Trump And Pence For Response To Coronavirus (VIDEO) https://t.co/Xx3qgA9xH7 via @gat…', '2020-03-10T04:56:24', '40'],
-		['bias', 1.0, 'RT @PalmerReport: Pearl Jam cancels tour, slams Donald Trump administrations disastrous coronavirus response https://t.co/mFMGKAVWES', '2020-03-10T03:28:29', '39'],
+		// ['bias', 1.0, 'RT @PalmerReport: Pearl Jam cancels tour, slams Donald Trump administrations disastrous coronavirus response https://t.co/mFMGKAVWES', '2020-03-10T03:28:29', '39'],
 		['political-clickbait', 1.0, 'RT @RawStory: Judges blast Trump administration for ordering coronavirus info posters taken down from courts https://t.co/aav25XJkRM', '2020-03-10T03:08:39', '38'],
 		['political-clickbait', 1.0, 'We haven’t considered it, but now that you mention it. https://t.co/FtNk4g3NS4', '2020-03-10T01:44:23', '37'],
 		['clickbait-unreliable', 1.0, 'RT @Breaking911: LIST: These Products Will Kill The Coronavirus - https://t.co/flnPkXPPou https://t.co/0nxsxN8A62', '2020-03-10T01:41:20', '36'],
@@ -323,8 +335,6 @@ function getMisinfoTweets(){
 		['political-clickbait', 1.0, 'RT @RawStory: Ted Cruz interacted with coronavirus-infected CPAC attendee -- and wont return to Washington   https://t.co/ASwyIKjYhR', '2020-03-08T23:29:42', '4'],
 		['clickbait-unreliable', 1.0, 'RT @1reddragon696: Trump Is Withholding Coronavirus Testing Kits From Governors https://t.co/7SUCYvWDp6 via @politicususa', '2020-03-08T23:29:36', '3'],
 		['political-clickbait', 1.0, 'RT @CheriJacobus: Ted Cruz interacted with coronavirus-infected CPAC attendee and won’t return to Washington - https://t.co/NWxcVnVpcG', '2020-03-08T23:28:59', '2'],
-		['clickbait-unreliable', 1.0, 'RT @RobertCooper58: Ben Carson Admits Trump Has No Plan For Coronavirus Infected Cruise Ship https://t.co/ss1ufvKYBM', '2020-03-08T23:28:49', '1'],
-		['clickbait-unreliable', 1.0, 'RT @realTuckFrumper: Trump Is Withholding Coronavirus Testing Kits From Governors https://t.co/aszIIk1dOq', '2020-03-08T23:28:43', '0'],
 
 
 // ['clickbait-unreliable', 1.0, 'RT @realTuckFrumper: Trump Is Withholding Coronavirus Testing Kits From Governors https://t.co/aszIIk1dOq', '2020-03-08T23:28:43', '0'],
