@@ -28,6 +28,9 @@
   <script language="JavaScript" src="interactive/bot.js"></script>
   <script type="text/javascript" src="interactive/misinfo.js"></script>
 
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
 </head>
 
 <body onLoad="misinfo_display();">
@@ -77,41 +80,28 @@
     <h2> Coronavirus on Social Media: Misinformation  Analysis </h2>
     <br/>
 
-    <p class="lead">
+    <div class="row">
 
-        The 'infodemic' on Social Media impacts health and welfare of society,
-        both at a local and global scale. We analyze twitter information cascades to detect and combat misinformation. We expose and maintain a list of <b>false, misleading and clickbait</b> claims detected from Twitter information cascades about Coronavirus.
-        <br/><br/>
-    </p>
+      <div class="col">
+      <p class="lead">
 
 
-    <!-- <blockquote class="twitter-tweet" data-lang="en">
-    <p lang="en" dir="ltr">just setting up my twttr</p>&mdash; Jack (@jack) <a href="https://twitter.com/jack/status/20">March 21, 2006</a>
-    </blockquote> -->
+          The 'infodemic' on Social Media impacts health and welfare of society,
+          both at a local and global scale. We analyze twitter information cascades to detect and combat misinformation.
+          We expose and maintain a list of <b>false, misleading and clickbait</b> claims detected from information cascades about Coronavirus from March 9 to 17, 2020.
+          <br/><br/>
 
-    <!-- <div class="row">
-      <table>
-      <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Points</th>
-      </tr>
-      <tr>
-        <td>Eve</td>
-        <td>Jackson</td>
-        <td>94</td>
-      </tr>
-      <tr>
-        <td>Adam</td>
-        <td>Johnson</td>
-        <td>67</td>
-      </tr>
-    </table>
-        <br/></br>
+      </p>
+      </div>
 
-        <br/></br>
+      <div class="col">
+        <img src="img/misinfo/detection_score_dist.png" class="img-fluid" alt="Responsive image"/>
+      </div>
+    </div>
 
-    </div> -->
+
+    <br/><br/><br/>
+
 
     <div id = "misinfo_score_table" style = "overflow-x:auto;">
     </div>
