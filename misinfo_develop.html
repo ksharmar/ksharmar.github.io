@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Coronavirus Tweets Analysis">
+  <meta name="author" content="Melady Lab">
+  <title>Melady Lab, Coronavirus Tweets on Social Media </title>
+  <!-- Bootstrap core CSS -->
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js">
+  </script>
+  <script type = "text/javascript">
+     google.charts.load('current', {packages: ['corechart']});
+  </script>
+   <script type = "text/javascript">
+     google.charts.load('current', {packages: ['table']});
+  </script>
+
+  <script language="JavaScript" src="interactive/bot.js"></script>
+  <script type="text/javascript" src="interactive/misinfo_develop.js"></script>
+
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+</head>
+
+<body onLoad="misinfo_display();">
+
+  <div id="header">
+    <!-- Navigation -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src='img/usc-logo.png' width=30px height=30px></img>
+        USC Melady Lab </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <div class="navbar-right collapse navbar-collapse menu-mobile" id="navbarResponsive">
+          <ul class="nav navbar-nav ml-auto navbar-link-area">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Coronovirus Tweets
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="trend.html">Trend Analysis</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="misinfo.html">Misinformation Analysis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="geo.html">Geo Analysis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <a class="navbar-brand" href="index.html"><img src='img/newvoices_logo.png' width=40px height=40px></img> </a>
+      </div>
+    </nav>
+    </div>
+
+<!-- Page Content -->
+
+<div class="container" style="padding-top: 20px; padding-bottom: 0px ">
+
+    <br/>
+    <h2> Coronavirus on Social Media: Misinformation  Analysis </h2>
+    <br/>
+
+    <!-- <p class="lead">
+
+
+        The 'infodemic' on Social Media impacts health and welfare of society,
+        both at a local and global scale. We analyze twitter information cascades to detect and combat misinformation.
+        We expose and maintain a list of <b>false, misleading and clickbait</b> claims detected from information cascades about Coronavirus from March 9 to 17, 2020.
+        <br/><br/>
+
+    </p> -->
+
+    <div class="row">
+
+      <div class="col">
+      <p class="lead">
+
+
+          The 'infodemic' on Social Media impacts health and welfare of society,
+          both at a local and global scale. We analyze twitter information cascades to detect and combat misinformation.
+          We expose and maintain a list of <b>false, misleading and clickbait</b> claims detected from information cascades about Coronavirus from March 9 to 17, 2020.
+          <br/><br/>
+
+      </p>
+      </div>
+
+       <div class="col">
+        <img src="img/misinfo/detection_score_dist.png" class="img-fluid" alt="Responsive image"/>
+      </div>
+    </div>
+
+
+    <!-- <br/><br/><br/> -->
+
+
+    <div id = "misinfo_score_table" style = "overflow-x:auto;">
+    </div>
+
+    <!-- <br/>
+    <h2> Coronavirus on Social Media: Analyzing User Behaviours </h2>
+    <br/>
+
+    <p class="lead">
+        Social bots are commonly used for automated or semi-automated content creation and sharing
+        on social media. We analyze the 500 most retweeted accounts on ongoing coronavirus discussions to isolate bot-like behaviours,
+        using Botometer<sup><a href="https://botometer.iuni.iu.edu/#!/" >1</a></sup>
+        which scores user accounts based on their network activities to estimate
+        the probabilities that the account exhibits characteristics of social bots.
+
+    </p> -->
+
+    <!-- <div class="row">
+      <div class="col-sm-5">
+        <div id = "bot_hist" style = "width: 100%; height: 400px; margin: 0 auto">
+        </div>
+      </div>
+      <div class="col-sm-7">
+        <br/></br>
+        <div id = "bot_score_table" style = "width: 100%; height: 400px; margin: 0 auto">
+        </div>
+      </div>
+    </div> -->
+
+</div>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <br/></br/> <br/></br/> <br/></br/> <br/></br/>
+
+</body>
+
+<!-- Footer -->
+<!-- <footer class="page-footer font-small gray" style="background-color: #2e3438; color:lightgray; bottom: 0; width: 100%">
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://melady.usc.edu/" style="color: lightgray"> University of Southern California, <u> Melady Lab </u></a>
+  </div>
+</footer> -->
+<!-- Footer -->
+
+</html>
