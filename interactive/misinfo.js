@@ -1,7 +1,7 @@
 function misinfo_display() {
   // alert('abc');
-	tweets = showMisinfoTweets(0, 20)
-	tweets_2 = showMisinfoTweets(21, 100)
+	tweets = showMisinfoTweets(0, 10)
+	tweets_2 = showMisinfoTweets(10, 100)
 	document.getElementById("misinfo_score_table_recent").innerHTML = tweets;
 	document.getElementById("misinfo_score_table_remaining").innerHTML = tweets_2;
 }
