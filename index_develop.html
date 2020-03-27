@@ -111,7 +111,9 @@
         var clist = country_pos_neg[key];
         var i = 0;
         for (i = 0; i < climit; i++) {
-            if i >= clist.length: break;
+            if (i >= clist.length){
+              break;
+            }
             text = text + clist[i] + ", ";
         }
         document.getElementById(targetid).innerText = text;
