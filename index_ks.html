@@ -59,7 +59,13 @@
                       isStacked:false,
                       chartArea:{left:60,top:30,width:"300px",height:"250px"},
                       height: 350,
-                      width: 500
+                      width: 500,
+                      vAxis: {
+                        viewWindow: {
+                            min: 0,
+                            max: 100
+                        },
+                      }
                     };
        // Instantiate and draw the chart.
        var chart = new google.visualization.ColumnChart(document.getElementById('country_sentiments'));
@@ -188,10 +194,10 @@
       </div>
       <div class="column">
           Click map for sentiment. Map color intensity reflects magnitude <br/>
-          of positive to negative sentiment ratio.
+          of positive to negative sentiment ratio.<br/>
          <div id="country_sentiments_desc"> </div>
          <div id="country_sentiments"> </div>
-         <div id="top_country_sentiments">
+         <!-- <div id="top_country_sentiments">
           <p class='lead'> Top Countries (most positive on Twitter) </p>
           <div id='pos_list'>Philippines, Mainland China, Ireland, Saudi Arabia, Tanzania
             <br/> India, Sri Lanka, Switzerland, Ecuador, Pakistan
@@ -202,10 +208,39 @@
           <div id='neg_list'>Brazil, Portugal, Hong Kong, Argentina, Singapore,
             <br/> United States of America, France, Sweden, Malaysia, Mexico
           </div>
-        </div>
+        </div> -->
 
       </div>
     </div>
+
+    <div class="row">
+      <div class="col">
+        <p class='lead'> Top Countries (most positive on Twitter) </p>
+        <div id='pos_list'>Philippines, Mainland China, Ireland, Saudi Arabia, Tanzania
+          India, Sri Lanka, Switzerland, Ecuador, Pakistan
+        </div>
+      </div>
+      <div class="col">
+        <p class='lead'> Top Countries (most negative on Twitter) </p>
+        <div id='neg_list'>Brazil, Portugal, Hong Kong, Argentina, Singapore,
+           United States of America, France, Sweden, Malaysia, Mexico
+        </div>
+      </div>
+    </div>
+
+
+    <!-- <div id="top_country_sentiments">
+     <p class='lead'> Top Countries (most positive on Twitter) </p>
+     <div id='pos_list'>Philippines, Mainland China, Ireland, Saudi Arabia, Tanzania
+       India, Sri Lanka, Switzerland, Ecuador, Pakistan
+     </div>
+
+     <br/>
+     <p class='lead'> Top Countries (most negative on Twitter) </p>
+     <div id='neg_list'>Brazil, Portugal, Hong Kong, Argentina, Singapore,
+        United States of America, France, Sweden, Malaysia, Mexico
+     </div>
+   </div> -->
 
 
     <br/><br/><br/><br/>
