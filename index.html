@@ -67,7 +67,10 @@
       }
 
       function show_sentiment_chart(region) {
-          document.getElementById('country_sentiments_desc').innerHTML = "Click map for sentiment. Map color intensity reflects positive <br/> to negative sentiment ratio. <br/><br/><p class='lead'>" + region + "<br/>";
+          document.getElementById('country_sentiments_desc').innerHTML =
+          "Click map for sentiment. Map color intensity reflects the magnitude
+          <br/> of positive to negative sentiment ratio. <br/><br/><p class='lead'>"
+          + region + "<br/>";
           draw_sentiment(region);
       }
 
@@ -171,17 +174,6 @@
     <!-- <img src="img/geo_daily_count_ratio.gif" class='center' alt="Responsive image"> -->
 
     <div class="row">
-      <div class="column"><div id="vmap" style="width: 600px; height: 400px;"></div></div>
-      <div class="column">
-        <div id="country_sentiments_desc">
-          Click map for sentiment. Map color intensity reflects positive
-          <br/> to negative sentiment ratio.
-        </div>
-        <div id="country_sentiments"> </div>
-      </div>
-    </div>
-
-    <div class="row">
       <div class="col">
         <p class='lead'> Top Countries (most positive on Twitter) </p>
         <div id='pos_list'>Philippines, Mainland China, Ireland, Saudi Arabia, Tanzania
@@ -195,6 +187,18 @@
         </div>
       </div>
     </div>
+    <br/>
+    <div class="row">
+      <div class="column"><div id="vmap" style="width: 600px; height: 400px;"></div></div>
+      <div class="column">
+        <div id="country_sentiments_desc">
+          Click map for sentiment. Map color intensity reflects the magnitude
+          <br/> of positive to negative sentiment ratio.
+        </div>
+        <div id="country_sentiments"> </div>
+      </div>
+    </div>
+
 
     <br/><br/><br/><br/>
     <h4>
