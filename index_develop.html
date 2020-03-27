@@ -36,6 +36,7 @@
    <!-- <script type="text/javascript" src="interactive/jquery.vmap.sampledata.js"></script> -->
    <script type="text/javascript" src="interactive/map_sentiment.js"></script>
    <!-- <script type="JavaScript" src="interactive/sentiment.js"></script> -->
+   <script type="text/javascript" src="interactive/hashtag_sentiment.js"></script>
 
 
   <script type="module">
@@ -220,7 +221,92 @@
     </div>
 
     <div class="row">
+      <div class="col">
         <div id="country_sentiments"> </div>
+      </div>
+      <div class="col">
+        <!-- style="background-color:lightblue; margin-right:20px"> -->
+
+        <div style="width: 100%; height: 400px; overflow-y: scroll">
+          <blockquote class="twitter-tweet" data-lang="en">
+          <p lang="en" dir="ltr">Positive sentiments (76.48%)
+           <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
+          </blockquote>
+
+        <blockquote class="twitter-tweet" data-lang="en">
+        <p lang="en" dir="ltr">
+          RT @StribOpinion: #WorkFromHome: It's good in a public health crisis, and good for business generally. #coronavirus By @MaryMorseMarti http…
+         <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
+        </blockquote>
+
+        <blockquote class="twitter-tweet" data-lang="en">
+        <p lang="en" dir="ltr">
+          RT @Golden_Roots_: One of our fave tools! We highly recommend @useloom for those transitioning into #WFH, and those always #workingremotely…
+         <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
+        </blockquote>
+
+        <blockquote class="twitter-tweet" data-lang="en">
+        <p lang="en" dir="ltr">
+          RT @prasanna_says: Leaders changing from the front! Thanks @BaskarG for moving to #WFH cc: @ericsyuan - zoom is holding up super well wit…
+        <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
+        </blockquote>
+
+        <blockquote class="twitter-tweet" data-lang="en">
+        <p lang="en" dir="ltr">
+          RT @LouiseJupe: Right. That’s the best few months sorted. #coronaschedule #coronavirus #WorkFromHome #HelpEachOther ⁦@AcademicChatter⁩ ⁦@pa…
+         <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
+        </blockquote>
+
+        <blockquote class="twitter-tweet" data-lang="en">
+        <p lang="en" dir="ltr">
+          RT @hlpeeples: I bet dogs are like “whatever this #coronavirus thing is... I love it!!!” #WorkFromHome #dogmom https://t.co/ztnVey1DWl
+         <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
+        </blockquote>
+      </div>
+      </div>
+
+      <div class="col">
+       <!-- style="background-color:indianred"> -->
+
+      <div style="width: 100%; height: 400px; overflow-y: scroll">
+
+        <blockquote class="twitter-tweet" data-lang="en">
+        <p lang="en" dir="ltr">Negative sentiments (23.52%)
+         <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
+        </blockquote>
+
+      <blockquote class="twitter-tweet" data-lang="en">
+      <p lang="en" dir="ltr">
+      RT @ludditus: Most jobs for which #SmartWorking #WorkingFromHome #télétravail #telelavoro is possible are useless, parasite, or alienated b…
+        <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
+      </blockquote>
+
+      <blockquote class="twitter-tweet" data-lang="en">
+      <p lang="en" dir="ltr">
+      With 3 confirmed cases of #coronavirus, we should encourage Ohioans to #WorkFromHome when they feel sick. However, many living paycheck to paycheck can't afford to stay home. Creating a paid sick leave program will help reduce the risk of #COVID19. https://t.co/YLslg7SkGc
+      <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
+      </blockquote>
+
+      <blockquote class="twitter-tweet" data-lang="en">
+      <p lang="en" dir="ltr">
+        RT @MPOHealthLit: Unfortunately, this means basically that it is everywhere now. #WorkFromHome if possible protect the #vulnerable in m…
+       <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
+      </blockquote>
+
+      <blockquote class="twitter-tweet" data-lang="en">
+      <p lang="en" dir="ltr">
+        Tracker by @timeular helps a lot in #wfh situation due to #COVID19 . I like my job and often forget it's past hours when I don't have to catch my train. Remember that you can get #overworked and #tired even at home and it has negative impact to your immunity! #timemanagement
+         <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
+      </blockquote>
+
+      <blockquote class="twitter-tweet" data-lang="en">
+      <p lang="en" dir="ltr">
+      RT @bozzie_t: Now we going to miss our work spouses 😭😭💔 #workingfromhome ##CoronaVirusSA #CoronavirusOutbreak https://t.co/dRkz835nKK
+      <!-- <a href="https://twitter.com/jack/status/20">March 21, 2006</a> -->
+      </blockquote>
+      </div>
+      </div>
+
     </div>
 
 
@@ -231,6 +317,9 @@
     <br/><br/>
     </h4>
     <div class="row">
+      <div class="col">
+        <div id="sentiment_socialdistancing_plot"></div>
+      </div>
     <div class="col">
       <!-- style="background-color:lightblue; margin-right:20px"> -->
 
@@ -313,6 +402,9 @@ Twitter Sentiments on #WorkFromHome
 <br/><br/>
 </h4>
 <div class="row">
+  <div class="col">
+    <div id="sentiment_workfromhome_plot"></div>
+  </div>
 <div class="col">
   <!-- style="background-color:lightblue; margin-right:20px"> -->
 
