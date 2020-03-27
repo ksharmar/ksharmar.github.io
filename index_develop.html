@@ -106,14 +106,14 @@
      google.charts.setOnLoadCallback(default_region);
 
      function get_most_countries(key, targetid) {
-        var climit = 5;
+        var climit = 10;
         var text = "";
         var clist = country_pos_neg[key];
         var i = 0;
         for (i = 0; i < climit; i++) {
+            if i >= clist.length: break;
             text = text + clist[i] + ", ";
         }
-        text = text + '...';
         document.getElementById(targetid).innerText = text;
      }
 
@@ -208,20 +208,20 @@
     <div class="row">
       <div class="column"><div id="vmap" style="width: 600px; height: 400px;"></div></div>
       <div class="column">
-        <div id="country_sentiments_desc">
-          Click map for sentiment. Map color intensity reflects positive
-          <br/> to negative sentiment ratio.
-        </div>
         <div>
             <br/>
             <br/>
-            Countries with the most positive sentiment on Twitter:
+            <p class='lead'> Top Countries (most positive on Twitter) </p>
             <div id="pos_list"></div>
         </div>
         <div>
             <br/>
-            Countries with the most negative sentiment on Twitter:
+            <p class='lead'> Top Countries (most negative on Twitter) </p>
             <div id="neg_list"></div>
+        </div>
+        <div id="country_sentiments_desc">
+          Click map for sentiment. Map color intensity reflects <br/>
+          magnitude of positive  to negative sentiment ratio.
         </div>
       </div>
     </div>
