@@ -12,23 +12,23 @@
 
   <!-- Bootstrap core CSS -->
   <!-- Bootstrap core CSS -->
-  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->
 
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type = "text/javascript">
-    google.charts.load('current', {packages: ['corechart']});
+    google.charts.load('current', {packages: ['corechart', 'table', 'line']});
  </script>
-  <script type = "text/javascript">
+  <!-- <script type = "text/javascript">
     google.charts.load('current', {packages: ['table']});
  </script>
  <script type = "text/javascript">
   google.charts.load('current', {packages: ['line']});
-</script>
+</script> -->
   <script type="text/javascript" src="interactive/trend.js"></script>
 </head>
 
@@ -79,47 +79,56 @@
      <h2> Coronavirus on Social Media: Analyzing Twitter Conversations </h2>
      <br/>
    <!-- Top-50 hashtags line charts -->
-   <p class="lead"> We analyze the popularity trend of Twitter Hashtags
-   as the coronavirus situation evolves. The following provides the Top-30 <b> emerging hashtags </b> based on usage counts over last 5 days.
-   The emerging hashtags are estimated based on increments in usage counts over the last week.
+   <p class="lead"> We analyze the popularity trend of Twitter Hashtags as the coronavirus situation evolves. The following provides the Top-10 <b> emerging hashtags </b> and <b>steady hashtags</b> based on daily usage counts over last 9 days.
+   The two groups are estimated by Kmeans algorithm on daily usage patterns of 3,000+ hashtags in tweets associated with Covid-19.
+      <!-- emerging hashtags are estimated based on increments in usage counts over the last week. -->
    
-   <!-- Top-50 hashtags line charts -->
-   <!-- <p class="lead"> Top-50 hashtags </p>
-   <div id="Line_Controls_Chart">
-     <div id="lineChartArea" style="padding:0px 20px 0px 0px;"></div>
-     <div id="controlsArea" style="padding:0px 20px 0px 0px;"></div>
-   </div> -->
-   <br/><br/> Fast Up and Down hashtags, 2020-03-17. </p>
+   <br/><br/> Top 10 Emerging Hashtags, 2020/03/20 - 2020/03/28. </p>
+   <p style="font-family: 'Courier New', Courier, monospace;">coronalockdown(9021)
+    stayathomeandstaysafe(1777)
+    viruscorona(1511)
+    caresact(1324)
+    belgique(759)
+    staysafenigeria(626)
+    conunamanoamiga(573)
+    readytoservethenation(561)
+    saturdaythoughts(495)
+    nationsalutescoronafighters(487) (*hashtag(the sum of daily usage counts over last 9 days))</p>
    <div id="type1_Line_Controls_Chart">
-     <!-- main chart -->
      <div id="type1LineChartArea" style="padding:0px 20px 0px 0px;"></div>
-     <!-- control bar-->
      <div id="type1ControlsArea" style="padding:0px 20px 0px 0px;"></div>
    </div>
 
-   <br/><br/> <p class="lead">Recently emerging new hashtags, 2020-03-17. </p>
+   <br/><br/> <p class="lead">Top 10 Steady Hashtags, 2020/03/20 - 2020/03/28. </p>
+   <p style="font-family: 'Courier New', Courier, monospace;">coronavirus (merged)(1649983)
+    covid-india (merged)(42825)
+    covid-china (merged)(41987)
+    stayhome (merged)(34707)
+    trump (merged)(32237)
+    outbreak (merged)(28983)
+    coronavirusupdates (merged)(16974)
+    breaking(15564)
+    lockdown(10513)
+    chloroquine(7012) (*hashtag(the sum of daily usage counts over last 9 days))</p>
    <div id="type2_Line_Controls_Chart">
-     <!-- main chart -->
      <div id="type2LineChartArea" style="padding:0px 20px 0px 0px;"></div>
-     <!-- control bar-->
      <div id="type2ControlsArea" style="padding:0px 20px 0px 0px;"></div>
    </div>
 
+<!--    
    <br/><br/> <p class="lead">Recently emerging existing hashtags, 2020-03-17. </p>
    <div id="type3_Line_Controls_Chart">
-     <!-- main chart -->
      <div id="type3LineChartArea" style="padding:0px 20px 0px 0px;"></div>
-     <!-- control bar-->
      <div id="type3ControlsArea" style="padding:0px 20px 0px 0px;"></div>
    </div>
 
    <br/><br/> <p class="lead">Steady hashtags, 2020-03-17. </p>
    <div id="type4_Line_Controls_Chart">
-     <!-- main chart -->
      <div id="type4LineChartArea" style="padding:0px 20px 0px 0px;"></div>
-     <!-- control bar-->
      <div id="type4ControlsArea" style="padding:0px 20px 0px 0px;"></div>
-   </div>
+   </div> -->
+
+   
    <!-- <div id="topk_hashtags_line" style="width: 900px; height: 500px;"></div> -->
    <!-- Top-50 hashtags -->
  <!--
