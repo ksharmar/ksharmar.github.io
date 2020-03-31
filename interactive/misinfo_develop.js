@@ -31,8 +31,8 @@ function showMisinfoTweets(s, e){
 				+  "</td>";
 
 	      //str += "<td class='mistd' style='text-align:center'>" +   abc[i][1] + "</td></tr>";
-				str += "<td class='mistd' style='text-align:center'>" +
-				"<img src='img/misinfo/cascade_histogram_images_fixed_ylim/cascade_timeseries_" + abc[i][4] + ".png'" + " class='img-fluid' alt='Responsive image'/>"
+				str += "<td class='mistd' style='text-align:center'>" + // abc[i][4]
+				"<img src='img/misinfo/cascade_histogram_images_fixed_ylim/cascade_timeseries_"  + ".png'" + " class='img-fluid' alt='Responsive image'/>"
 				+ "</td></tr>";
 
 			}else{
@@ -49,7 +49,7 @@ function showMisinfoTweets(s, e){
 
 	      // str += "<td class='mistd' style='text-align:center'>" +   abc[i][1] + "</td></tr>";
 				str += "<td class='mistd' style='text-align:center'>" +
-				"<img src='img/misinfo/cascade_histogram_images_fixed_ylim/cascade_timeseries_" + abc[i][4] + ".png'" + " class='img-fluid' alt='Responsive image'/>"
+				"<img src='img/misinfo/cascade_histogram_images_fixed_ylim/cascade_timeseries_" + ".png'" + " class='img-fluid' alt='Responsive image'/>"
 				+ "</td></tr>";
 
 			};
