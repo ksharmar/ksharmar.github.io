@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Coronavirus Tweets Analysis">
+  <meta name="author" content="Melady Lab">
+
+  <title>Melady Lab, Coronavirus Tweets on Social Media </title>
+
+  <!-- Bootstrap core CSS -->
+  <!-- <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- STARTING IMAP -->
+   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+   <!-- <script type="text/javascript" src="interactive/jquery.vmap.sampledata.js"></script> -->
+
+  <script type="text/javascript">
+
+    import { sentiment_results } from "./resources/sentiment_analysis/sentiment_analysis.js"
+    function _sentiment_data(){
+      var list = [];
+      // if (sentiment_results.hasOwnProperty('us')) {
+      //   list = sentiment_results[region];
+      // } else {
+      //   list = sentiment_results["missing"];
+      // }
+      alert(list)
+      return list;
+    }
+  </script>
+</head>
+
+<body onload="_sentiment_data()">
+
+<a> sentiment_results </a>
+
+</body>
