@@ -1,7 +1,8 @@
+import { sentiment_results } from "./resources/sentiment_analysis/sentiment_analysis.js"
+
 function misinfo_display(date) {
 	alert(date);
-	// import { sentiment_results } from "./resources/sentiment_analysis/sentiment_analysis.js"
-	alert(date);
+	alert(sentiment_results);
 	// tweets = showMisinfoTweets(date);
 	// alert(tweets);
 	// document.getElementById("misinfo_score_table_recent").innerHTML = tweets;
